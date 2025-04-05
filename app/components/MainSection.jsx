@@ -29,21 +29,21 @@ const MainSection = () => {
           </div>
         </div>
 
-        <div className=" bg-linear-to-r     relative  drop-shadow-[4px_3px_40px_rgb(81, 102, 130)]  lg:p-10  ">
+        <div className="relative h-[80vh] bg-linear-to-r drop-shadow-xl p-1 lg:p-10">
+          {/* Background Image */}
           <img
-            className=" w-full h-[60vh] object-cover blur-[0.1rem] hidden lg:block"
+            className="hidden md:block absolute inset-0 w-full h-full object-cover blur-[0.1rem]"
             src="https://images.ctfassets.net/w8fc6tgspyjz/3FllRRqmlYB2Bdf3ASg3fT/14ff2e7789c12cfc0a55358c50aa5312/home-tabs-v3-projects-desktop.png?fm=avif&q=50"
             alt=""
           />
 
-          <div className=" p-2 lg:p-3   lg:drop-shadow-(--my-drop-shadow) w-full  border-[0.2px] border-[#b1b5c8] md:absolute md:w-[35%]  top-[-20px] bg-transparent lg:rounded-2xl  right-[-30px] bottom-0 blur-none  ">
-            <div className=" bg-white rounded-2xl  text-center space-y-1 lg:p-6">
-              <h2 className="text-xl font-bold ">Set up your Workspace</h2>
-              {/* <p className="font-semibold">
-                Start with what you need, customize as you go.
-              </p> */}
+          {/* Card Container */}
+          <div className="relative md:absolute md:top-1/2 md:right-8 md:-translate-y-1/2 w-full md:w-[50%] lg:w-[35%] border-[0.2px] border-[#b1b5c8] bg-transparent rounded-2xl blur-none">
+            <div className="bg-white rounded-2xl text-center space-y-4 p-2 lg:p-6 shadow-md">
+              <h2 className="text-xl font-bold">Set up your Workspace</h2>
 
-              <div className="w-full mt-3   ">
+              {/* Slider */}
+              <div className="w-full mt-3">
                 <Swiper
                   spaceBetween={30}
                   slidesPerView={1}
@@ -56,12 +56,12 @@ const MainSection = () => {
                     clickable: true,
                   }}
                   modules={[Autoplay, Pagination]}
-                  className="mySwiper p-2 "
+                  className="mySwiper p-2"
                 >
                   {HomeImagedata?.map((val, index) => (
-                    <SwiperSlide key={index} className="">
+                    <SwiperSlide key={index}>
                       <img
-                        className="h-[50vh] w-full object-cover rounded-lg "
+                        className="w-full h-[60vh] md:h-[50vh] object-cover rounded-lg"
                         src={val}
                         alt=""
                       />
@@ -70,6 +70,7 @@ const MainSection = () => {
                 </Swiper>
               </div>
 
+              {/* Form Section */}
               <FormSection />
             </div>
           </div>
