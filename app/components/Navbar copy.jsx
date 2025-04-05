@@ -13,8 +13,10 @@ import { MdOutlineTask } from "react-icons/md";
 import { PiArrowBendRightUpBold } from "react-icons/pi";
 import Link from "next/link";
 import { FaTasks } from "react-icons/fa";
-
+import { usePathname } from "next/navigation";
 const Navbar = () => {
+  const pathname = usePathname();
+  console.log(pathname);
   // variables for category
   let cat1 = "capabilities";
   let cat2 = "All Features";
@@ -38,17 +40,20 @@ const Navbar = () => {
     <>
       <header
         className={`fixed w-full ${
-          navDropToggle ? "min-h-screen bg-[#5d616538]" : ""
-        }  overflow-hidden z-[999]`}
+          navDropToggle ? "min-h-screen" : ""
+        }  overflow-hidden z-[50]`}
       >
-        <nav className=" w-full md:w-[80%]  z-[999]  mx-auto p-3 py-5 flex items-center  justify-between">
+        <nav className=" w-full md:w-[80%]    mx-auto p-3 py-5 flex items-center  justify-between">
           {/* add logo */}
 
-          <Link href={"/"} className="  gap-2  flex items-center  p-3 md:p-2  px-4 border-[0.5px] bg-white border-gray-300    rounded-xl">
+          <Link
+            href={"/"}
+            className="  gap-2  flex items-center  p-3 md:p-2  px-4 border-[0.5px] bg-white border-gray-300    rounded-xl"
+          >
             <img
               src="https://clickup.com/assets/brand/logo-v3-clickup-light.svg"
               className="h-6"
-              alt=""
+              alt="Logo"
             />
 
             <div className="text-[0.7rem] hidden lg:block leading-tight  border-l-[1px] border-gray-300 px-2">
@@ -57,19 +62,24 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <div className="hidden lg:block">
-            <ul className="flex items-center gap-4  p-1  border-[0.5px] bg-white border-gray-300  shadow-lg   rounded-lg">
-              <li
-                onClick={() => setNavDropToggle(!navDropToggle)}
-                className="p-1   flex items-center gap-2 cursor-pointer  lg:p-2 px-7 rounded-lg hover:bg-[#f1f1f9]"
-              >
-                Product <IoIosArrowDown />
-              </li>
-              <Link href={"/pricing"} className="p-1  lg:p-2 px-6 rounded-lg cursor-pointer hover:bg-[#f1f1f9]">
-                Pricing
-              </Link>
-            </ul>
-          </div>
+          {pathname !== "/landing" && (
+            <div className="hidden lg:block">
+              <ul className="flex items-center gap-4  p-1  border-[0.5px] bg-white border-gray-300  shadow-lg   rounded-lg">
+                <li
+                  onClick={() => setNavDropToggle(!navDropToggle)}
+                  className="p-1   flex items-center gap-2 cursor-pointer  lg:p-2 px-7 rounded-lg hover:bg-[#f1f1f9]"
+                >
+                  Product <IoIosArrowDown />
+                </li>
+                <Link
+                  href={"/pricing"}
+                  className="p-1  lg:p-2 px-6 rounded-lg cursor-pointer hover:bg-[#f1f1f9]"
+                >
+                  Pricing
+                </Link>
+              </ul>
+            </div>
+          )}
 
           <div className="flex items-center gap-4 px-2 ">
             <button className="p-3 hover:bg-[#f1f1f9] hidden lg:block text-sm px-4 border-[0.5px] bg-white border-gray-300  shadow-lg  rounded-xl">
@@ -80,12 +90,10 @@ const Navbar = () => {
               <button className="p-3 md:p-2  text-sm hidden lg:block  rounded-lg hover:bg-[#f1f1f9]">
                 Login
               </button>
-              <button className="  primary-btn  ">
-                SignUp
-              </button>
+              <button className="  primary-btn  ">SignUp</button>
             </div>
 
-            <button className="lg:hidden p-2 px-3 rounded-xl border-[0.5px] border-gray-300 ">
+            <button className="lg:hidden p-2 px-3 rounded-xl border-[0.5px] border-gray-300 bg-white ">
               <FiMenu size={25} />
             </button>
           </div>
@@ -96,37 +104,37 @@ const Navbar = () => {
             {/*  drop down menu 1  for product section */}
             <div className=" grid grid-cols-5  gap-2 ">
               <div className="col-span-1 ">
-                <ul className="flex flex-col gap-2 w-full p-2 ">
+                <ul className="flex flex-col  w-full  ">
                   <li className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] ">
                     {" "}
-                    <button
-                      className="flex items-center gap-2 font-bold text-[0.9rem]  "
+                    <p
+                      className="common-navlink font-semibold "
                       onClick={() => Handlecategory(cat1)}
                     >
                       <IoSpeedometerOutline size={20} /> {cat1}
-                    </button>{" "}
+                    </p>{" "}
                     <MdKeyboardArrowRight size={24} className="mt-1" />
                   </li>
 
                   <li className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] ">
                     {" "}
-                    <button
-                      className="flex items-center gap-2 font-bold text-[0.9rem] "
+                    <p
+                      className="common-navlink w-full font-semibold "
                       onClick={() => Handlecategory(cat2)}
                     >
                       <BiCubeAlt size={20} />
                       {cat2}
-                    </button>{" "}
+                    </p>{" "}
                     <MdKeyboardArrowRight size={24} className="mt-1" />
                   </li>
                   <li className="flex items-center justify-between p-1  rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] ">
                     {" "}
-                    <button
-                      className="flex items-center gap-2 font-bold text-[0.9rem] "
+                    <p
+                      className="common-navlink w-full font-semibold "
                       onClick={() => Handlecategory(cat3)}
                     >
                       <IoSpeedometerOutline size={20} /> {cat3}
-                    </button>{" "}
+                    </p>{" "}
                     <MdKeyboardArrowRight size={24} className="mt-1" />
                   </li>
                 </ul>
@@ -138,21 +146,23 @@ const Navbar = () => {
                 <div className="col-span-4  grid grid-cols-4">
                   <div className="col-span-3 grid grid-cols-3">
                     <div className="p-2  flex flex-col gap-2 ">
-                      <h1 className="text-sm font-bold">Project Management</h1>
+                      <p className="text-sm text-para font-semibold">
+                        Project Management
+                      </p>
 
-                      <ul className="flex flex-col gap-2 text-[#3c3a54] ">
-                        <li className="flex  items-center gap-1 ">
+                      <ul className="flex flex-col  text-para ">
+                        <Link href={"#"} className="common-navlink ">
+                          <MdOutlineTask size={18} /> Projects
+                        </Link>
+                        <Link href={"#"} className="common-navlink ">
                           <MdOutlineTask size={18} /> Tasks
-                        </li>
-                        <li className="flex  items-center gap-1 ">
+                        </Link>{" "}
+                        <Link href={"#"} className="common-navlink ">
+                          <MdOutlineTask size={18} /> Portfolio
+                        </Link>{" "}
+                        <Link href={"#"} className="common-navlink ">
                           <MdOutlineTask size={18} /> Tasks
-                        </li>{" "}
-                        <li className="flex  items-center gap-1 ">
-                          <MdOutlineTask size={18} /> Tasks
-                        </li>{" "}
-                        <li className="flex  items-center gap-1 ">
-                          <MdOutlineTask size={18} /> Tasks
-                        </li>
+                        </Link>
                       </ul>
                     </div>
                   </div>
@@ -213,88 +223,8 @@ const Navbar = () => {
                     {/* div for nav list  */}
 
                     <div className=" p-3  columns-4  items-start flex-wrap w-full">
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
+                      <Link href={"#"} className="common-navlink">
+                        <FaTasks size={18} /> Tasks
                       </Link>
                     </div>
 
@@ -355,88 +285,8 @@ const Navbar = () => {
                     {/* div for nav list  */}
 
                     <div className=" p-3  columns-3  items-start flex-wrap w-full">
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
-                      </Link>
-                      <Link className="flex gap-2 items-center">
-                        <FaTasks size={20} /> Tasks
+                      <Link href="#" className="common-navlink">
+                        <FaTasks size={18} /> Tasks
                       </Link>
                     </div>
 

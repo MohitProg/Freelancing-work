@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -109,46 +108,52 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+@theme {
+  --color-primary: #ffffff;
+  --color-para: #24223e;
+}
 
+@layer base {
   h1 {
-    @apply text-[2.7rem] leading-tight md:text-[3.4rem] lg:text-[4.3rem] text-center   p-1 font-bold;
+    @apply text-[2.3rem] leading-tight md:text-[3rem] lg:text-[4rem] text-center   p-1 font-bold;
   }
 
   h2 {
     @apply text-[2.2rem] leading-tight md:text-[1.8rem] lg:text-[2.7rem] text-center   p-1 font-bold;
   }
-
-  h3 {
-    @apply text-[1rem] leading-tight md:text-[1.5rem] lg:text-[1.6rem] text-center   p-1 font-bold;
-  }
-  h4 {
-    @apply text-[1rem] leading-tight md:text-[1.5rem] lg:text-[1rem] text-center   p-1 font-bold;
-  }
-
-  h5 {
-    @apply text-xl  w-full sm:w-[80%]   lg:w-[45%] mx-auto text-center;
-  }
 }
 
 @layer components {
-  .primary-btn{
+  .primary-btn {
     @apply from-[#4273fa] justify-center via-[#721afa] to-[#af12f0] text-white rounded-xl lg:hover:scale-105 transition-all duration-300 ease-in-out items-center font-semibold bg-gradient-to-r shadow-md flex p-2  px-5;
   }
 
+  .common-section {
+    @apply mx-auto w-full bg-primary  sm:w-[90%] md:w-[80%]  lg:w-[80%]  lg:p-3;
+  }
 
-  .common-section{
-    @apply  mx-auto w-full  sm:w-[90%] md:w-[80%]  lg:w-[80%]  lg:p-3 
+  .secondary-btn {
+    @apply rounded-xl shadow-xl cursor-pointer   lg:hover:scale-105 transition-all duration-300 ease-in-out   bg-black p-2 text-lg   text-white flex items-center gap-1 justify-center px-5;
+  }
+
+  .common-input{
+    @apply p-2 py-3 focus:outline-gray-500 rounded-lg text-para text-sm 
   }
 
 
-  .secondary-btn{
-     @apply rounded-xl shadow-xl cursor-pointer mt-10  lg:hover:scale-105 transition-all duration-300 ease-in-out   bg-black p-2 text-lg   text-white flex items-center gap-1 justify-center px-5
+  /* common-navlink of a paragraph  */
+  .common-navlink{
+    @apply flex gap-2 text-para items-center text-sm  hover:bg-[#f1f1f9] p-2
+  }
+}
+
+@layer utilities {
+  .primary-para {
+    @apply text-para sm:text-lg lg:text-xl;
+  }
+
+  .common-border{
+    @apply border-[0.8px] border-gray-500 
+
   }
 }

@@ -14,7 +14,6 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const LandingPage = () => {
   // animation ref for screent shot on home screen
   const ScreenAnimeRef = useRef(null);
-  console.log(ScreenAnimeRef);
 
   useGSAP(() => {
     gsap.from(ScreenAnimeRef.current, {
@@ -55,7 +54,7 @@ const LandingPage = () => {
           <div className="flex  absolute   top-[10%]  left-0 right-0  z-50    flex-col gap-5 md:gap-4  lg:gap-5  text-center justify-center items-center">
             <h1>The everything app,for work</h1>
 
-            <p>
+            <p className="primary-para text-center">
               <strong> Get everyone working in a single platform</strong>{" "}
               designed to manage any type of work
             </p>
@@ -76,8 +75,10 @@ const LandingPage = () => {
 
         {/* section 2  */}
 
-        <section className="common-section ">
-          <h3>Trusted by 3 millions+ teams</h3>
+        <section className="common-section text-center mt-3 ">
+          <p className="primary-para text-center">
+            Trusted by 3 millions+ teams
+          </p>
 
           {/* company features */}
 
@@ -88,18 +89,18 @@ const LandingPage = () => {
 
         {/* section 3  */}
 
-        <section className="common-section  ">
+        <section className="common-section  space-y-3 mt-4 ">
           <h2>Everthing your team is looking for</h2>
-          <h5>
+          <p className="text-center primary-para">
             <strong>
               ClickUp exceptional flexiability can handle any type of work
             </strong>
             .And we never stop innovating
-          </h5>
+          </p>
 
           <div className=" grid grid-cols-1  mx-auto md:grid-cols-2 lg:grid-cols-3  md:mt-12 gap-9 mt-3 sm:p-5 ">
             {/* image  div 1 */}
-            <div className="bg-gradient-to-b z-[-1] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative from-[#c00ff9]   flex flex-col justify-end rounded-xl to-[#5037e6]  ">
+            <div className="bg-gradient-to-b  overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative from-[#c00ff9]   flex flex-col justify-end rounded-xl to-[#5037e6]  ">
               {/* info div  */}
               <div className=" px-5 py-8 absolute  top-0 bottom-0 left-0 right-0 flex text-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
@@ -122,7 +123,7 @@ const LandingPage = () => {
               </div>
             </div>
             {/* image div 2  */}
-            <div className="bg-gradient-to-b z-[-1] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative from-[#4da7fa]    flex flex-col justify-around rounded-xl to-[#604cef]  ">
+            <div className="bg-gradient-to-b  overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative from-[#4da7fa]    flex flex-col justify-around rounded-xl to-[#604cef]  ">
               {/* info div  */}
               <div className=" px-6 py-8   flex text-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
@@ -144,7 +145,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="bg-[#252a31] z-[-1] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
+            <div className="bg-[#252a31] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
               {/* info div  */}
               <div className=" px-5 py-8   flex text-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
@@ -202,7 +203,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="bg-[#252a31] z-[-1] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
+            <div className="bg-[#252a31]  overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
               {/* info div  */}
               <div className=" px-5 py-8   flex text-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
@@ -225,7 +226,7 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-b from-[#eb3f9b] via-[#f95a68] to-[#ff674e] z-[-1] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
+            <div className="bg-gradient-to-b from-[#eb3f9b] via-[#f95a68] to-[#ff674e] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
               {/* info div  */}
               <div className=" px-5 py-8   flex text-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
@@ -289,31 +290,9 @@ const LandingPage = () => {
                   Join today for free <MdOutlineArrowRightAlt size={30} />
                 </button>
               </div>
-
-             
             </div>
           </div>
         </section>
-
-        <footer className=" py-5 lg:mt-30 mt-10  px-10  w-full lg:w-[80%]  mx-auto gap-2   flex  flex-col  md:flex-row lg:justify-between       ">
-          <div className="flex items-center gap-1 justify-center">
-            <img
-              className="h-4"
-              src="https://clickup.com/assets/brand/logo-v3-clickup-symbol-only.svg"
-              alt=""
-            />{" "}
-            <span className="text-sm font-bold">
-              The Everthing app for work
-            </span>
-          </div>
-
-          <ul className="flex text-gray-500 text-sm flex-row-reverse  items-center  justify-center md:text-sm  gap-4 ">
-            <li>@ 2025 Clickup</li>
-            <li>Security</li>
-            <li>Privacy</li>
-            <li>terms</li>
-          </ul>
-        </footer>
       </main>
     </>
   );

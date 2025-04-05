@@ -13,7 +13,7 @@ import {CompanyPreviewdata} from "../data.js"
 const CompanyScroller = () => {
 
 
-  console.log(CompanyPreviewdata)
+
   return (
     <>
       <div className="  ">

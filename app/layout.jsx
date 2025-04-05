@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar copy";
 import Footer from "./components/Footer";
+import ChatBot from "./components/ChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,15 +25,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      
-      <Navbar/>
+        <Navbar />
 
-      <div className="min-h-screen py-20 p-2  md:py-20 lg:py-30 ">
-        {children}
+        <div className="min-h-screen py-20 p-2   md:py-20 lg:py-30 ">
+          {children}
 
-      </div>
+          <ChatBot />
+        </div>
 
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
