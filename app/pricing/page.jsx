@@ -1,7 +1,7 @@
 import React from "react";
 import CompanyScroller from "../components/CompanyScroller";
 import FaQ from "../components/FaQ";
-import PaymentSection from "../components/pricing/paymentSection";
+import PaymentSection from "../components/PaymentSection";
 
 const PricePage = () => {
   return (

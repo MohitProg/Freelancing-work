@@ -11,7 +11,7 @@ const FaQ = () => {
   return (
    <>
      <section className="flex   common-section    flex-col gap-5  p-2  lg:p-8 py-12">
-        <div className="lg:w-[80%] flex flex-col gap-2 text-center mx-auto ">
+        <div className=" lg:w-[80%] flex flex-col gap-2 text-center mx-auto ">
           <h2 >
             Frequently asked questions
           </h2>
