@@ -14,6 +14,7 @@ import { PiArrowBendRightUpBold } from "react-icons/pi";
 import Link from "next/link";
 import { FaTasks } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import AnimateButton from "../utils/AnimateButton";
 const Navbar = () => {
   const pathname = usePathname();
   console.log(pathname);
@@ -41,14 +42,14 @@ const Navbar = () => {
       <header
         className={`fixed w-full ${
           navDropToggle ? "min-h-screen" : ""
-        }  overflow-hidden z-[50]`}
+        }  overflow-hidden z-[999]`}
       >
         <nav className=" w-full md:w-[80%]    mx-auto p-3 py-5 flex items-center  justify-between">
           {/* add logo */}
 
           <Link
             href={"/"}
-            className="  gap-2  flex items-center  p-3 md:p-2  px-4 border-[0.5px] bg-white border-gray-300    rounded-xl"
+            className="  gap-2  flex items-center bg-primary  p-3 md:p-2  px-4 common-border    rounded-xl"
           >
             <img
               src="https://clickup.com/assets/brand/logo-v3-clickup-light.svg"
@@ -56,7 +57,7 @@ const Navbar = () => {
               alt="Logo"
             />
 
-            <div className="text-[0.7rem] hidden lg:block leading-tight  border-l-[1px] border-gray-300 px-2">
+            <div className="text-[0.7rem] text-para hidden lg:block leading-tight  border-l-[1px] border-gray-700 px-2">
               The everting
               <br /> app for work
             </div>
@@ -64,7 +65,7 @@ const Navbar = () => {
 
           {pathname !== "/landing" && (
             <div className="hidden lg:block">
-              <ul className="flex items-center gap-4  p-1  border-[0.5px] bg-white border-gray-300  shadow-lg   rounded-lg">
+              <ul className="flex items-center gap-4  p-1  common-border    rounded-xl text-para bg-primary   shadow-lg   ">
                 <li
                   onClick={() => setNavDropToggle(!navDropToggle)}
                   className="p-1   flex items-center gap-2 cursor-pointer  lg:p-2 px-7 rounded-lg hover:bg-[#f1f1f9]"
@@ -73,7 +74,7 @@ const Navbar = () => {
                 </li>
                 <Link
                   href={"/pricing"}
-                  className="p-1  lg:p-2 px-6 rounded-lg cursor-pointer hover:bg-[#f1f1f9]"
+                  className="p-1  lg:p-2 px-6 rounded-lg cursor-pointer hover:bg-hoverColor"
                 >
                   Pricing
                 </Link>
@@ -81,26 +82,28 @@ const Navbar = () => {
             </div>
           )}
 
-          <div className="flex items-center gap-4 px-2 ">
-            <button className="p-3 hover:bg-[#f1f1f9] hidden lg:block text-sm px-4 border-[0.5px] bg-white border-gray-300  shadow-lg  rounded-xl">
+          <div className="flex items-center gap-4 px-2  text-para">
+            <button className="p-3 hover:bg-hoverColor bg-primary hidden lg:block text-sm px-4     common-border  rounded-xl">
               Contact Sales
             </button>
 
-            <div className="lg:p-1 flex items-center justify-between gap-3   border-[0.5px] bg-white border-gray-300  shadow-lg  rounded-xl">
-              <button className="p-3 md:p-2  text-sm hidden lg:block  rounded-lg hover:bg-[#f1f1f9]">
+            <div className=" flex items-center justify-between gap-3  bg-primary  common-border rounded-xl">
+              <button className="p-3 md:p-2  text-sm hidden lg:block  rounded-lg hover:bg-hoverColor">
                 Login
               </button>
-              <button className="  primary-btn  ">SignUp</button>
+              <AnimateButton className="  primary-btn  common-border ">
+                SignUp
+              </AnimateButton>
             </div>
 
-            <button className="lg:hidden p-2 px-3 rounded-xl border-[0.5px] border-gray-300 bg-white ">
+            <button className="lg:hidden p-2 px-3 common-border bg-primary rounded-xl   ">
               <FiMenu size={25} />
             </button>
           </div>
         </nav>
 
         <div className={`${navDropToggle ? "block" : "hidden"}`}>
-          <div className=" border-[0.5px] bg-white w-[70%] mx-auto mt-1 space-y-4 border-gray-300  shadow-xl rounded-xl p-4 ">
+          <div className=" border-[0.5px] bg-primary w-[70%] mx-auto mt-1 space-y-4 border-gray-300  shadow-xl rounded-xl p-4 ">
             {/*  drop down menu 1  for product section */}
             <div className=" grid grid-cols-5  gap-2 ">
               <div className="col-span-1 ">

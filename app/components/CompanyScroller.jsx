@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,58 +9,63 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import {CompanyPreviewdata} from "../data.js"
+import { CompanyPreviewdata } from "../data.js";
+import { motion } from "motion/react";
+import Image from "next/image.js";
+import AnimateContent from "../utils/AnimateContent.jsx";
+const MotionImage = motion.create(Image);
 const CompanyScroller = () => {
-
-
-
   return (
     <>
-      <div className="  ">
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            650: {
-              slidesPerView: 3,
-            },
+      <section className="common-section text-center  flex flex-col gap-2 ">
+        <AnimateContent>
+          <p className="primary-para text-center">
+            Trusted by 3 millions+ teams
+          </p>
+        </AnimateContent>
 
-            900: {
-              slidesPerView: 4,
-            },
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={false}
-          modules={[Autoplay, Navigation]}
-          className=" flex items-center justify-center h-[100px]" // Ensure proper height
-        >
+        {/* company features */}
 
+        <div className="  ">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              650: {
+                slidesPerView: 3,
+              },
 
-          {CompanyPreviewdata.map((val,index)=>(
-
-
-          <SwiperSlide className="  ">
-            <div className=" w-1/2 sm:w-2/3 mx-auto flex items-center justify-center h-full">
-              <img
-                src={val.img.src}
-                alt={val.text}
-                
-                className="w-full object-contain"
-              />
-            </div>
-          </SwiperSlide>
-
-          ))}
-      
-        </Swiper>
-      </div>
+              900: {
+                slidesPerView: 4,
+              },
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={false}
+            modules={[Autoplay, Navigation]}
+            className=" flex items-center justify-center  h-[80px]" // Ensure proper height
+          >
+            {CompanyPreviewdata.map((val, index) => (
+              <SwiperSlide className="  p-2 ">
+                <div className="  w-[80%] bg-primary common-border rounded-lg  shadow-xl  flex mx-auto relative items-center justify-center h-full">
+                  <MotionImage
+                    fill
+                    src={val.img.src}
+                    alt={val.text}
+                    className=" object-contain"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
     </>
   );
 };

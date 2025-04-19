@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
+import AnimateContent from "../utils/AnimateContent";
 
 const HoverVideoSection = () => {
   const videoArray = [
@@ -52,39 +53,39 @@ const HoverVideoSection = () => {
 
   return (
     <>
-      <section className="common-section">
-        <h1>Common video section</h1>
-
-        <div className="w-full  flex flex-col   overflow-hidden  md:flex-row items-center justify-start shadow rounded-xl ">
-          {videoArray.map((val, ind) => (
-            <div
-              key={ind}
-              onMouseOver={() => HandleOnHover(ind)}
-              onMouseLeave={() => HandleOnleave(ind)}
-              className={`md:w-[30%] transition-all  ease-in duration-300  w-full md:h-[60vh]  overflow-hidden relative ${
-                playvideoIndex === ind
-                  ? " h-[40vh] md:w-[100%]"
-                  : " h-[20vh] md:w-[30%]"
-              }`}
-            >
-              <video
-                ref={(el) => (videoRef.current[ind] = el)}
-                src={val.video}
-                className="h-full w-full absolute top-0 bottom-0 left-0 right-0 object-cover"
-                muted
-              >
-                <source />
-              </video>
-
+      <AnimateContent>
+        <section className="common-section common-border rounded-xl">
+          <div className="w-full  flex flex-col   overflow-hidden  md:flex-row items-center justify-start shadow rounded-xl ">
+            {videoArray.map((val, ind) => (
               <div
-                className={`absolute  inset-0 transition-all ease-in-out duration-300   ${
-                  playvideoIndex === ind ? "bg-black/0" : "bg-black/40"
-                } bg-opacity-50`}
-              ></div>
-            </div>
-          ))}
-        </div>
-      </section>
+                key={ind}
+                onMouseOver={() => HandleOnHover(ind)}
+                onMouseLeave={() => HandleOnleave(ind)}
+                className={`md:w-[30%] transition-all  ease-in duration-300  w-full md:h-[60vh]  overflow-hidden relative ${
+                  playvideoIndex === ind
+                    ? " h-[40vh] md:w-[100%]"
+                    : " h-[20vh] md:w-[30%]"
+                }`}
+              >
+                <video
+                  ref={(el) => (videoRef.current[ind] = el)}
+                  src={val.video}
+                  className="h-full w-full absolute top-0 bottom-0 left-0 right-0 object-cover"
+                  muted
+                >
+                  <source />
+                </video>
+
+                <div
+                  className={`absolute  inset-0 transition-all ease-in-out duration-300   ${
+                    playvideoIndex === ind ? "bg-black/0" : "bg-black/40"
+                  } bg-opacity-50`}
+                ></div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </AnimateContent>
     </>
   );
 };

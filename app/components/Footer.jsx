@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <>
       {pathname === "/landing" ? (
-        <footer className=" py-5 lg:mt-30 mt-10  px-10  w-full lg:w-[80%]  mx-auto gap-2   flex  flex-col  md:flex-row lg:justify-between       ">
+        <footer className=" py-5 lg:mt-30 mt-10  px-10  w-full lg:w-[80%] bg-primary  mx-auto gap-2   flex  flex-col  md:flex-row lg:justify-between       ">
           <div className="flex items-center gap-1 justify-center">
             <img
               className="h-4"
@@ -36,8 +36,8 @@ const Footer = () => {
           </ul>
         </footer>
       ) : (
-        <footer className="">
-          <div className="flex border-t-[0.5px] border-b-[0.5px] border-gray-300  ">
+        <footer className="bg-primary">
+          <div className="flex common-border bg-primary">
             <div className="w-[80%] mx-auto flex justify-between items-center text-sm py-8">
               <span className="flex items-center gap-1 font-bold text-sm ">
                 <img

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+
 import CompanyScroller from "../components/CompanyScroller";
 
 import { MdOutlineArrowRightAlt } from "react-icons/md";
@@ -10,99 +10,48 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiMenu } from "react-icons/fi";
 import Link from "next/link";
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { motion } from "motion/react";
+import Image from "next/image";
+import HeroSection from "../components/landing/HeroSection";
+import AnimateContent from "../utils/AnimateContent";
+
 const LandingPage = () => {
-  // animation ref for screent shot on home screen
-  const ScreenAnimeRef = useRef(null);
-
-  useGSAP(() => {
-    gsap.from(ScreenAnimeRef.current, {
-      y: 700,
-      opacity: 0,
-      duration: 2,
-    });
-  });
-
   return (
     <>
-      <main>
+      <main className="space-y-8">
         {/* section 1 */}
-
-        <section className=" p-3   relative    ">
-          {/* animation div  */}
-          <div
-            ref={ScreenAnimeRef}
-            className=" w-full  p-2 lg:w-[80%]     h-screen overflow-hidden relative  mx-auto rounded-xl   "
-          >
-            <img
-              className="w-[80%] md:w-[70%] lg:w-[55%]  shadow-2xl shadow-black absolute bottom-0 sm:left-0  right-0 mx-auto z-50 rounded-t-xl "
-              src="https://images.ctfassets.net/w8fc6tgspyjz/ANJFM8HigJCMUwQxflBvU/226711f57db215ba057f50f7a9b68c37/home-tabs-v4-chat-desktop.png"
-              alt=""
-            />
-            <img
-              className="  md:w-[60%] lg:w-[40%] shadow-black shadow-2xl absolute bottom-0 left-0  mx-auto rounded-xl"
-              src="https://images.ctfassets.net/w8fc6tgspyjz/3FllRRqmlYB2Bdf3ASg3fT/14ff2e7789c12cfc0a55358c50aa5312/home-tabs-v3-projects-desktop.png?fm=avif&q=50"
-              alt=""
-            />
-            <img
-              className=" w-[90%] lg:block hidden lg:w-[40%] md:w-[60%] shadow-black shadow-2xl absolute bottom-0  right-0 mx-auto rounded-xl"
-              src="https://images.ctfassets.net/w8fc6tgspyjz/3Rdwyyo4HE9409nPMNTN1y/1132f37adc35603d75741af29d6b7ea3/home-tabs-v3-time-tracking.png"
-              alt=""
-            />
-          </div>
-
-          <div className="flex  absolute   top-[10%]  left-0 right-0  z-50    flex-col gap-5 md:gap-4  lg:gap-5  text-center justify-center items-center">
-            <h1>The everything app,for work</h1>
-
-            <p className="primary-para text-center">
-              <strong> Get everyone working in a single platform</strong>{" "}
-              designed to manage any type of work
-            </p>
-
-            <div className="flex flex-col items-center gap-2">
-              <Link
-                href={"/"}
-                className="  text-lg py-3 lg:text-2xl lg:py-4  px-5 lg:px-18 gap-2  primary-btn    "
-              >
-                Get started.its FREE <FaArrowRightLong size={16} />
-              </Link>
-              {/* <p className=" font-semibold text-[#7970ae]">
-                Free Forever No Credit Card{" "}
-              </p> */}
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         {/* section 2  */}
 
-        <section className="common-section text-center mt-3 ">
-          <p className="primary-para text-center">
-            Trusted by 3 millions+ teams
-          </p>
-
-          {/* company features */}
-
-          <div className=" mx-auto">
-            <CompanyScroller />
-          </div>
-        </section>
+        <CompanyScroller />
 
         {/* section 3  */}
 
-        <section className="common-section  space-y-3 mt-4 ">
-          <h2>Everthing your team is looking for</h2>
-          <p className="text-center primary-para">
-            <strong>
-              ClickUp exceptional flexiability can handle any type of work
-            </strong>
-            .And we never stop innovating
-          </p>
+        <section className="common-section   flex flex-col gap-5 mt-4 ">
+          <div className="flex flex-col gap-1">
+            <AnimateContent>
+
+            <h2>Everthing your team is looking for</h2>
+
+            </AnimateContent>
+
+            <AnimateContent>
+
+            <p className="text-center primary-para">
+              <strong>
+                ClickUp exceptional flexiability can handle any type of work
+              </strong>
+              .And we never stop innovating
+            </p>
+            </AnimateContent>
+          </div>
 
           <div className=" grid grid-cols-1  mx-auto md:grid-cols-2 lg:grid-cols-3  md:mt-12 gap-9 mt-3 sm:p-5 ">
             {/* image  div 1 */}
-            <div className="bg-gradient-to-b  overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative from-[#c00ff9]   flex flex-col justify-end rounded-xl to-[#5037e6]  ">
+            <AnimateContent className="bg-gradient-to-b  overflow-hidden  relative from-[#c00ff9]   flex flex-col justify-end rounded-xl to-[#5037e6]  ">
               {/* info div  */}
-              <div className=" px-5 py-8 absolute  top-0 bottom-0 left-0 right-0 flex text-start flex-col gap-2 ">
+              <div className=" px-5 py-8 absolute  top-0 bottom-0 left-0 right-0 flex  items-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
                   AI-powered productivity
                 </h1>
@@ -121,11 +70,11 @@ const LandingPage = () => {
                   className=" w-full object-cover"
                 />
               </div>
-            </div>
+            </AnimateContent>
             {/* image div 2  */}
-            <div className="bg-gradient-to-b  overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative from-[#4da7fa]    flex flex-col justify-around rounded-xl to-[#604cef]  ">
+            <AnimateContent className="bg-gradient-to-b  overflow-hidden   relative from-[#4da7fa]    flex flex-col justify-around rounded-xl to-[#604cef]  ">
               {/* info div  */}
-              <div className=" px-6 py-8   flex text-start flex-col gap-2 ">
+              <div className=" px-6 py-8   flex items-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
                   View work your way
                 </h1>
@@ -143,11 +92,11 @@ const LandingPage = () => {
                   className=" w-full object-cover"
                 />
               </div>
-            </div>
+            </AnimateContent>
 
-            <div className="bg-[#252a31] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
+            <AnimateContent className="bg-[#252a31] overflow-hidden   relative   flex flex-col justify-around rounded-xl   ">
               {/* info div  */}
-              <div className=" px-5 py-8   flex text-start flex-col gap-2 ">
+              <div className=" px-5 py-8   flex items-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
                   Search Everything
                 </h1>
@@ -166,11 +115,11 @@ const LandingPage = () => {
                   className=" w-full object-cover"
                 />
               </div>
-            </div>
+            </AnimateContent>
 
-            <div className="col-span-2 hidden md:flex   items-center justify-between bg-gradient-to-b from-[#c40df9]  via-[#951ef1]  to-[#5332de] p-8 rounded-xl gap-4 ">
+            <AnimateContent className="col-span-2 hidden md:flex   items-center justify-between bg-gradient-to-b from-[#c40df9]  via-[#951ef1]  to-[#5332de] p-8 rounded-xl gap-4 ">
               <div className="flex flex-col gap-3 items-start ">
-                <div className="text-start flex flex-col gap-2 ">
+                <div className="items-start flex flex-col gap-2 ">
                   <h1 className="text-2xl font-bold text-white">
                     Plays Well with others
                   </h1>
@@ -186,7 +135,7 @@ const LandingPage = () => {
                 />
               </div>
               <div className="flex flex-col gap-3 items-start ">
-                <div className="text-start flex flex-col gap-2 ">
+                <div className="items-start flex flex-col gap-2 ">
                   <h1 className="text-2xl font-bold text-white">
                     Replaces them entirely
                   </h1>
@@ -201,11 +150,11 @@ const LandingPage = () => {
                   alt=""
                 />
               </div>
-            </div>
+            </AnimateContent>
 
-            <div className="bg-[#252a31]  overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
+            <AnimateContent className="bg-[#252a31]  overflow-hidden  relative   flex flex-col justify-around rounded-xl   ">
               {/* info div  */}
-              <div className=" px-5 py-8   flex text-start flex-col gap-2 ">
+              <div className=" px-5 py-8   flex items-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
                   Search Everything
                 </h1>
@@ -224,11 +173,11 @@ const LandingPage = () => {
                   className=" w-full object-cover"
                 />
               </div>
-            </div>
+            </AnimateContent>
 
-            <div className="bg-gradient-to-b from-[#eb3f9b] via-[#f95a68] to-[#ff674e] overflow-hidden lg:hover:scale-105 transition-all duration-300 ease-in-out relative   flex flex-col justify-around rounded-xl   ">
+            <AnimateContent className="bg-gradient-to-b from-[#eb3f9b] via-[#f95a68] to-[#ff674e] overflow-hidden  relative   flex flex-col justify-around rounded-xl   ">
               {/* info div  */}
-              <div className=" px-5 py-8   flex text-start flex-col gap-2 ">
+              <div className=" px-5 py-8   flex items-start flex-col gap-2 ">
                 <h1 className="text-2xl text-white font-semibold">
                   Stay ahead of what’s next
                 </h1>
@@ -247,8 +196,8 @@ const LandingPage = () => {
                   className=" w-full object-cover"
                 />
               </div>
-            </div>
-            <div className="col-span-2  hidden md:flex bg-image   justify-between bg-gradient-to-b from-[#0c1947]  via-[#0c1947]  to-[#0c1947] rounded-xl gap-4 ">
+            </AnimateContent>
+            <AnimateContent className="col-span-2  hidden md:flex bg-image   justify-between bg-gradient-to-b from-[#0c1947]  via-[#0c1947]  to-[#0c1947] rounded-xl gap-4 ">
               <div className=" flex flex-col  px-10  justify-around p-3">
                 <h1 className="text-2xl font-bold text-white">
                   Trusted by over 2,000,000 teams
@@ -290,7 +239,7 @@ const LandingPage = () => {
                   Join today for free <MdOutlineArrowRightAlt size={30} />
                 </button>
               </div>
-            </div>
+            </AnimateContent>
           </div>
         </section>
       </main>

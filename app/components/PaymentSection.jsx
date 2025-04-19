@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import AnimateContent from "../utils/AnimateContent";
+import AnimateButton from "../utils/AnimateButton";
 const features = [
   "Task Creation",
   "Task Assignment",
@@ -19,8 +21,8 @@ const PaymentSection = () => {
 
   return (
     <>
-      <section className="p-4 mx-auto common-section mt-8  ">
-        <div className="flex items-center justify-between p-2 lg:flex-row flex-col gap-3">
+      <section className="p-4 mx-auto common-section common-border bg-primary rounded-xl mt-8  ">
+        <AnimateContent className="flex items-center justify-between p-2 lg:flex-row flex-col gap-3">
           <span className=" text-sm lg:text-xs text-[#7612fa] p-2 bg-[#f1e7fe] rounded-full">
             100% Money-BackGuarantee
           </span>
@@ -42,22 +44,22 @@ const PaymentSection = () => {
           </div>
 
           {/* section for payment  */}
-        </div>
+        </AnimateContent>
 
-        <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4  border-[1px] border-gray-800 rounded-lg overflow-hidden">
-          <div className="flex   border-[1px] border-gray-400 px-6 py-8 gap-5 flex-col ">
+        <AnimateContent className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4   rounded-lg overflow-hidden">
+          <div className="flex   common-border  px-6 py-8 gap-5 flex-col ">
             <div className="">
-              <h1 className="text-xl font-bold text-[#15be8e]">Free Forever</h1>
-              <p className="text-para text-center">Best for personal use</p>
+              <h1 className="text-xl font-bold ">Free Forever</h1>
+              <p className="primary-para text-center">Best for personal use</p>
             </div>
 
             <div className="space-y-3  ">
-              <h1 className="text-6xl uppercase font-bold text-[#15be8e]">
+              <h2 className="text-6xl uppercase font-bold ">
                 Free
-              </h1>
-              <button className="p-2 hover:bg-[#40caa3] bg-[#15be8e] text-lg text-white font-bold rounded-lg w-full">
+              </h2>
+              <AnimateButton className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full">
                 Free forever
-              </button>
+              </AnimateButton>
             </div>
 
             {/* lsit of features  */}
@@ -65,7 +67,7 @@ const PaymentSection = () => {
             <div className="py-5 px-1">
               <h1 className="text-sm font-bold">key features :</h1>
 
-              <ul className="flex flex-col gap-2 mt-2 text-gray-600 ">
+              <ul className="flex flex-col gap-2 mt-2 primary-para ">
                 {features.map((val, indx) => (
                   <li key={indx} className="text-sm ">
                     ✔️ {val}
@@ -77,19 +79,19 @@ const PaymentSection = () => {
 
           {/* div 2 */}
 
-          <div className="flex   border-[1px] border-gray-400 px-6 py-8 gap-5 flex-col ">
+          <div className="flex    common-border px-6 py-8 gap-5 flex-col ">
             <div className="">
-              <h1 className="text-xl font-bold text-[#fa12e3]">Unlimited</h1>
-              <p className="text-para text-center">Best for personal use</p>
+              <h1 className="text-xl font-bold ">Unlimited</h1>
+              <p className="primary-para text-center">Best for personal use</p>
             </div>
 
             <div className="space-y-3  ">
-              <h1 className="text-6xl uppercase font-bold text-[#fa12e3]">
+              <h2 className="text-6xl uppercase font-bold ">
                 $7
-              </h1>
-              <button className="p-2 hover:bg-[#fb4dea] bg-[#fa12e3] text-lg text-white font-bold rounded-lg w-full">
+              </h2>
+              <AnimateButton className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full">
                 Get Started
-              </button>
+              </AnimateButton>
             </div>
 
             {/* lsit of features  */}
@@ -99,7 +101,7 @@ const PaymentSection = () => {
                 Everything in Free Forever plus:
               </h1>
 
-              <ul className="flex flex-col gap-2 mt-2 text-gray-600 ">
+              <ul className="flex flex-col gap-2 mt-2  primary-para ">
                 {features.map((val, indx) => (
                   <li key={indx} className="text-sm ">
                     ✔️ {val}
@@ -110,24 +112,24 @@ const PaymentSection = () => {
           </div>
 
           {/* div 3 */}
-          <div className="flex   border-[1px] border-gray-400 px-6 py-8 gap-5 flex-col ">
+          <div className="flex  common-border px-6 py-8 gap-5 flex-col ">
             <div className="">
-              <h1 className="text-xl flex items-end justify-center gap-2 font-bold text-[#1f7cff]">
+              <h1 className="text-xl flex items-end justify-center gap-2 font-bold ">
                 Business{" "}
-                <span className="text-xs   bg-[#1f7cff] p-1 px-3  font-semibold rounded-full text-white ">
+                <span className="text-xs   secondary-btn p-1 px-3  font-semibold rounded-full text-white ">
                   Popular
                 </span>
               </h1>
-              <p className="text-para text-center">Best for mid-sized teams</p>
+              <p className="primary-para text-center">Best for mid-sized teams</p>
             </div>
 
             <div className="space-y-3  ">
-              <h1 className="text-6xl uppercase font-bold text-[#1f7cff]">
+              <h2 className="text-6xl uppercase font-bold ">
                 $12
-              </h1>
-              <button className="p-2 hover:bg-[#40caa3] bg-[#1f7cff] text-lg text-white font-bold rounded-lg w-full">
+              </h2>
+              <AnimateButton className="p-2  secondary-btn text-lg text-white font-bold rounded-lg w-full">
                 Get started
-              </button>
+              </AnimateButton>
             </div>
 
             {/* lsit of features  */}
@@ -137,7 +139,7 @@ const PaymentSection = () => {
                 Everything in Unlimited, plus:
               </h1>
 
-              <ul className="flex flex-col gap-2 mt-2 text-gray-600 ">
+              <ul className="flex flex-col gap-2 mt-2 primary-para ">
                 {features.map((val, indx) => (
                   <li key={indx} className="text-sm ">
                     ✔️ {val}
@@ -149,19 +151,19 @@ const PaymentSection = () => {
 
           {/* div 4 */}
 
-          <div className="flex   border-[1px] border-gray-400 px-6 py-8 gap-5 flex-col ">
+          <div className="flex   common-border px-6 py-8 gap-5 flex-col ">
             <div className="">
-              <h1 className="text-xl font-bold text-[#15be8e]">Enterprise</h1>
-              <p className="text-para text-center">Best for many large teams</p>
+              <h1 className="text-xl font-bold ">Enterprise</h1>
+              <p className="primary-para text-center">Best for many large teams</p>
             </div>
 
-            <div className="space-y-10 text-center ">
+            <div className="flex flex-col gap-12 text-center ">
               <p className="text-para text-sm">
                 Get a custom demo and see how ClickUp aligns with your goals.
               </p>
-              <button className="p-2 mt-2 hover:bg-[#615f71] bg-[#1c1b20] text-lg text-white font-bold rounded-xl w-full">
+              <AnimateButton className="p-2 mt-2 secondary-btn text-lg text-white font-bold rounded-xl w-full">
                 Contact Sales
-              </button>
+              </AnimateButton>
             </div>
 
             {/* lsit of features  */}
@@ -180,7 +182,7 @@ const PaymentSection = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </AnimateContent>
       </section>
     </>
   );
