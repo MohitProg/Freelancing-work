@@ -165,7 +165,7 @@ body {
   }
 
   .common-border {
-    @apply border-[1px] border-solid border-gray-300 shadow-sm;
+    @apply border-[0.5px] border-solid border-gray-300 shadow-sm;
   }
 
   .common-backgroundGredient {

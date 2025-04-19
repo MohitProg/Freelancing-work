@@ -34,7 +34,7 @@ const HomePage = () => {
 
       <AnimateContent>
 
-      <section className="lg:w-[70%] mx-auto  mt-6 bg-gradient-to-r from-gray-500 to-black overflow-hidden rounded-xl  grid grid-cols-1  lg:grid-cols-2 gap-2  ">
+      <section className="lg:w-[70%] mx-auto  mt-6 bg-gradient-to-r from-gray-500 to-black overflow-hidden rounded-xl  grid grid-cols-1  sm:grid-cols-2 gap-2  ">
         <div className=" p-7 lg:p-9  text-white flex flex-col items-start gap-6">
           <AnimateContent>
 

@@ -7,7 +7,7 @@ import AnimateButton from "../utils/AnimateButton";
 const FeatureGrid = () => {
   return (
     <>
-      <section className="  w-full relative space-y-4 mt-6  py-4  ">
+      <section className="  w-full relative bg-primary space-y-4 mt-6  py-4  ">
         <div className=" text-center space-y-2  lg:p-10 px-3   lg:w-[60%] mx-auto">
           <AnimateContent>
             <h3 className="lg:text-xl  text-lg text-center italic text-[#7815fa]">

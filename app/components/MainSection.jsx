@@ -43,7 +43,7 @@ const MainSection = () => {
           {/* Image + Card Section */}
           <AnimateContent>
 
-          <div className="relative h-[80vh] rounded-xl overflow-hidden">
+          <div className="relative h-[80vh]  overflow-hidden">
             {/* Background Image */}
             <Image
               fill
@@ -52,10 +52,14 @@ const MainSection = () => {
               alt="please wait"
             />
 
+               {/* blur background  */}
+        <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[100] h-10 bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
+
             {/* Gradient Overlay */}
+
             <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-purple-300/30">
               <div className="relative h-full w-full flex items-center justify-center">
-                <div className="space-y-4 w-full sm:w-[80%] md:w-[40%] lg:w-[30%] md:absolute md:right-[10%] md:bottom-4  p-4 bg-primary common-border rounded-xl">
+                <div className="space-y-4 w-[95%] sm:w-[80%] md:w-[40%] lg:w-[30%] md:absolute md:right-[10%] md:bottom-4  p-4 bg-primary common-border rounded-xl">
                   <h2 className="text-xl font-bold">Set up your Workspace</h2>
 
                   <div className="w-full mt-3">
@@ -75,7 +79,7 @@ const MainSection = () => {
                     >
                       {HomeImagedata?.map((val, index) => (
                         <SwiperSlide key={index}>
-                          <div className="w-full h-[60vh] relative rounded-lg overflow-hidden">
+                          <div className="w-full h-[50vh] sm:h-[80vh]  md:h-[60vh] relative rounded-lg overflow-hidden">
                             <Image
                               fill
                               src={val}

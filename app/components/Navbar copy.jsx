@@ -49,7 +49,7 @@ const Navbar = () => {
 
           <Link
             href={"/"}
-            className="  gap-2  flex items-center bg-primary  p-3 md:p-2  px-4 common-border    rounded-xl"
+            className="  gap-2  flex items-center bg-primary  p-2 md:p-2  px-4 common-border    rounded-xl"
           >
             <img
               src="https://clickup.com/assets/brand/logo-v3-clickup-light.svg"
@@ -91,12 +91,12 @@ const Navbar = () => {
               <button className="p-3 md:p-2  text-sm hidden lg:block  rounded-lg hover:bg-hoverColor">
                 Login
               </button>
-              <AnimateButton className="  primary-btn  common-border ">
+              <AnimateButton className="  primary-btn   ">
                 SignUp
               </AnimateButton>
             </div>
 
-            <button className="lg:hidden p-2 px-3 common-border bg-primary rounded-xl   ">
+            <button className="lg:hidden p-2 px-3  bg-primary rounded-xl   ">
               <FiMenu size={25} />
             </button>
           </div>
