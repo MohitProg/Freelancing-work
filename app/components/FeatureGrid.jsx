@@ -37,7 +37,7 @@ const FeatureGrid = () => {
                 >
                   <div className="flex md:flex-row flex-col items-center justify-center gap-2">
                     {<value.icon size={28} />}
-                    <span className="text-sm md:text-lg font-semibold ">
+                    <span className="text-sm lg:text-lg font-semibold text-para ">
                       {value?.title}
                     </span>
                   </div>
@@ -51,7 +51,7 @@ const FeatureGrid = () => {
                 className="p-4 py-8 hover:outline-2 cursor-pointer hover:outline-[#7815fa] hover:text-[#7815fa] flex flex-col gap-1 rounded-xl justify-center items-center bg-white shadow-xl"
               >
                 {<value.icon size={28} />}
-                <span className="text-sm md:text-lg">{value?.title}</span>
+                <span className="text-sm lg:text-lg text-para">{value?.title}</span>
               </AnimateButton>
             );
           })}

@@ -38,11 +38,10 @@ const PricePage = () => {
 
       <section className="flex  common-section flex-col gap-5  mt-4 p-2 lg:p-8 py-12">
         <AnimateContent>
-
-        <h2>Take your productivity to the next level</h2>
+          <h2>Take your productivity to the next level</h2>
         </AnimateContent>
 
-        <AnimateContent className=" w-full sm:w-[90%] lg:w-[80%] common-border  mx-auto shadow-lg  common-border bg-gradient-to-r from-gray-200 to-black/40 md:to-black   p-5  rounded-xl">
+        <AnimateContent className=" w-full sm:w-[90%] lg:w-[80%] common-border  mx-auto shadow-lg  common-border bg-gradient-to-r from-white to-black/40 via-white/60 md:to-black   p-5  rounded-xl">
           <button className="secondary-btn text-xs p-[0.5px] px-2 bg-[#edfced] rounded-full">
             ClickUp Assist
           </button>

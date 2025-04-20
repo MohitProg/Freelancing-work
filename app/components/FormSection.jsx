@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Dialog,
@@ -8,13 +9,17 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import AnimateButton from "../utils/AnimateButton";
-const FormSection = () => {
+import { GoArrowRight } from "react-icons/go";
+import { motion } from "motion/react";
+
+const MotionButton = motion(DialogTrigger);
+const FormSection = ({ title, className }) => {
   return (
     <>
       <Dialog>
-        <DialogTrigger className="primary-btn w-full   py-3 text-lg mt-2">
-          Get Started
-        </DialogTrigger>
+        <MotionButton className={className}>
+          {title} <GoArrowRight size={20} />
+        </MotionButton>
 
         <DialogContent className={" outline-none drop-shadow-2xl border-none"}>
           <DialogHeader>

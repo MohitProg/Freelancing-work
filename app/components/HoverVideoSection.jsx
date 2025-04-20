@@ -54,7 +54,15 @@ const HoverVideoSection = () => {
   return (
     <>
       <AnimateContent>
-        <section className="common-section common-border rounded-xl">
+        <section className="common-section min-h-screen items-center justify-center rounded-xl flex flex-col gap-10">
+          <div className="flex flex-col gap-1 items-center justify-center">
+
+    <h2>Magic happen when your work is connected</h2>
+
+    <p className="primary-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugiat maiores voluptates natus</p>
+
+          </div>
+
           <div className="w-full  flex flex-col   overflow-hidden  md:flex-row items-center justify-start shadow rounded-xl ">
             {videoArray.map((val, ind) => (
               <div

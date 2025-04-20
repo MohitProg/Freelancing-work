@@ -142,11 +142,11 @@ body {
   }
 
   .common-section {
-    @apply mx-auto w-full   sm:w-[90%] md:w-[80%]  lg:w-[80%]  lg:p-3;
+    @apply mx-auto w-full   sm:w-[95%] md:w-[80%]  lg:w-[88%] max-w-[1800px]  lg:p-3;
   }
 
   .secondary-btn {
-    @apply rounded-xl shadow-xl cursor-pointer border-[1px] border-solid border-gray-300 bg-gradient-to-r from-gray-600 to-black  p-2 text-lg   text-white flex items-center gap-1 justify-center px-5;
+    @apply rounded-xl shadow-xl cursor-pointer  bg-gradient-to-r from-gray-600 to-black  p-2 text-lg   text-white flex items-center gap-1 justify-center px-5;
   }
 
   .common-input {

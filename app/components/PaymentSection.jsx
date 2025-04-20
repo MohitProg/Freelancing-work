@@ -21,13 +21,13 @@ const PaymentSection = () => {
 
   return (
     <>
-      <section className="p-4 mx-auto common-section common-border bg-primary rounded-xl mt-8  ">
+      <section className="p-4 mx-auto common-section   rounded-xl mt-8  ">
         <AnimateContent className="flex items-center justify-between p-2 lg:flex-row flex-col gap-3">
           <span className=" text-sm lg:text-xs text-[#7612fa] p-2 bg-[#f1e7fe] rounded-full">
             100% Money-BackGuarantee
           </span>
 
-          <div className="flex items-center gap-2 border-[0.5px] border-gray-300 rounded-xl  ">
+          <div className="flex items-center gap-2 common-border  bg-primary overflow-hidden rounded-xl  ">
             <button
               disabled={timeQnt ? true : false}
               onClick={() => setTimeQnt(!timeQnt)}
@@ -46,17 +46,15 @@ const PaymentSection = () => {
           {/* section for payment  */}
         </AnimateContent>
 
-        <AnimateContent className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4   rounded-lg overflow-hidden">
-          <div className="flex   common-border  px-6 py-8 gap-5 flex-col ">
+        <AnimateContent className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4   gap-5 lg:gap-0 rounded-lg overflow-hidden">
+          <div className="flex   common-border bg-primary  rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
             <div className="">
               <h1 className="text-xl font-bold ">Free Forever</h1>
               <p className="primary-para text-center">Best for personal use</p>
             </div>
 
             <div className="space-y-3  ">
-              <h2 className="text-6xl uppercase font-bold ">
-                Free
-              </h2>
+              <h2 className="text-6xl uppercase font-bold ">Free</h2>
               <AnimateButton className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full">
                 Free forever
               </AnimateButton>
@@ -79,16 +77,14 @@ const PaymentSection = () => {
 
           {/* div 2 */}
 
-          <div className="flex    common-border px-6 py-8 gap-5 flex-col ">
+          <div className="flex    common-border bg-primary   rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
             <div className="">
               <h1 className="text-xl font-bold ">Unlimited</h1>
               <p className="primary-para text-center">Best for personal use</p>
             </div>
 
             <div className="space-y-3  ">
-              <h2 className="text-6xl uppercase font-bold ">
-                $7
-              </h2>
+              <h2 className="text-6xl uppercase font-bold ">$7</h2>
               <AnimateButton className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full">
                 Get Started
               </AnimateButton>
@@ -112,7 +108,7 @@ const PaymentSection = () => {
           </div>
 
           {/* div 3 */}
-          <div className="flex  common-border px-6 py-8 gap-5 flex-col ">
+          <div className="flex  common-border bg-primary rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
             <div className="">
               <h1 className="text-xl flex items-end justify-center gap-2 font-bold ">
                 Business{" "}
@@ -120,13 +116,13 @@ const PaymentSection = () => {
                   Popular
                 </span>
               </h1>
-              <p className="primary-para text-center">Best for mid-sized teams</p>
+              <p className="primary-para text-center">
+                Best for mid-sized teams
+              </p>
             </div>
 
             <div className="space-y-3  ">
-              <h2 className="text-6xl uppercase font-bold ">
-                $12
-              </h2>
+              <h2 className="text-6xl uppercase font-bold ">$12</h2>
               <AnimateButton className="p-2  secondary-btn text-lg text-white font-bold rounded-lg w-full">
                 Get started
               </AnimateButton>
@@ -151,10 +147,12 @@ const PaymentSection = () => {
 
           {/* div 4 */}
 
-          <div className="flex   common-border px-6 py-8 gap-5 flex-col ">
+          <div className="flex   common-border bg-primary rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
             <div className="">
               <h1 className="text-xl font-bold ">Enterprise</h1>
-              <p className="primary-para text-center">Best for many large teams</p>
+              <p className="primary-para text-center">
+                Best for many large teams
+              </p>
             </div>
 
             <div className="flex flex-col gap-12 text-center ">

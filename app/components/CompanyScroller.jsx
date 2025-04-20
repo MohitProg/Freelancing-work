@@ -53,7 +53,7 @@ const CompanyScroller = () => {
           >
             {CompanyPreviewdata.map((val, index) => (
               <SwiperSlide className="  p-2 ">
-                <div className="  w-[80%]   flex mx-auto relative items-center justify-center h-full">
+                <div className="  w-[80%] bg-primary rounded-2xl  flex mx-auto relative items-center justify-center h-full">
                   <MotionImage
                     fill
                     src={val.img.src}

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { TbMessageCircleFilled } from "react-icons/tb";
 import { RxCross2 } from "react-icons/rx";
 import { IoSend } from "react-icons/io5";
+import { TbMessageChatbot } from "react-icons/tb";
 
 const ChatBot = () => {
   // state for chat box
@@ -21,7 +22,7 @@ const ChatBot = () => {
           className={`${showChat ? "hidden" : "block"}`}
           onClick={() => setShowChat(!showChat)}
         >
-          <TbMessageCircleFilled color="#7b68ee" size={45} />
+          <TbMessageChatbot color="#7b68ee" size={45} />
         </button>
       </div>
 
