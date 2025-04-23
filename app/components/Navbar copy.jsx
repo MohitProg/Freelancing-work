@@ -239,8 +239,8 @@ const Navbar = () => {
   const pathname = usePathname();
   console.log(pathname);
   // variables for category
-  let cat1 = "capabilities";
-  let cat2 = "All Features";
+  let cat1 = "All Features";
+  let cat2 = "capabilities";
   let cat3 = "Integration";
   // state for nav toggle
 
@@ -372,9 +372,9 @@ const Navbar = () => {
                   <div className="h-full w-full"></div>
                 </div>
 
-                {/* section for capability data type  */}
+                {/* section for All features  */}
 
-                {categorryData.cat === cat1 && (
+                {categorryData.cat === cat2 && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -405,9 +405,9 @@ const Navbar = () => {
                   </motion.div>
                 )}
 
-                {/* section for All features  */}
+                {/* section for capabilities  */}
 
-                {categorryData.cat === cat2 && (
+                {categorryData.cat === cat1 && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

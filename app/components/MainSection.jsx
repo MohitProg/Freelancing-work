@@ -13,7 +13,7 @@ import AnimateButton from "../utils/AnimateButton";
 const MainSection = () => {
   return (
     <>
-      <section className="common-backgroundGredient">
+      <section className="common-backgroundGredient ">
         <div className="space-y-8">
           {/* Heading Section */}
           <div className="flex flex-col gap-1 p-2 text-center justify-center items-center mx-auto max-w-4xl">

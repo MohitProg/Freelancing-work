@@ -19,27 +19,29 @@ const FaQ = () => {
           </p>
         </div>
 
-        {/* <div className="flex flex-col gap-4 w-full md:w-[75%] mx-auto   ">
+        <div className="flex flex-col gap-4 w-full md:w-[75%] mx-auto   ">
           {accordionData.map((val, index) => (
             <Accordion
               key={index}
               type="single"
               collapsible
-              className="common-border  rounded-xl p-1 bg-primary"
+              className="common-border shadow-xl  rounded-xl p-1 bg-primary"
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger className={"primary-para p-2"}>
                   {val.title} ?
                 </AccordionTrigger>
-                <AccordionContent className={" text-para  p-2  py-4 "}>
+                <AccordionContent
+                  className={" text-para  md:text-lg p-2  py-2 "}
+                >
                   {val.description}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
           ))}
-        </div> */}
+        </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        {/* <div className="grid grid-cols-3 gap-4">
           {accordionData?.map((val,ind) => (
             <div key={ind} className="bg-primary p-5 px-8 flex flex-col gap-1 common-border shadow-2xl rounded-xl">
               <h3 className="font-semibold text-xl">
@@ -51,7 +53,7 @@ const FaQ = () => {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
     </>
   );
