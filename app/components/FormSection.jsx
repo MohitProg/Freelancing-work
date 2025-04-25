@@ -26,7 +26,7 @@ const FormSection = ({ title, className }) => {
 
         <DialogContent
           className={
-            " w-[50vw]  !max-w-none  outline-none drop-shadow-2xl border-none"
+            " w-[95vw] md:w-[60vw]  !max-w-none  outline-none drop-shadow-2xl border-none"
           }
         >
           <div className="hidden">
@@ -58,61 +58,98 @@ const FormSection = ({ title, className }) => {
               </div>
             </div>
 
-            <form action="" className="flex flex-col gap-2 ">
-              <div className="flex flex-col gap-2 ">
-                <label htmlFor="" className="text-para text-md">
-                  Name
-                </label>
-                <Input
-                  type="text"
-                  className="common-input "
-                  placeholder="Enter your Name"
-                />
+            <form
+              action=""
+              className="flex flex-col gap-2 max-h-[70vh] h-[70vh]  overflow-y-scroll  "
+            >
+              <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-2 ">
+                  <label htmlFor="" className="text-para text-md">
+                    Name
+                  </label>
+                  <Input
+                    type="text"
+                    className="common-input "
+                    placeholder="Enter your Name"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2 ">
+                  <label htmlFor="" className="text-para text-md">
+                    Organization Name
+                  </label>
+                  <Input
+                    type="text"
+                    className="common-input "
+                    placeholder="Enter organization Name"
+                  />
+                </div>
               </div>
 
+              <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-2 ">
+                  <label htmlFor="" className="text-para text-md">
+                    Location
+                  </label>
+                  <Input
+                    type="text"
+                    className="common-input "
+                    placeholder="Enter your location"
+                  />
+                </div>
 
-              <div className="flex  items-center gap-3 justify-between">
+                <div className="flex flex-col gap-2 ">
+                  <label htmlFor="" className="text-para text-md">
+                    Linkedin Url
+                  </label>
+                  <Input
+                    type="text"
+                    className="common-input "
+                    placeholder="Enter your location"
+                  />
+                </div>
+              </div>
 
-              <div className="flex flex-col gap-2 w-full ">
-                <label htmlFor="" className="text-para text-md">
-                  Email
-                </label>
-                <Input
-                  type="text"
-                  className="common-input common-border"
-                  placeholder="Enter your Email"
-                />
+              <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-2 w-full ">
+                  <label htmlFor="" className="text-para text-md">
+                    Email
+                  </label>
+                  <Input
+                    type="text"
+                    className="common-input common-border"
+                    placeholder="Enter your Email"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2  w-full">
+                  <label htmlFor="" className="text-para text-md">
+                    Phone No
+                  </label>
+                  <Input
+                    type="text"
+                    className="common-input common-border"
+                    placeholder="Enter your Name"
+                  />
+                </div>
               </div>
 
               <div className="flex flex-col gap-2  w-full">
                 <label htmlFor="" className="text-para text-md">
-                  Phone No
-                </label>
-                <Input
-                  type="text"
-                  className="common-input common-border"
-                  placeholder="Enter your Name"
-                />
-              </div>
-
-              </div>
-
-              <div className="flex flex-col gap-2  w-full">
-                <label htmlFor="" className="text-para text-md">
-                 message
+                  message
                 </label>
                 <Textarea
                   type="text"
-                  className="common-input common-border"
+                  className="common-input common-border  h-30"
                   placeholder="Enter your Name"
                 />
               </div>
 
               <div className="flex items-center justify-center">
-
-              <button className="secondary-btn py-2 mt-3 px-8 shadow-none">Submit</button>
+                <button className="secondary-btn py-2 mt-3 px-8 shadow-none">
+                  Submit
+                </button>
               </div>
-
             </form>
           </div>
         </DialogContent>

@@ -167,4 +167,345 @@ const ArrayData = [
   { title: "Transactions", icon: CiDollar },
 ];
 
+
+
+
+// data for navbar all features and capabilitues and integration 
+export const dataArray = [
+  // features for capability
+  {
+    title: "Capabilities",
+    subData: [
+      {
+        title: "Project Mangement",
+        link: "#",
+        subCat: [
+          {
+            title: "Tasks",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Time Line",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Calender",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Gantt charts",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+
+      {
+        title: "Product Development",
+        link: "#",
+        subCat: [
+          {
+            title: "Sprints",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Kanban",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Roadmap & Backlog",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "tasks",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+
+      {
+        title: "Time Sheet",
+        link: "#",
+        subCat: [
+          {
+            title: "Time Sheet DashBoard",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "AutoFill TimeSheet",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Manual TimeSheet",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Daily task TimeSheet",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+
+      {
+        title: "Screen Monitor",
+        link: "#",
+        subCat: [
+          {
+            title: "ScreenShots",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "liveStreaming",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "tasks",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "tasks",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+
+      {
+        title: "Resource Management",
+        link: "#",
+        subCat: [
+          {
+            title: "Attendence",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Time Tracking",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "WorkLoad views",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Goals",
+            icon: "",
+            linKpath: "#",
+          },
+
+          {
+            title: "Dashboard",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+
+      {
+        title: "Productivity Tracking ",
+        link: "#",
+        subCat: [
+          {
+            title: "Active Trends",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Productivity Metrices",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Productivity Rules",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Moast used Apps",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+
+      {
+        title: "Breaks ",
+        link: "#",
+        subCat: [
+          {
+            title: "Pre-defined breaks ",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Custom Breaks",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "idle time breaks",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "custom statuses",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+
+      {
+        title: "Alrets",
+        link: "#",
+        subCat: [
+          {
+            title: "Auto Alerts ",
+            icon: "",
+            linKpath: "#",
+          },
+          {
+            title: "Custom Alerts",
+            icon: "",
+            linKpath: "#",
+          },
+        ],
+      },
+    ],
+  },
+  // features for all features
+  {
+    title: "All features",
+    subData: [
+      {
+        title: "Attendence Management",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Real Time User Activity",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Productive Application or Classification",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Hourly Engagement",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Activity And Inactivity",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "The real productivity algo",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Interactive Desktop Application",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Screenshots",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Live video streaming",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Project And Taskmanagement",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Auto fill timesheet",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Application & Url Alerts ",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Application And website Usage ",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Goal Setting And Benchmarking ",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Work load Balance ",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+
+      {
+        title: "Repots ",
+        linKpath: "#",
+        icon: "",
+        data: {},
+      },
+    ],
+  },
+];
+
 export default ArrayData;

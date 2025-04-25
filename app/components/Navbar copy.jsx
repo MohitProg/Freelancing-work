@@ -16,234 +16,16 @@ import { FaTasks } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import AnimateButton from "../utils/AnimateButton";
 import { AnimatePresence, motion } from "motion/react";
+import { dataArray } from "../data";
 const Navbar = () => {
-  // main data array
-  const dataArray = [
-    {
-      title: "Capabilities",
-      subData: [
-        {
-          title: "Project Mangement",
-          link: "#",
-          subCat: [
-            {
-              title: "Tasks",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Time Line",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Calender",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Gantt charts",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-
-        {
-          title: "Product Development",
-          link: "#",
-          subCat: [
-            {
-              title: "Sprints",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Kanban",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Roadmap & Backlog",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "tasks",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-
-        {
-          title: "Time Sheet",
-          link: "#",
-          subCat: [
-            {
-              title: "Time Sheet DashBoard",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "AutoFill TimeSheet",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Manual TimeSheet",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Daily task TimeSheet",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-
-        {
-          title: "Screen Monitor",
-          link: "#",
-          subCat: [
-            {
-              title: "ScreenShots",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "liveStreaming",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "tasks",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "tasks",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-
-        {
-          title: "Resource Management",
-          link: "#",
-          subCat: [
-            {
-              title: "Attendence",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Time Tracking",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "WorkLoad views",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Goals",
-              icon: "",
-              linKpath: "#",
-            },
-
-            {
-              title: "Dashboard",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-
-        {
-          title: "Productivity Tracking ",
-          link: "#",
-          subCat: [
-            {
-              title: "Active Trends",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Productivity Metrices",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Productivity Rules",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Moast used Apps",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-
-        {
-          title: "Breaks ",
-          link: "#",
-          subCat: [
-            {
-              title: "Pre-defined breaks ",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Custom Breaks",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "idle time breaks",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "custom statuses",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-
-        {
-          title: "Alrets",
-          link: "#",
-          subCat: [
-            {
-              title: "Auto Alerts ",
-              icon: "",
-              linKpath: "#",
-            },
-            {
-              title: "Custom Alerts",
-              icon: "",
-              linKpath: "#",
-            },
-          ],
-        },
-      ],
-    },
-  ];
-  const pathname = usePathname();
-  console.log(pathname);
   // variables for category
   let cat1 = "All Features";
   let cat2 = "capabilities";
   let cat3 = "Integration";
+  // main data array
+ 
+  const pathname = usePathname();
   // state for nav toggle
-
   const [navDropToggle, setNavDropToggle] = useState(false);
 
   const [categorryData, setCategoryData] = useState({
@@ -372,7 +154,7 @@ const Navbar = () => {
                   <div className="h-full w-full"></div>
                 </div>
 
-                {/* section for All features  */}
+                {/* section for Capabilities */}
 
                 {categorryData.cat === cat2 && (
                   <motion.div
@@ -405,7 +187,7 @@ const Navbar = () => {
                   </motion.div>
                 )}
 
-                {/* section for capabilities  */}
+                {/* section for All features  */}
 
                 {categorryData.cat === cat1 && (
                   <motion.div
@@ -417,10 +199,12 @@ const Navbar = () => {
                     <div className="col-span-3   grid grid-cols-1">
                       {/* div for nav list  */}
 
-                      <div className=" p-3  columns-4  items-start flex-wrap w-full">
-                        <Link href={"#"} className="common-navlink">
-                          <FaTasks size={18} /> Tasks
-                        </Link>
+                      <div className=" p-3  columns-2  gap-2 items-start flex-wrap w-full">
+                        {dataArray[1].subData?.map((val, ind) => (
+                          <Link key={ind} href={"#"} className="common-navlink">
+                            <FaTasks size={15} /> {val?.title}
+                          </Link>
+                        ))}
                       </div>
 
                       <div>
