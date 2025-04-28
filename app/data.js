@@ -113,8 +113,6 @@ export const CompanyPreviewdata = [
   },
 ];
 
-
-
 const ArrayData = [
   { title: "Dependencies", icon: CiSearch },
   { title: "Completed", icon: CiCircleCheck },
@@ -167,10 +165,7 @@ const ArrayData = [
   { title: "Transactions", icon: CiDollar },
 ];
 
-
-
-
-// data for navbar all features and capabilitues and integration 
+// data for navbar all features and capabilitues and integration
 export const dataArray = [
   // features for capability
   {
@@ -395,21 +390,21 @@ export const dataArray = [
     subData: [
       {
         title: "Attendence Management",
-        linKpath: "#",
+        linKpath: "attendence-management",
         icon: "",
         data: {},
       },
 
       {
         title: "Real Time User Activity",
-        linKpath: "#",
+        linKpath: "real-time-user-activity",
         icon: "",
         data: {},
       },
 
       {
         title: "Productive Application or Classification",
-        linKpath: "#",
+        linKpath: "productive-application-or-classification",
         icon: "",
         data: {},
       },

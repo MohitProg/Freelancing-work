@@ -23,7 +23,7 @@ const Navbar = () => {
   let cat2 = "capabilities";
   let cat3 = "Integration";
   // main data array
- 
+
   const pathname = usePathname();
   // state for nav toggle
   const [navDropToggle, setNavDropToggle] = useState(false);
@@ -164,7 +164,7 @@ const Navbar = () => {
                     className="col-span-4  grid grid-cols-4"
                   >
                     {dataArray[0].subData?.map((val, ind) => (
-                      <div key={ind} className="p-2  flex flex-col gap-2 ">
+                      <div key={ind} className="p-2  flex flex-col gap-1 ">
                         <p className="text-sm text-black font-semibold">
                           {val?.title}
                         </p>
@@ -201,7 +201,12 @@ const Navbar = () => {
 
                       <div className=" p-3  columns-2  gap-2 items-start flex-wrap w-full">
                         {dataArray[1].subData?.map((val, ind) => (
-                          <Link key={ind} href={"#"} className="common-navlink">
+                          <Link
+                            onClick={() => setNavDropToggle(!navDropToggle)}
+                            key={ind}
+                            href={val?.linKpath}
+                            className="common-navlink"
+                          >
                             <FaTasks size={15} /> {val?.title}
                           </Link>
                         ))}
