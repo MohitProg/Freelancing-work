@@ -173,8 +173,9 @@ const Navbar = () => {
                           {val?.subCat?.map((val, index) => (
                             <Link
                               key={index}
-                              href={val?.linKpath}
+                              href={`/capabilities/${val?.linKpath}`}
                               className="common-navlink "
+                              onClick={() => setNavDropToggle(!navDropToggle)}
                             >
                               <MdOutlineTask size={18} /> {val?.title}
                             </Link>

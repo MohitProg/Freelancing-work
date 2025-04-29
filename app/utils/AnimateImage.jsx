@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 const MotionImage = motion(Image);
 
-const AnimateImage = ({ children, className, src }) => {
+const AnimateImage = ({ className, src }) => {
   return (
     <>
       <MotionImage
@@ -20,9 +20,7 @@ const AnimateImage = ({ children, className, src }) => {
         fill
         src={src}
         alt="Image is Loading "
-      >
-        {children}
-      </MotionImage>
+      />
     </>
   );
 };
