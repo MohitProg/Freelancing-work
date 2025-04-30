@@ -12,11 +12,47 @@ const ChatBot = () => {
   // state for chat box
 
   const [showChat, setShowChat] = useState(false);
+  const [answer, setanswer] = useState({
+    id: "",
+    ans: [],
+  });
+
+  const handleClick = (val) => {
+    setanswer({ id: val?.id, ans: [...answer.ans, val.answer] });
+  };
+
+  // data array for question anwer
+  const chatbotQA = [
+    {
+      question: "What is Prisma?",
+      id: 1,
+      answer:
+        "Prisma is an open-source ORM for Node.js and TypeScript that simplifies database access by providing a type-safe and auto-generated query builder.",
+    },
+    {
+      id: 2,
+      question: "How do I connect Prisma to my database?",
+      answer:
+        "You connect Prisma to your database by setting the connection URL in the `DATABASE_URL` environment variable inside your `.env` file.",
+    },
+    {
+      id: 3,
+      question: "What is a Prisma schema?",
+      answer:
+        "The Prisma schema is a file (`schema.prisma`) where you define your data models, the database provider, and Prisma client generation settings.",
+    },
+    {
+      id: 4,
+      question: "How do I run a Prisma migration?",
+      answer:
+        "You can run a Prisma migration using the command `npx prisma migrate dev --name <migration-name>`.",
+    },
+  ];
 
   return (
     <>
       <AnimatePresence>
-        <div className=" fixed      right-2 bottom-2 flex items-center justify-center ">
+        <div className=" fixed right-2 bottom-2 flex items-center justify-center ">
           {/* messanger */}
 
           {!showChat && (
@@ -40,7 +76,7 @@ const ChatBot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.95 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={` lg:h-[80vh] h-[70vh]   rounded-lg    bg-white w-[95%] lg:w-[25%] shadow-lg fixed z-[300] right-2 overflow-hidden   bottom-4 lg:right-4  b`}
+            className={` lg:h-[80vh] h-[70vh]   rounded-lg    bg-white w-[95%] lg:w-[25%] shadow-lg fixed z-[300] right-2 overflow-y-scroll   bottom-4 lg:right-4  b`}
           >
             <div className="bg-purple-500">
               <div className="flex  items-center justify-between">
@@ -72,35 +108,52 @@ const ChatBot = () => {
 
               {/* message  1 */}
 
-              <div className="flex  items-center  justify-start">
-                <div className="bg-[#f1f4f7] relative p-3 py-5 rounded-lg text-sm">
+              <div className="flex  items-center  justify-start ">
+                <div className="bg-[#f1f4f7] relative p-3 py-5 rounded-lg text-sm  shadow-md">
                   <img
                     src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     className="rounded-full h-5 w-5 object-cover absolute top-0 left-0"
                     alt=""
                   />
 
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Deleniti non beatae natus? Facilis sequi quia ad.
-                    Dignissimos corrupti magni amet maiores, ab, tenetur
-                    explicabo id repudiandae, suscipit earum numquam cum!
-                  </p>
+                  <div className="flex flex-col gap-2">
+                    {chatbotQA?.map((val) => (
+                      <p
+                        key={val?.id}
+                        onClick={() => handleClick(val)}
+                        className="underline text-[0.9rem] text-para/70 cursor-pointer"
+                      >
+                        {val?.question}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* message 2 */}
 
-              <div className="flex  items-center  justify-end ">
-                <div className="bg-[#f1f4f7] relative p-2 py-3 rounded-lg text-sm">
-                  <p>Lorem ipsum dolor</p>
-                </div>
-              </div>
+              {answer?.ans?.length > 0 && (
+                <>
+                  {answer?.ans?.map((val, ind) => (
+                    <motion.div
+                      initial={{ y: 20, scale: 0.9 }}
+                      whileInView={{y:0,scale:1}}
+                      transition={{duration:0.3,ease:"easeInOut"}}
+                      key={ind}
+                      className="flex  items-center  justify-end "
+                    >
+                      <div className="bg-[#f1f4f7] relative p-2 py-3 rounded-lg text-[0.9rem]">
+                        <p className="text-para/70">{val}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </>
+              )}
             </div>
 
             {/* message input field */}
 
-            <div className="flex items-center gap-1 px-2">
+            {/* <div className="flex items-center gap-1 px-2">
               <input
                 type="text"
                 placeholder="Enter a message"
@@ -110,7 +163,7 @@ const ChatBot = () => {
               <button className="  py-[10px] primary-btn ">
                 <IoSend size={20} />
               </button>
-            </div>
+            </div> */}
           </motion.div>
         )}
       </AnimatePresence>

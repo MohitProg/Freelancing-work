@@ -100,8 +100,6 @@ const Navbar = () => {
           </div>
         </nav>
 
-       
-
         {/* div menu start from here  */}
 
         <AnimatePresence>
@@ -116,40 +114,39 @@ const Navbar = () => {
               {/*  drop down menu 1  for product section */}
               <div className=" grid grid-cols-5  gap-2 ">
                 <div className="col-span-1 ">
-                  <ul className="flex flex-col  w-full  ">
-                    <li className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] ">
-                      {" "}
-                      <p
-                        className="common-navlink font-semibold "
-                        onClick={() => Handlecategory(cat1)}
-                      >
+                  <ul className="flex flex-col w-full   ">
+                    <li
+                      onClick={() => Handlecategory(cat1)}
+                      className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
+                    >
+                      <p className="common-navlink font-semibold">
                         <IoSpeedometerOutline size={20} /> {cat1}
-                      </p>{" "}
+                      </p>
                       <MdKeyboardArrowRight size={24} className="mt-1" />
                     </li>
 
-                    <li className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] ">
-                      {" "}
-                      <p
-                        className="common-navlink w-full font-semibold "
-                        onClick={() => Handlecategory(cat2)}
-                      >
+                    <li
+                      onClick={() => Handlecategory(cat2)}
+                      className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
+                    >
+                      <p className="common-navlink w-full font-semibold ">
                         <BiCubeAlt size={20} />
                         {cat2}
-                      </p>{" "}
+                      </p>
                       <MdKeyboardArrowRight size={24} className="mt-1" />
                     </li>
-                    <li className="flex items-center justify-between p-1  rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] ">
-                      {" "}
-                      <p
-                        className="common-navlink w-full font-semibold "
-                        onClick={() => Handlecategory(cat3)}
-                      >
+                    <li
+                      onClick={() => Handlecategory(cat3)}
+                      className="flex items-center justify-between p-1  rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
+                    >
+                      <p className="common-navlink w-full font-semibold ">
                         <IoSpeedometerOutline size={20} /> {cat3}
-                      </p>{" "}
+                      </p>
                       <MdKeyboardArrowRight size={24} className="mt-1" />
                     </li>
                   </ul>
+
+                  {/* div for your logo */}
 
                   <div className="h-full w-full"></div>
                 </div>
@@ -164,8 +161,8 @@ const Navbar = () => {
                     className="col-span-4  grid grid-cols-4"
                   >
                     {dataArray[0].subData?.map((val, ind) => (
-                      <div key={ind} className="p-2  flex flex-col gap-1 ">
-                        <p className="text-sm text-black font-semibold">
+                      <div key={ind} className="   flex flex-col gap-1 ">
+                        <p className="text-sm px-3 text-black font-semibold">
                           {val?.title}
                         </p>
 
@@ -205,7 +202,7 @@ const Navbar = () => {
                           <Link
                             onClick={() => setNavDropToggle(!navDropToggle)}
                             key={ind}
-                            href={val?.linKpath}
+                            href={`/features/${val?.linKpath}`}
                             className="common-navlink"
                           >
                             <FaTasks size={15} /> {val?.title}

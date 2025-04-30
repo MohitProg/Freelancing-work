@@ -43,6 +43,8 @@ const Features = ({ slug }) => {
     }
   }, [slug]);
 
+
+  console.log(mainData)
   return (
     <>
       {mainData && (
@@ -51,10 +53,12 @@ const Features = ({ slug }) => {
             <div className="common-section ">
               <div className="text-center lg:w-[70%] mx-auto  flex flex-col gap-4">
                 <AnimateContent>
-                  <h1>{mainData.title}</h1>
+                  <h1 className="leading-[2.2rem] md:leading-[2.9rem] lg:leading-[4rem]">
+                    {mainData.title}
+                  </h1>
                 </AnimateContent>
                 <AnimateContent>
-                  <p className="primary-para  mx-auto lg:w-[80%]">
+                  <p className="primary-para  mx-auto lg:w-[80%] px-3">
                     One app for projects, knowledge, conversations, and more.
                     Get more done faster—together.
                   </p>
@@ -91,7 +95,6 @@ const Features = ({ slug }) => {
 
             <div className="md:col-span-8 lg:col-span-6   flex   min-h-[130vh]  flex-col gap-8 ">
               {/* info divs  */}
-
               <AnimateContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5      md:drop-shadow-lg bg-primary  p-2 lg:p-4  common-border rounded-xl">
                   <div className="bg-gradient-to-tr order-2 from-purple-800 rounded-xl overflow-hidden to-purple-300   p-2 ">
@@ -108,7 +111,7 @@ const Features = ({ slug }) => {
                     <h2 className="text-2xl ">
                       Comprehensive Attendance Tracking
                     </h2>
-                    <ul className="text-para  list-none  text-sm lg:text-[1.08rem] flex flex-col  gap-4 lg:gap-6">
+                    <ul className="text-para  list-none  text-lg lg:text-[1.08rem] flex flex-col  gap-6 ">
                       <li className="flex items-start gap-3 leading-tight ">
                         <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
                           <GoArrowUpRight color="#ffffff" size={18} />
@@ -149,7 +152,7 @@ const Features = ({ slug }) => {
                     <h2 className="text-2xl ">
                       Comprehensive Attendance Tracking
                     </h2>
-                    <ul className="text-para  list-none  text-sm lg:text-[1.08rem] flex flex-col  gap-4 lg:gap-6">
+                    <ul className="text-para  list-none  text-lg lg:text-[1.08rem] flex flex-col  gap-4 gap-6">
                       <li className="flex items-start gap-3 leading-tight ">
                         <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
                           <GoArrowUpRight color="#ffffff" size={18} />
@@ -201,7 +204,7 @@ const Features = ({ slug }) => {
                     <h2 className="text-2xl ">
                       Comprehensive Attendance Tracking
                     </h2>
-                    <ul className="text-para  list-none  text-sm lg:text-[1.08rem] flex flex-col  gap-4 lg:gap-6">
+                    <ul className="text-para  list-none  text-lg lg:text-[1.08rem] flex flex-col  gap-4 gap-6">
                       <li className="flex items-start gap-3 leading-tight ">
                         <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
                           <GoArrowUpRight color="#ffffff" size={18} />

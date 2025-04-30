@@ -171,7 +171,7 @@ body {
 
   /* common-navlink of a paragraph  */
   .common-navlink {
-    @apply flex gap-2 text-para items-center text-sm  hover:bg-[#f1f1f9] p-2;
+    @apply flex gap-2 text-para items-center text-[1rem]  hover:bg-[#f1f1f9] p-2;
   }
 }
 

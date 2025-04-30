@@ -11,7 +11,7 @@ const TaskUi = () => {
         <h2>Task management is broken. We fixed it.</h2>
 
         {/* Two Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2  w-full gap-4   ">
+        <div className="grid grid-cols-1 lg:grid-cols-2  w-full gap-6   ">
           {/* Left Card - Old Way */}
           <div className=" bg-primary common-border  rounded-xl  p-2 w-full  shadow-md">
             <h2 className="text-2xl ">The old way</h2>
