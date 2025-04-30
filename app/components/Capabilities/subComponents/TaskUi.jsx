@@ -5,13 +5,13 @@ import { IoClose } from "react-icons/io5";
 const TaskUi = () => {
   return (
     <>
-      <section className="common-section  flex flex-col gap-8 items-center">
+      <section className="common-section  flex flex-col gap-8 p-2 items-center">
         {/* Heading Section */}
 
         <h2>Task management is broken. We fixed it.</h2>
 
         {/* Two Cards */}
-        <div className="grid grid-cols-1  w-full gap-4   ">
+        <div className="grid grid-cols-1 lg:grid-cols-2  w-full gap-4   ">
           {/* Left Card - Old Way */}
           <div className=" bg-primary common-border  rounded-xl  p-2 w-full  shadow-md">
             <h2 className="text-2xl ">The old way</h2>
@@ -66,7 +66,7 @@ const TaskUi = () => {
 
       {/* section 4 */}
 
-      <section className="min-h-screen bg-white flex flex-col items-center px-6 py-16 space-y-12">
+      <section className="min-h-screen common-section bg-white flex flex-col items-center px-6 py-16 space-y-12">
         {/* Heading */}
         <div className="text-center space-y-4">
           <h2 className="">
@@ -80,7 +80,7 @@ const TaskUi = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  w-full">
           {/* Card 1 */}
           <div className="common-border  rounded-xl  overflow-hidden shadow-md ">
             <div className="bg-gradient-to-tr from-purple-800 to-purple-300  p-2">
@@ -163,7 +163,7 @@ const TaskUi = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8  mt-4 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4  mt-4 mx-auto">
             {/* Left Card */}
             <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
               <div className="flex flex-col gap-1 items-start  p-3 py-5 ">

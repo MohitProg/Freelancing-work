@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
 
-        <div className="min-h-screen py-20 p-2   md:py-20 lg:py-30 ">
+        <div className="min-h-screen py-20    md:py-20 lg:py-30 ">
           {children}
 
           <ChatBot />

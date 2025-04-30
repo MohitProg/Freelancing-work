@@ -40,10 +40,10 @@ const Capabilities = ({ slug }) => {
         <main className="flex flex-col   gap-4">
           {/* section 2  */}
 
-          <section className="  flex flex-col gap-7  min-h-screen  common-backgroundGredient relative w-full   ">
-            <div className="grid common-section  grid-cols-1 lg:grid-cols-5 bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
+          <section className="  flex flex-col gap-7 min-h-screen  common-backgroundGredient relative w-full   ">
+            <div className="grid   grid-cols-1  lg:grid-cols-5 p-2  common-section  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
               <div className="flex flex-col gap-3 p-3 py-6  rounded-xl    lg:col-span-2 items-start">
-                <h1 className="text-start leading-[2rem] lg:leading-[4rem]">
+                <h1 className="text-start leading-[2.2rem] md:leading-[2.9rem] lg:leading-[4rem]">
                   A Task Management Platform that saves time
                   {/* {Maindata?.heading} */}
                 </h1>
@@ -59,7 +59,7 @@ const Capabilities = ({ slug }) => {
                 </AnimateButton>
               </div>
 
-              <div className="  relative  lg:col-span-3 col-span-1 h-[40vh]    rounded-xl  overflow-hidden ">
+              <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] lg:h-full     rounded-xl  overflow-hidden ">
                 <AnimateImage
                   className="object-cover object-center"
                   fill
