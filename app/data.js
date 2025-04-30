@@ -169,7 +169,7 @@ const ArrayData = [
 export const dataArray = [
   // features for capability
   {
-    title: "Capabilities",
+    title: "capabilities",
     subData: [
       {
         title: "Project Mangement",
@@ -179,6 +179,12 @@ export const dataArray = [
             title: "Tasks",
             icon: "",
             linKpath: "tasks",
+            data: {
+              heading: "A Task Management Platform that saves time",
+              desc: "Automate, prioritize, and keep work moving—all while staying connected to Docs, Whiteboards, Chat, and more.",
+              image:
+                "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            },
           },
           {
             title: "Time Line",
@@ -194,6 +200,12 @@ export const dataArray = [
             title: "Gantt charts",
             icon: "",
             linKpath: "gantt-charts",
+            data: {
+              heading: "Visualize projects as organized timelines",
+              desc: "ClickUp's drag-and-drop Gantt Charts give you a clear picture of your team's progress, dependencies, and any dangerously over-optimistic deadlines.",
+              image:
+                "https://images.unsplash.com/photo-1726568313407-c7d9c8a8ce88?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            },
           },
         ],
       },
@@ -371,7 +383,7 @@ export const dataArray = [
   },
   // features for all features
   {
-    title: "All features",
+    title: "All Features",
     subData: [
       {
         title: "Attendence Management",

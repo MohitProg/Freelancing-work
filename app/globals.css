@@ -141,14 +141,14 @@ body {
   /* color for main headings  */
   --color-texthead: #333333;
   /* color for paragraph headings  */
-  --color-para: #4b5563;
+  --color-para: #323840;
   /* color for hover on navs  */
   --color-hoverColor: #ede9ff;
 }
 
 @layer base {
   h1 {
-    @apply text-[2.3rem]  bg-gradient-to-r from-[#33bbfd] to-[#933afe] bg-clip-text text-transparent drop-shadow-md  leading-[4rem] md:text-[3rem] lg:text-[4rem] text-center   p-1 font-bold;
+    @apply text-[2.3rem]  bg-gradient-to-r from-[#33bbfd] to-[#933afe] bg-clip-text text-transparent drop-shadow-md  leading-[3rem] md:leading-[4rem] md:text-[3rem] lg:text-[4rem] text-center   p-1 font-bold;
   }
 
   h2 {
@@ -185,6 +185,6 @@ body {
   }
 
   .common-backgroundGredient {
-    @apply bg-gradient-to-b from-[#33bafd08] to-[#923afe87]/90;
+    @apply bg-gradient-to-b from-[#33bafd08] to-[#b488fe]/60;
   }
 }

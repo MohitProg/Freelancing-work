@@ -9,8 +9,8 @@ const AnimateLink = ({ children, href = "#", className }) => {
   return (
     <>
       <MotionLink
-        initial={{ x: 0 }}
-        whileHover={{ x: 10 }}
+        initial={{  y:0 }}
+        whileHover={{  y:2 }}
         transition={{
           type: "spring",
           stiffness: 300,

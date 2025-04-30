@@ -17,6 +17,21 @@ import { usePathname } from "next/navigation";
 import AnimateButton from "../utils/AnimateButton";
 import { AnimatePresence, motion } from "motion/react";
 import { dataArray } from "../data";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const Navbar = () => {
   // variables for category
   let cat1 = "All Features";
@@ -39,6 +54,108 @@ const Navbar = () => {
     }
   };
 
+  const MobileNavbar = () => {
+    return (
+      <Sheet>
+        <SheetTrigger className="lg:hidden p-2 px-3 bg-primary rounded-xl shadow-md hover:bg-opacity-90 transition">
+          <FiMenu size={25} />
+        </SheetTrigger>
+
+        <SheetContent
+          className="w-full max-h-screen overflow-y-auto p-0 bg-backgroundColor"
+          side="left"
+        >
+          <SheetHeader>
+            <SheetTitle className="hidden">Are you absolutely sure?</SheetTitle>
+          </SheetHeader>
+
+          {/* Main Content */}
+          <div className="px-3 py-2 space-y-4">
+            <ul className="space-y-3">
+              <li>
+                <Accordion
+                  className="bg-primary rounded-xl common-border shadow-sm"
+                  type="single"
+                  collapsible
+                >
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="text-lg text-para px-4 py-3 font-semibold">
+                      Products
+                    </AccordionTrigger>
+
+                    <AccordionContent className="px-2 py-1 space-y-2">
+                      {/* First Subcategory */}
+                      <Accordion
+                        className="bg-primary rounded-md"
+                        type="single"
+                        collapsible
+                      >
+                        <AccordionItem value="item-1">
+                          <AccordionTrigger className="text-[1rem] text-para px-3 py-2">
+                            {cat1}
+                          </AccordionTrigger>
+                          <AccordionContent className="max-h-[60vh] overflow-y-auto px-3 space-y-2">
+                            {dataArray[1].title === cat1 &&
+                              dataArray[1].subData?.map((val, ind) => (
+                                <Link
+                                  key={ind}
+                                  href={val?.linKpath}
+                                  className="common-navlink flex items-center gap-2 text-sm px-2 py-2 rounded-md hover:bg-muted"
+                                >
+                                  <FaTasks size={15} /> {val?.title}
+                                </Link>
+                              ))}
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+
+                      {/* Second Subcategory */}
+                      <Accordion
+                        className="bg-primary rounded-md"
+                        type="single"
+                        collapsible
+                      >
+                        <AccordionItem value="item-1">
+                          <AccordionTrigger className="text-[1rem] text-para px-3 py-2">
+                            {cat2}
+                          </AccordionTrigger>
+                          <AccordionContent className="max-h-[60vh] overflow-y-auto px-3 space-y-4">
+                            {dataArray[0].title === cat2 &&
+                              dataArray[0].subData?.map((val, ind) => (
+                                <div key={ind} className="space-y-1">
+                                  <h3 className="text-sm text-muted-foreground font-medium">
+                                    {val?.title}
+                                  </h3>
+                                  <div className="flex flex-col gap-2 pl-3">
+                                    {val?.subCat?.map((value, idx) => (
+                                      <Link
+                                        key={idx}
+                                        href={value?.linKpath}
+                                        className="common-navlink flex items-center gap-2 text-sm px-2 py-1 rounded-md hover:bg-muted"
+                                      >
+                                        <FaTasks size={15} /> {value?.title}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </li>
+
+              <li className="text-lg font-semibold text-para p-3 bg-primary rounded-xl common-border  shadow-sm">
+                Pricing
+              </li>
+            </ul>
+          </div>
+        </SheetContent>
+      </Sheet>
+    );
+  };
   return (
     <>
       <header
@@ -95,12 +212,11 @@ const Navbar = () => {
               </button>
               <AnimateButton className="  primary-btn   ">SignUp</AnimateButton>
             </div>
-
-            <button className="lg:hidden p-2 px-3  bg-primary rounded-xl   ">
-              <FiMenu size={25} />
-            </button>
+            <MobileNavbar />
           </div>
         </nav>
+
+        {/* navbar for phones  */}
 
         {/* div menu start from here  */}
 
