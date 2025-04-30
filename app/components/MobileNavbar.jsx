@@ -54,7 +54,7 @@ const MobileNavbar = () => {
                   </AccordionTrigger>
 
                   <AccordionContent className="px-2 py-1 space-y-2">
-                    {/* First Subcategory */}
+                    {/* First Subcategory for all features  */}
                     <Accordion
                       className="bg-primary rounded-md"
                       type="single"
@@ -67,9 +67,13 @@ const MobileNavbar = () => {
                         <AccordionContent className="max-h-[60vh] overflow-y-auto px-3 space-y-2">
                           {dataArray[1].title === cat1 &&
                             dataArray[1].subData?.map((val, ind) => (
-                              <Link key={ind} href={val?.linKpath}>
+                              <Link
+                                key={ind}
+                                href={`/features/${val?.linKpath}`}
+                              >
                                 <SheetClose className="common-navlink w-full  text-start flex items-start gap-2 text-sm px-2 py-2 rounded-md hover:bg-muted">
-                                  <FaTasks size={15} className="mt-1" /> {val?.title}
+                                  <FaTasks size={15} className="mt-1" />{" "}
+                                  {val?.title}
                                 </SheetClose>
                               </Link>
                             ))}
@@ -77,7 +81,7 @@ const MobileNavbar = () => {
                       </AccordionItem>
                     </Accordion>
 
-                    {/* Second Subcategory */}
+                    {/* Second Subcategory for  capabilities */}
                     <Accordion
                       className="bg-primary rounded-md"
                       type="single"
@@ -96,9 +100,13 @@ const MobileNavbar = () => {
                                 </h3>
                                 <div className="flex flex-col gap-2 pl-3">
                                   {val?.subCat?.map((value, idx) => (
-                                    <Link key={idx} href={value?.linKpath}>
+                                    <Link
+                                      key={idx}
+                                      href={`/capabilities/${val?.linKpath}`}
+                                    >
                                       <SheetClose className="common-navlink flex items-start gap-2 text-sm px-2 py-1 rounded-md hover:bg-muted">
-                                        <FaTasks size={15} className="mt-1" /> {value?.title}
+                                        <FaTasks size={15} className="mt-1" />{" "}
+                                        {value?.title}
                                       </SheetClose>
                                     </Link>
                                   ))}
