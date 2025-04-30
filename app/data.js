@@ -169,7 +169,7 @@ const ArrayData = [
 export const dataArray = [
   // features for capability
   {
-    title: "capabilities",
+    title: "Capabilities",
     subData: [
       {
         title: "Project Mangement",

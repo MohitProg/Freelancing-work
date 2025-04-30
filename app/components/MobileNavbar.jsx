@@ -22,7 +22,7 @@ import { FaTasks } from "react-icons/fa";
 
 const MobileNavbar = () => {
   let cat1 = "All Features";
-  let cat2 = "capabilities";
+  let cat2 = "Capabilities";
   let cat3 = "Integration";
 
   return (
@@ -41,10 +41,16 @@ const MobileNavbar = () => {
 
         {/* Main Content */}
         <div className="px-3 py-2 space-y-4">
-          <ul className="space-y-3">
+          <ul className="flex flex-col gap-3">
+            <Link href={"/pricing"}>
+              <SheetClose className="text-lg w-full text-start font-semibold text-para p-3 bg-primary  rounded-sm common-border  shadow-sm">
+                Pricing
+              </SheetClose>
+            </Link>
+
             <li>
               <Accordion
-                className="bg-primary  rounded-xl common-border shadow-sm"
+                className="bg-primary  rounded-sm common-border shadow-sm"
                 type="single"
                 collapsible
               >
@@ -64,7 +70,7 @@ const MobileNavbar = () => {
                         <AccordionTrigger className="text-[1rem] text-para px-3 py-2">
                           {cat1}
                         </AccordionTrigger>
-                        <AccordionContent className="max-h-[60vh] overflow-y-auto px-3 space-y-2">
+                        <AccordionContent className="max-h-[50vh] overflow-y-auto px-3 space-y-2">
                           {dataArray[1].title === cat1 &&
                             dataArray[1].subData?.map((val, ind) => (
                               <Link
@@ -91,7 +97,7 @@ const MobileNavbar = () => {
                         <AccordionTrigger className="text-[1rem] text-para px-3 py-2">
                           {cat2}
                         </AccordionTrigger>
-                        <AccordionContent className="max-h-[60vh] overflow-y-auto px-3 space-y-4">
+                        <AccordionContent className="max-h-[40vh] overflow-y-auto px-3 space-y-4">
                           {dataArray[0].title === cat2 &&
                             dataArray[0].subData?.map((val, ind) => (
                               <div key={ind} className="space-y-1">
@@ -120,12 +126,6 @@ const MobileNavbar = () => {
                 </AccordionItem>
               </Accordion>
             </li>
-
-            <Link href={"/pricing"}>
-              <SheetClose className="text-lg w-full text-start font-semibold text-para p-3 bg-primary rounded-xl common-border  shadow-sm">
-                Pricing
-              </SheetClose>
-            </Link>
           </ul>
         </div>
       </SheetContent>
