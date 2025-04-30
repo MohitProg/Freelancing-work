@@ -102,7 +102,7 @@ const MobileNavbar = () => {
                                   {val?.subCat?.map((value, idx) => (
                                     <Link
                                       key={idx}
-                                      href={`/capabilities/${val?.linKpath}`}
+                                      href={`/capabilities/${value?.linKpath}`}
                                     >
                                       <SheetClose className="common-navlink flex items-start gap-2 text-sm px-2 py-1 rounded-md hover:bg-muted">
                                         <FaTasks size={15} className="mt-1" />{" "}
