@@ -148,11 +148,11 @@ body {
 
 @layer base {
   h1 {
-    @apply text-[2.3rem]  bg-gradient-to-r from-[#33bbfd] to-[#933afe] bg-clip-text text-transparent drop-shadow-md  leading-[3rem] md:leading-[4rem] md:text-[3rem] lg:text-[4rem] text-center   p-1 font-bold;
+    @apply text-[2.3rem]  bg-gradient-to-r from-[#33bbfd] to-[#933afe]  bg-clip-text text-transparent drop-shadow-md  leading-[3rem] md:leading-none md:text-[3rem] lg:text-[4rem] text-center   p-1 font-bold;
   }
 
   h2 {
-    @apply text-[2.2rem] leading-tight text-texthead  md:text-[1.8rem] lg:text-[2.7rem] text-center   p-1 font-bold;
+    @apply text-[2rem] leading-tight text-texthead  md:text-[1.8rem] lg:text-[2.7rem] text-center   p-1 font-bold;
   }
 }
 

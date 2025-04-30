@@ -116,7 +116,7 @@ const KanbanUi = () => {
             </div>
           </div>
 
-          <div className="col-span-2 h-[30vh] sticky top-[10%] p-4 rounded-lg shadow-lg">
+          <div className="col-span-2  h-[400px] sticky top-[10%] p-4 rounded-lg">
             <div className="w-64 max-h-96  bg-primary overflow-y-auto rounded-2xl border border-gray-200 shadow-md">
               <ul className="space-y-2 p-2">
                 <li className="bg-black text-white font-semibold rounded-xl px-4 py-3 cursor-pointer">

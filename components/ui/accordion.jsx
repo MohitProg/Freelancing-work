@@ -4,6 +4,7 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "lucide-react";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
+import { FaAngleDown } from "react-icons/fa6";
 
 import { cn } from "@/lib/utils";
 
@@ -33,8 +34,8 @@ function AccordionTrigger({ className, children, ...props }) {
         {...props}
       >
         {children}
-        <MdOutlineArrowDropDownCircle 
-          size={25}
+        <FaAngleDown
+          size={20}
           className="text-muted-foreground  pointer-events-none  shrink-0 translate-y-0.5 transition-transform duration-200"
         />
       </AccordionPrimitive.Trigger>

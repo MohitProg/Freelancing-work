@@ -1,4 +1,5 @@
 import AnimateImage from "@/app/utils/AnimateImage";
+import { CornerDownRight } from "lucide-react";
 import React from "react";
 import { IoClose } from "react-icons/io5";
 const TaskUi = () => {
@@ -10,11 +11,11 @@ const TaskUi = () => {
         <h2>Task management is broken. We fixed it.</h2>
 
         {/* Two Cards */}
-        <div className="grid grid-cols-2 w-full gap-4   ">
+        <div className="grid grid-cols-1  w-full gap-4   ">
           {/* Left Card - Old Way */}
-          <div className=" bg-primary common-border  rounded-xl  p-3 w-full  shadow-md">
+          <div className=" bg-primary common-border  rounded-xl  p-2 w-full  shadow-md">
             <h2 className="text-2xl ">The old way</h2>
-            <div className=" rounded-2xl p-6 space-y-4">
+            <div className=" rounded-2xl  p-3 space-y-4">
               {[
                 "I'm always chasing after project updates",
                 "I should have known we were off track weeks ago",
@@ -36,7 +37,7 @@ const TaskUi = () => {
           {/* Right Card - ClickUp Way */}
           <div className="bg-gradient-to-br  from-[#8b5cf6] to-[#933afe] rounded-xl p-3 w-full shadow-lg text-white">
             <h3 className="text-2xl font-bold mb-6 text-center">The Our Way</h3>
-            <div className="bg-primary rounded-2xl p-6 space-y-4 text-gray-800">
+            <div className="bg-primary rounded-2xl p-3 space-y-4 text-gray-800">
               {[
                 "Project updates come to me!",
                 "Progress predicted months in advance.",
@@ -46,7 +47,9 @@ const TaskUi = () => {
                 "My calendar auto-blocks time for tasks.",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="text-purple-600 text-xl">✔️</div>
+                  <div className="text-purple-600 text-xl">
+                    <CornerDownRight />
+                  </div>
                   <p className="text-gray-800">
                     {/* Bold the first few words */}
                     {item.split(" ").slice(0, 3).join(" ")}{" "}
@@ -77,7 +80,7 @@ const TaskUi = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  w-full">
           {/* Card 1 */}
           <div className="common-border  rounded-xl  overflow-hidden shadow-md ">
             <div className="bg-gradient-to-tr from-purple-800 to-purple-300  p-2">
