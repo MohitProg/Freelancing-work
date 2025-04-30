@@ -76,7 +76,7 @@ const ChatBot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.95 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={` lg:h-[80vh] h-[70vh]   rounded-lg    bg-white w-[95%] lg:w-[25%] shadow-lg fixed z-[300] right-2 overflow-y-scroll   bottom-4 lg:right-4  b`}
+            className={` lg:h-[80vh] h-[70vh]   rounded-lg    bg-white w-[95%] lg:w-[25%] shadow-lg fixed z-[300] right-2 overflow-hidden  bottom-4 lg:right-4  b`}
           >
             <div className="bg-purple-500">
               <div className="flex  items-center justify-between">
@@ -137,8 +137,8 @@ const ChatBot = () => {
                   {answer?.ans?.map((val, ind) => (
                     <motion.div
                       initial={{ y: 20, scale: 0.9 }}
-                      whileInView={{y:0,scale:1}}
-                      transition={{duration:0.3,ease:"easeInOut"}}
+                      whileInView={{ y: 0, scale: 1 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                       key={ind}
                       className="flex  items-center  justify-end "
                     >
