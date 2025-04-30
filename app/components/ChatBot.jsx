@@ -7,6 +7,7 @@ import { TbMessageChatbot } from "react-icons/tb";
 import { AnimatePresence } from "motion/react";
 import { motion } from "motion/react";
 import { BsChatLeftTextFill } from "react-icons/bs";
+import { MessageCircleMore } from "lucide-react";
 
 const ChatBot = () => {
   // state for chat box
@@ -52,7 +53,7 @@ const ChatBot = () => {
   return (
     <>
       <AnimatePresence>
-        <div className=" fixed right-2 bottom-2 flex items-center justify-center ">
+        <div className=" fixed right-4 bottom-4 flex items-center justify-center ">
           {/* messanger */}
 
           {!showChat && (
@@ -62,9 +63,10 @@ const ChatBot = () => {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               key={"chatbtn"}
+              className="z-[300]"
               onClick={() => setShowChat(!showChat)}
             >
-              <BsChatLeftTextFill color="#7b68ee" size={30} />
+              <MessageCircleMore className="" color="#7b68ee" size={40} />
             </motion.button>
           )}
         </div>
@@ -95,6 +97,7 @@ const ChatBot = () => {
 
                 <button className="p-3" onClick={() => setShowChat(!showChat)}>
                   <RxCross2 color="#ffffff" size={20} />
+
                 </button>
               </div>
             </div>
