@@ -14,6 +14,13 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const MotionButton = motion(DialogTrigger);
 const FormSection = ({ title, className }) => {
@@ -38,7 +45,7 @@ const FormSection = ({ title, className }) => {
           {/* form of data  */}
 
           <div className=" flex flex-col gap-3">
-            <div className="p-2  space-y-2">
+            <div className="  space-y-2">
               {/* logo */}
 
               <div className="h-[7vh] w-[7vh] relative">
@@ -58,91 +65,102 @@ const FormSection = ({ title, className }) => {
               </div>
             </div>
 
-            <form
-              action=""
-              className="flex flex-col gap-2 max-h-[70vh] h-[70vh]  overflow-y-scroll  "
-            >
-              <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-2 ">
+            <form action="" className="flex flex-col gap-2 p-2   ">
+              <div className="flex flex-col gap-2   ">
+                <div className="grid grid-cols-1  md:grid-cols-3 gap-2">
+                  <div className="flex flex-col gap-2 p-1 ">
+                    <label htmlFor="" className="text-para text-md">
+                      Name
+                    </label>
+                    <Input
+                      type="text"
+                      className="common-input "
+                      placeholder="Enter your Name"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2 p-1 ">
+                    <label htmlFor="" className="text-para text-md">
+                      Organization Name
+                    </label>
+                    <Input
+                      type="text"
+                      className="common-input "
+                      placeholder="Enter organization Name"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2 p-1 ">
+                    <label htmlFor="" className="text-para text-md">
+                      Location
+                    </label>
+                    <Input
+                      type="text"
+                      className="common-input "
+                      placeholder="Enter your location"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2 p-1 ">
+                    <label htmlFor="" className="text-para text-md">
+                      Linkedin Url
+                    </label>
+                    <Input
+                      type="text"
+                      className="common-input "
+                      placeholder="Enter your location"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2 p-1 ">
+                    <label htmlFor="" className="text-para text-md">
+                      Email
+                    </label>
+                    <Input
+                      type="text"
+                      className="common-input common-border"
+                      placeholder="Enter your Email"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2 p-1  ">
+                    <label htmlFor="" className="text-para text-md">
+                      Phone No
+                    </label>
+                    <Input
+                      type="text"
+                      className="common-input common-border"
+                      placeholder="Enter your Name"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2  p-1 ">
+                    <label htmlFor="" className="text-para text-md">
+                      Team Size
+                    </label>
+                    <Select>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select team Size " />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="light">1-10 employee</SelectItem>
+                        <SelectItem value="dark">11-50 employee</SelectItem>
+                        <SelectItem value="system">51-200 employee</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-2   p-1">
                   <label htmlFor="" className="text-para text-md">
-                    Name
+                    message
                   </label>
-                  <Input
+                  <Textarea
                     type="text"
-                    className="common-input "
+                    className="common-input common-border  h-30"
                     placeholder="Enter your Name"
                   />
                 </div>
-
-                <div className="flex flex-col gap-2 ">
-                  <label htmlFor="" className="text-para text-md">
-                    Organization Name
-                  </label>
-                  <Input
-                    type="text"
-                    className="common-input "
-                    placeholder="Enter organization Name"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-2 ">
-                  <label htmlFor="" className="text-para text-md">
-                    Location
-                  </label>
-                  <Input
-                    type="text"
-                    className="common-input "
-                    placeholder="Enter your location"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2 ">
-                  <label htmlFor="" className="text-para text-md">
-                    Linkedin Url
-                  </label>
-                  <Input
-                    type="text"
-                    className="common-input "
-                    placeholder="Enter your location"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-2 w-full ">
-                  <label htmlFor="" className="text-para text-md">
-                    Email
-                  </label>
-                  <Input
-                    type="text"
-                    className="common-input common-border"
-                    placeholder="Enter your Email"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2  w-full">
-                  <label htmlFor="" className="text-para text-md">
-                    Phone No
-                  </label>
-                  <Input
-                    type="text"
-                    className="common-input common-border"
-                    placeholder="Enter your Name"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2  w-full">
-                <label htmlFor="" className="text-para text-md">
-                  message
-                </label>
-                <Textarea
-                  type="text"
-                  className="common-input common-border  h-30"
-                  placeholder="Enter your Name"
-                />
               </div>
 
               <div className="flex items-center justify-center">

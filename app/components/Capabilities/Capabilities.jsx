@@ -39,8 +39,7 @@ const Capabilities = ({ slug }) => {
       {Maindata && (
         <main className="flex flex-col   gap-4">
           {/* section 2  */}
-
-          <section className="  flex flex-col gap-7 min-h-[70vh]  common-backgroundGredient relative w-full   ">
+          <section className="  flex flex-col gap-7 min-h-[80vh]  common-backgroundGredient relative w-full   ">
             <div className="grid   grid-cols-1  lg:grid-cols-5 p-2  common-section  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
               <div className="flex flex-col gap-3 p-3 py-6  rounded-xl    lg:col-span-2 items-start">
                 <h1 className="text-start leading-[2.1rem] md:leading-[2.9rem] lg:leading-[4rem]">
@@ -74,7 +73,7 @@ const Capabilities = ({ slug }) => {
 
             <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[30] h-[10vh] bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
           </section>
-
+          {/* section 3  */}
           {slug === "tasks" && <TaskUi />}
           {slug === "time-line" && <TimeUi />}
           {slug === "gantt-charts" && <GenChartUi />}
