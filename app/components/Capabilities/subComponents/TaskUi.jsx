@@ -7,9 +7,7 @@ const TaskUi = () => {
     <>
       <section className="common-section  flex flex-col gap-8 p-2 items-center">
         {/* Heading Section */}
-
-        <h2>Task management is broken. We fixed it.</h2>
-
+        <h2>Task Creation</h2>
         {/* Two Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2  w-full gap-6   ">
           {/* Left Card - Old Way */}
@@ -66,23 +64,19 @@ const TaskUi = () => {
 
       {/* section 4 */}
 
-      <section className="min-h-screen common-section bg-white flex flex-col items-center px-6 py-16 space-y-12">
+      <section className="common-section  flex flex-col items-center px-6 py-5 space-y-12">
         {/* Heading */}
-        <div className="text-center space-y-4">
-          <h2 className="">
-            Make better decisions, faster—
-            <br /> with ClickUp AI.
-          </h2>
+        <div className="text-center space-y-2">
+          <h2 className="">Assign Responsibilities</h2>
           <p className="primary-para">
-            Track trends and analyze data with the first AI that connects your
-            Tasks to the rest of your work.
+            Assign tasks to specific team members with clarity
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  w-full">
           {/* Card 1 */}
-          <div className="common-border  rounded-xl  overflow-hidden shadow-md ">
+          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md ">
             <div className="bg-gradient-to-tr from-purple-800 to-purple-300  p-2">
               <div className=" w-full relative h-[30vh]  rounded-xl   overflow-hidden ">
                 <AnimateImage
@@ -105,7 +99,7 @@ const TaskUi = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="common-border  rounded-xl  overflow-hidden shadow-md">
+          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md">
             <div className="bg-gradient-to-tr from-blue-800 to-purple-300  p-2">
               <div className=" w-full relative h-[30vh]  rounded-xl   overflow-hidden ">
                 <AnimateImage
@@ -128,7 +122,7 @@ const TaskUi = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="common-border  rounded-xl  overflow-hidden shadow-md">
+          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md">
             <div className="bg-gradient-to-tr from-pink-800 to-purple-300  p-2">
               <div className=" w-full relative h-[30vh]  rounded-xl   overflow-hidden ">
                 <AnimateImage
@@ -150,107 +144,186 @@ const TaskUi = () => {
           </div>
         </div>
       </section>
-
       {/* section 5  */}
-
       <section className="common-section">
-        <div className=" px-4 py-4 md:px-12 lg:px-20 text-center">
+        <div className=" px-4 py-4 md:px-12 lg:px-10 text-center">
           <div className="py-7">
-            <h2>Tasks that connect to the rest of your work</h2>
+            <h2>Plan with Timelines</h2>
             <p className="primary-para">
-              Tailor tasks to fit your flow with custom fields, categories and
-              more.
+              Set start & due dates to stay on schedule
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4  mt-4 mx-auto">
-            {/* Left Card */}
-            <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
-              <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                <h3 className="text-xl  font-semibold mb-2">
-                  Automate repetitive tasks
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6   ">
+            {/* Card 1 */}
+            <div className="bg-primary common-border overflow-hidden  rounded-xl shadow-md  flex flex-col justify-between">
+              <div className="p-3 py-4">
+                <h3 className="text-xl font-semibold text-texthead mb-3">
+                  Track your time from any device
                 </h3>
-                <p className="text-para  text-start mb-4">
-                  Assignments, status updates, notifications, and workflows can
-                  be automated from any action
+                <p className="text-para mb-4">
+                  Record time from your desktop, mobile, or web browser with
+                  <a href="#" className="text-purple-600 underline">
+                    Chrome extension
+                  </a>
+                  . Easily link time tracked to any task you're working on in
+                  ClickUp.
                 </p>
               </div>
 
-              <div className=" w-full h-[40vh] relative    ">
-                <AnimateImage
-                  className="object-cover object-center hover:scale-105"
-                  fill
-                  alt="Please wait "
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
+              <div className="h-[30vh] relative ">
+                <AnimateImage src="https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               </div>
             </div>
 
-            {/* Right Card */}
-            <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
-              <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                <h3 className="text-xl font-semibold mb-2">
-                  Eliminate duplicate tasks
+            {/* Card 2 */}
+            <div className="bg-primary common-border overflow-hidden  rounded-xl shadow-md  flex flex-col justify-between">
+              <div className="p-3 py-4">
+                <h3 className="text-xl font-semibold text-texthead mb-3">
+                  Sync your time with us
                 </h3>
-                <p className="text-para mb-4 text-start">
-                  Centralize task discussions across teams by adding the same
-                  task to multiple lists.
+                <p className="text-para mb-4">
+                  Record time from your desktop, mobile, or web browser with
+                  <a href="#" className="text-purple-600 underline">
+                    Chrome extension
+                  </a>
+                  . Easily link time tracked to any task you're working on in
+                  ClickUp.
                 </p>
               </div>
 
-              <div className=" w-full h-[40vh] relative    ">
-                <AnimateImage
-                  className="object-cover object-center hover:scale-105"
-                  fill
-                  alt="Please wait "
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
+              <div className="h-[30vh] relative ">
+                <AnimateImage src="https://images.unsplash.com/photo-1590402494756-10c265b9d736?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               </div>
             </div>
 
-            <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
-              <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                <h3 className="text-xl font-semibold mb-2">
-                  Eliminate duplicate tasks
+            {/* Card 3 */}
+            <div className="bg-primary common-border overflow-hidden  rounded-xl shadow-md  flex flex-col justify-between">
+              <div className="p-3 py-4">
+                <h3 className="text-xl font-semibold text-texthead mb-3">
+                  Update your time from anywhere
                 </h3>
-                <p className="text-para mb-4 text-start">
-                  Centralize task discussions across teams by adding the same
-                  task to multiple lists.
+                <p className="text-para mb-4">
+                  Record time from your desktop, mobile, or web browser with
+                  <a href="#" className="text-purple-600 underline">
+                    Chrome extension
+                  </a>
+                  . Easily link time tracked to any task you're working on in
+                  ClickUp.
                 </p>
               </div>
 
-              <div className=" w-full h-[40vh] relative    ">
-                <AnimateImage
-                  className="object-cover object-center hover:scale-105"
-                  fill
-                  alt="Please wait "
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
-              </div>
-            </div>
-
-            <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
-              <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                <h3 className="text-xl font-semibold mb-2">
-                  Eliminate duplicate tasks
-                </h3>
-                <p className="text-para mb-4 text-start">
-                  Centralize task discussions across teams by adding the same
-                  task to multiple lists.
-                </p>
-              </div>
-
-              <div className=" w-full h-[40vh] relative    ">
-                <AnimateImage
-                  className="object-cover object-center hover:scale-105"
-                  fill
-                  alt="Please wait "
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
+              <div className="h-[30vh] relative ">
+                <AnimateImage src="https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="common-section">
+        <div className=" px-4 py-4 md:px-12 lg:px-10 text-center">
+          <div className="py-7">
+            <h2>Break Down Work</h2>
+            <p className="primary-para">
+              Organize complex projects into smaller, trackable subtasks
+            </p>
+          </div>
+
+          <div className="w-full h-[60vh] relative common-border drop-shadow-md rounded-xl overflow-hidden ">
+            <AnimateImage
+              className="object-cover"
+              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="common-section">
+        <div className=" px-4 py-4 md:px-12 lg:px-10 text-center">
+          <div className="py-7">
+            <h2>Track Progress</h2>
+            <p className="primary-para">
+              Update task status as “To Do,” “In Progress,” or “Done.”
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="common-border bg-primary overflow-hidden   drop-shadow-md rounded-xl flex flex-col">
+              <div className=" relative      w-full h-[40vh] flex items-center justify-center overflow-hidden rounded">
+                <AnimateImage
+                  className="object-cover"
+                  src="https://images.unsplash.com/photo-1578496479939-722d9dd1cc5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+
+                <div className="flex flex-col gap-1 bg-black/30  p-2 py-4 absolute top-0 left-0 right-0 bottom-0  items-start justify-end">
+                  <div className="flex flex-col items-start gap-1 ">
+                    <h3 className="text-lg font-bold text-primary mb-1">
+                      Notes
+                    </h3>
+                    <p className="text-[1rem]  font-medium text-white leading-relaxed text-start">
+                      Add notes to your time entries to reference exactly what
+                      you spent time on. How to use it and find it and enjoy it
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="common-border bg-primary overflow-hidden   drop-shadow-md rounded-xl flex flex-col">
+              <div className=" relative      w-full h-[40vh] flex items-center justify-center overflow-hidden rounded">
+                <AnimateImage
+                  className="object-cover"
+                  src="https://images.unsplash.com/photo-1578496479939-722d9dd1cc5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+
+                <div className="flex flex-col gap-1 bg-black/30  p-2 py-4 absolute top-0 left-0 right-0 bottom-0  items-start justify-end">
+                  <div className="flex flex-col items-start gap-1 ">
+                    <h3 className="text-lg font-bold text-primary mb-1">
+                      Notes
+                    </h3>
+                    <p className="text-[1rem]  font-medium text-white leading-relaxed text-start">
+                      Add notes to your time entries to reference exactly what
+                      you spent time on. How to use it and find it and enjoy it
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="common-border bg-primary overflow-hidden   drop-shadow-md rounded-xl flex flex-col">
+              <div className=" relative      w-full h-[40vh] flex items-center justify-center overflow-hidden rounded">
+                <AnimateImage
+                  className="object-cover"
+                  src="https://images.unsplash.com/photo-1578496479939-722d9dd1cc5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+
+                <div className="flex flex-col gap-1 bg-black/30  p-2 py-4 absolute top-0 left-0 right-0 bottom-0  items-start justify-end">
+                  <div className="flex flex-col items-start gap-1 ">
+                    <h3 className="text-lg font-bold text-primary mb-1">
+                      Notes
+                    </h3>
+                    <p className="text-[1rem]  font-medium text-white leading-relaxed text-start">
+                      Add notes to your time entries to reference exactly what
+                      you spent time on. How to use it and find it and enjoy it
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="common-section">
+        <div className="py-7 text-center">
+          <h2>Stay Notified</h2>
+          <p className="primary-para">
+            Get reminders and alerts for deadlines or updates
+          </p>
+        </div>
+
+        <div></div>
       </section>
     </>
   );

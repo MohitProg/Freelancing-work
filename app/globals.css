@@ -185,6 +185,6 @@ body {
   }
 
   .common-backgroundGredient {
-    @apply bg-gradient-to-b from-[#33bafd08] to-[#b488fe]/60;
+    @apply bg-gradient-to-b from-[#33bafd08] to-[#5c3f8d]/60;
   }
 }
