@@ -1,9 +1,6 @@
 "use client";
-
 import React, { useEffect, useRef } from "react";
-
 import CompanyScroller from "../../components/CompanyScroller";
-
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import HeroSection from "../../components/landing/HeroSection";
 import AnimateContent from "../../utils/AnimateContent";
@@ -22,7 +19,7 @@ const LandingPage = () => {
         {/* section 3  */}
 
         <section className="common-section   flex flex-col gap-5 mt-4 ">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 items-center">
             <AnimateContent>
               <h2>Everthing your team is looking for</h2>
             </AnimateContent>
