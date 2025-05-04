@@ -43,13 +43,12 @@ const Features = ({ slug }) => {
     }
   }, [slug]);
 
-
-  console.log(mainData)
+  console.log(mainData);
   return (
     <>
       {mainData && (
         <main className="space-y-5">
-          <section className=" relative common-backgroundGredient h-[40vh]">
+          <section className=" relative common-backgroundGradient h-[40vh] md:h-[60vh]">
             <div className="common-section ">
               <div className="text-center lg:w-[70%] mx-auto  flex flex-col gap-4">
                 <AnimateContent>
@@ -73,8 +72,8 @@ const Features = ({ slug }) => {
 
           {/* scetion 2 for main content  */}
 
-          <section className=" w-full   p-2 lg:w-[95%] mx-auto md:p-2   grid grid-cols-1 md:grid-cols-8 gap-4 ">
-            <div className="col-span-2  hidden lg:flex sticky top-[11%] common-border common-backgroundGredient   w-full   shadow-xl  rounded-xl   h-[90vh] p-2  overflow-hidden  flex-col items-center  justify-start">
+          <section className=" w-full   p-2 lg:w-[100%] mx-auto md:p-2   grid grid-cols-1 md:grid-cols-8 gap-4 ">
+            <div className="col-span-2  hidden lg:flex sticky top-[11%]  common-backgroundGradient  w-full    rounded-xl   h-[90vh] p-2  overflow-hidden  flex-col items-center  justify-start">
               <div className="  top-[5%]  max-h-[90vh] overflow-y-scroll  left-[7%] bg-primary w-full   *  common-border drop-shadow-2xl rounded-xl">
                 <h2 className="text-xl text-start p-2 ">Features</h2>
 
@@ -96,7 +95,7 @@ const Features = ({ slug }) => {
             <div className="md:col-span-8 lg:col-span-6   flex   min-h-[130vh]  flex-col gap-8 ">
               {/* info divs  */}
               <AnimateContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5      md:drop-shadow-lg bg-primary  p-2 lg:p-4  common-border rounded-xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5      bg-primary  p-2 lg:p-4   rounded-xl">
                   <div className="bg-gradient-to-tr order-2 from-purple-800 rounded-xl overflow-hidden to-purple-300   p-2 ">
                     <div className=" w-full relative h-[30vh]  md:h-[50vh]   rounded-2xl  ">
                       <AnimateImage
@@ -108,10 +107,10 @@ const Features = ({ slug }) => {
                     </div>
                   </div>
                   <div className="lg:p-3 p-1 flex flex-col order-1 gap-5 items-start justify-center ">
-                    <h2 className="text-2xl ">
+                    <h2 className="text-2xl text-center md:text-start ">
                       Comprehensive Attendance Tracking
                     </h2>
-                    <ul className="text-para  list-none  text-lg lg:text-[1.08rem] flex flex-col  gap-6 ">
+                    <ul className="text-para  list-none  text-[1rem] lg:text-[1.08rem] flex flex-col  gap-6 ">
                       <li className="flex items-start gap-3 leading-tight ">
                         <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
                           <GoArrowUpRight color="#ffffff" size={18} />
@@ -147,12 +146,12 @@ const Features = ({ slug }) => {
               </AnimateContent>
 
               <AnimateContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5   md:drop-shadow-lg  bg-primary  p-2 lg:p-4  common-border rounded-xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5   bg-primary  p-2 lg:p-4   rounded-xl">
                   <div className="lg:p-3 p-1 order-1 md:order-2  flex flex-col gap-5 items-start justify-center ">
-                    <h2 className="text-2xl ">
+                    <h2 className="text-2xl text-center md:text-start  ">
                       Comprehensive Attendance Tracking
                     </h2>
-                    <ul className="text-para  list-none  text-lg lg:text-[1.08rem] flex flex-col  gap-4 gap-6">
+                    <ul className="text-para  list-none text-[1rem] lg:text-[1.08rem] flex flex-col  gap-4 gap-6">
                       <li className="flex items-start gap-3 leading-tight ">
                         <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
                           <GoArrowUpRight color="#ffffff" size={18} />
@@ -199,12 +198,12 @@ const Features = ({ slug }) => {
               </AnimateContent>
 
               <AnimateContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5     md:drop-shadow-lg bg-primary  p-2 lg:p-4  common-border rounded-xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5     bg-primary  p-2 lg:p-4  rounded-xl">
                   <div className="lg:p-3 p-1 order-1 flex flex-col gap-5 items-start justify-center ">
-                    <h2 className="text-2xl ">
+                    <h2 className="text-2xl text-center md:text-start  ">
                       Comprehensive Attendance Tracking
                     </h2>
-                    <ul className="text-para  list-none  text-lg lg:text-[1.08rem] flex flex-col  gap-4 gap-6">
+                    <ul className="text-para  list-none  text-[1rem] lg:text-[1.08rem] flex flex-col  gap-4">
                       <li className="flex items-start gap-3 leading-tight ">
                         <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
                           <GoArrowUpRight color="#ffffff" size={18} />
@@ -254,14 +253,14 @@ const Features = ({ slug }) => {
 
           {/* section 3 for common content  */}
 
-          <section className="py-20 text-center  space-y-6">
+          <section className="py-20 text-center flex flex-col items-center  space-y-6">
             <h2>Start with a template, then make it your own.</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2  max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2  common-section mx-auto">
               {templates.map((item, idx) => (
                 <div
                   key={idx}
-                  className="common-border  rounded-xl px-6 py-10 shadow-sm hover:shadow-md transition bg-white/70 backdrop-blur-md"
+                  className=" rounded-xl px-6 py-10  hover:shadow-md transition bg-white/70 backdrop-blur-md"
                 >
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-100 mx-auto mb-4">
                     {item.icon}

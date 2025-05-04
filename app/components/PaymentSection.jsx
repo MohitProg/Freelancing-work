@@ -62,7 +62,7 @@ const PaymentSection = () => {
 
   return (
     <>
-      <section className="p-4 mx-auto common-section   rounded-xl">
+      <section className="p-2 mx-auto common-section   rounded-xl">
         <AnimateContent className="flex  items-start flex-col gap-3">
           <span className=" text-sm lg:text-xs text-[#9049fe] p-2 bg-[#f1e7fe] rounded-full">
             100% Money-BackGuarantee
@@ -110,12 +110,12 @@ const PaymentSection = () => {
         <AnimateContent className="grid grid-cols-1  mt-4  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4   gap-5 lg:gap-0 rounded-lg overflow-hidden">
           {/* payment div 1 */}
           <div className="flex   common-border  bg-primary  rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
-            <div className="space-y-[-6px] md:space-y-1">
+            <div className="space-y-[-6px] md:space-y-1 text-center">
               <h1 className="text-[1.8rem] font-bold ">Free Forever</h1>
               <p className="primary-para text-center">Best for personal use</p>
             </div>
 
-            <div className="space-y-3  ">
+            <div className="space-y-3  text-center ">
               <h2 className="text-6xl uppercase font-bold ">Free</h2>
               <AnimateButton className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full">
                 Free forever
@@ -143,12 +143,12 @@ const PaymentSection = () => {
           {/* payment  div 2 */}
 
           <div className="flex    common-border bg-primary   rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
-            <div className="space-y-[-6px] md:space-y-1">
+            <div className="space-y-[-6px] md:space-y-1 text-center">
               <h1 className="text-[1.8rem] font-bold ">Unlimited</h1>
               <p className="primary-para text-center">Best for personal use</p>
             </div>
 
-            <div className="space-y-3  ">
+            <div className="space-y-3  text-center ">
               <h2 className="text-6xl uppercase font-bold ">
                 {" "}
                 {moneychange === "USD"
@@ -182,19 +182,19 @@ const PaymentSection = () => {
 
           {/* payment  div 3 */}
           <div className="flex  common-border bg-primary rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
-            <div className="space-y-[-6px] md:space-y-1">
+            <div className="space-y-[-6px] md:space-y-1 text-center">
               <h1 className="text-[1.8rem] flex items-center justify-center gap-2 font-bold ">
                 Business{" "}
                 <span className="text-xs   secondary-btn p-1 px-3  font-semibold rounded-full text-white ">
                   Popular
                 </span>
               </h1>
-              <p className="primary-para text-center">
+              <p className="primary-para ">
                 Best for mid-sized teams
               </p>
             </div>
 
-            <div className="space-y-3  ">
+            <div className="space-y-3 text-center  ">
               <h2 className="text-6xl uppercase font-bold ">
                 {moneychange === "USD"
                   ? `$${amount.amount2}`
@@ -228,7 +228,7 @@ const PaymentSection = () => {
           {/* payment  div 4 */}
 
           <div className="flex   common-border bg-primary rounded-xl  lg:rounded-none px-6 py-8 gap-5 flex-col ">
-            <div className="space-y-[-6px] md:space-y-1">
+            <div className="space-y-[-6px] md:space-y-1 text-center">
               <h1 className="text-[1.8rem] font-bold ">Enterprise</h1>
               <p className="primary-para text-center">
                 Best for many large teams
@@ -239,7 +239,7 @@ const PaymentSection = () => {
               <p className="text-para text-sm">
                 Get a custom demo and see how ClickUp aligns with your goals.
               </p>
-              <AnimateButton className="p-2 mt-2 secondary-btn text-lg text-white font-bold rounded-xl w-full">
+              <AnimateButton className="p-2  secondary-btn text-lg text-white font-bold rounded-xl w-full">
                 Contact Sales
               </AnimateButton>
             </div>

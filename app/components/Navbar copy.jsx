@@ -52,7 +52,7 @@ const Navbar = () => {
 
           <Link
             href={"/"}
-            className="  gap-2  flex items-center bg-primary  p-2 md:p-2  px-4 common-border    rounded-xl"
+            className="  gap-2  flex items-center bg-primary  hover:shadow-sm   p-2 md:p-2  px-4 rounded-xl"
           >
             <img
               src="https://clickup.com/assets/brand/logo-v3-clickup-light.svg"
@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {pathname !== "/landing" && (
             <div className="hidden lg:block">
-              <ul className="flex items-center gap-4  p-1  common-border    rounded-xl text-para bg-primary   shadow-lg   ">
+              <ul className="flex items-center gap-4  p-1 rounded-xl text-para bg-primary    hover:shadow-sm   ">
                 <li
                   onClick={() => setNavDropToggle(!navDropToggle)}
                   className="p-1   flex items-center gap-2 cursor-pointer  lg:p-2 px-7 rounded-lg hover:bg-[#f1f1f9]"
@@ -86,15 +86,19 @@ const Navbar = () => {
           )}
 
           <div className="flex items-center gap-4 px-2  text-para">
-            <button className="p-3 hover:bg-hoverColor bg-primary hidden lg:block text-sm px-4     common-border  rounded-xl">
-              Contact Sales
-            </button>
+            <div className="p-1  bg-primary hidden lg:block text-sm     hover:shadow-sm   rounded-xl">
+              <button className="p-2 hover:bg-hoverColor px-4  rounded-xl">
+                Contact Sales
+              </button>
+            </div>
 
-            <div className=" flex items-center justify-between gap-3  bg-primary  common-border rounded-xl">
-              <button className="p-3 md:p-2  text-sm hidden lg:block  rounded-lg hover:bg-hoverColor">
+            <div className=" flex items-center justify-between gap-1 p-1  bg-primary   rounded-xl">
+              <button className="p-3 md:p-2 px-8  text-sm hidden lg:block  rounded-lg hover:bg-hoverColor">
                 Login
               </button>
-              <AnimateButton className="  primary-btn   ">SignUp</AnimateButton>
+              <AnimateButton className="  primary-btn py-2   ">
+                SignUp
+              </AnimateButton>
             </div>
             <MobileNavbar />
           </div>
@@ -109,7 +113,7 @@ const Navbar = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: "easeIn" }}
               exit={{ opacity: 0, y: 50 }}
-              className="  bg-primary w-[70%] mx-auto mt-1 space-y-4  common-border  shadow-xl rounded-xl p-4 "
+              className="  bg-primary w-[70%] mx-auto mt-1 space-y-4     rounded-xl p-4 "
             >
               {/*  drop down menu 1  for product section */}
               <div className=" grid grid-cols-5  gap-2 ">
@@ -117,9 +121,9 @@ const Navbar = () => {
                   <ul className="flex flex-col w-full   ">
                     <li
                       onClick={() => Handlecategory(cat1)}
-                      className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
+                      className="flex items-center justify-between p-1 rounded-xl font-medium  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
                     >
-                      <p className="common-navlink font-semibold">
+                      <p className="common-navlink ">
                         <IoSpeedometerOutline size={20} /> {cat1}
                       </p>
                       <MdKeyboardArrowRight size={24} className="mt-1" />
@@ -127,9 +131,9 @@ const Navbar = () => {
 
                     <li
                       onClick={() => Handlecategory(cat2)}
-                      className="flex items-center justify-between p-1 rounded-xl  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
+                      className="flex items-center justify-between p-1 rounded-xl font-medium  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
                     >
-                      <p className="common-navlink w-full font-semibold ">
+                      <p className="common-navlink w-full  ">
                         <BiCubeAlt size={20} />
                         {cat2}
                       </p>
@@ -162,7 +166,7 @@ const Navbar = () => {
                   >
                     {dataArray[0].subData?.map((val, ind) => (
                       <div key={ind} className="   flex flex-col gap-1 ">
-                        <p className="text-sm px-3 text-black font-semibold">
+                        <p className="text-sm px-3 text-black/80 font-semibold">
                           {val?.title}
                         </p>
 
@@ -171,7 +175,7 @@ const Navbar = () => {
                             <Link
                               key={index}
                               href={`/capabilities/${val?.linKpath}`}
-                              className="common-navlink "
+                              className="flex gap-2 text-para  items-center text-[0.8rem]  hover:bg-[#f1f1f9] p-2 "
                               onClick={() => setNavDropToggle(!navDropToggle)}
                             >
                               <MdOutlineTask size={18} /> {val?.title}
@@ -203,7 +207,7 @@ const Navbar = () => {
                             onClick={() => setNavDropToggle(!navDropToggle)}
                             key={ind}
                             href={`/features/${val?.linKpath}`}
-                            className="common-navlink"
+                            className="flex gap-2 text-para  items-center text-[0.8rem]  hover:bg-[#f1f1f9] p-2 "
                           >
                             <FaTasks size={15} /> {val?.title}
                           </Link>
@@ -272,7 +276,10 @@ const Navbar = () => {
                       {/* div for nav list  */}
 
                       <div className=" p-3  columns-3  items-start flex-wrap w-full">
-                        <Link href="#" className="common-navlink">
+                        <Link
+                          href="#"
+                          className="flex gap-2 text-para  items-center text-[0.8rem]  hover:bg-[#f1f1f9] p-2 "
+                        >
                           <FaTasks size={18} /> Tasks
                         </Link>
                       </div>

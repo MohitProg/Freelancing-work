@@ -1,15 +1,13 @@
-import React from "react";
-import { IoClose } from "react-icons/io5";
-import { CornerDownRight } from "lucide-react";
 import AnimateImage from "@/app/utils/AnimateImage";
-import AnimateButton from "@/app/utils/AnimateButton";
-const TimeSheetDashboardUi = () => {
+import React from "react";
+
+const TimeTracking = () => {
   return (
     <>
       <section className="common-section space-y-8">
-        <div className="text-center space-y-2 flex flex-col items-center">
+        <div className="text-center space-y-2">
           <h2 className="">Automatic time logging</h2>
-          <p className="primary-para  mx-auto">
+          <p className="primary-para max-w-4xl mx-auto">
             Timesheet management can be done by logging the time spent by each
             team member on their tasks. Time logs are helpful in billing
             clients, to keep track of the pace of the project, and to identify
@@ -26,9 +24,9 @@ const TimeSheetDashboardUi = () => {
       </section>
 
       <section className="common-section space-y-8">
-        <div className="text-center space-y-2 flex flex-col items-center ">
+        <div className="text-center space-y-2">
           <h2 className="">Review time logged</h2>
-          <p className="primary-para mx-auto">
+          <p className="primary-para max-w-4xl mx-auto">
             Managers can review the time logged by their team. Timesheets in our
             project management software help the senior management make
             determinations about billable hours and actions.
@@ -43,8 +41,8 @@ const TimeSheetDashboardUi = () => {
         </div>
       </section>
 
-      <section className="common-section space-y-8 ">
-        <div className="text-center space-y-2 flex flex-col items-center">
+      <section className="common-section space-y-8">
+        <div className="text-center space-y-2">
           <h2 className="">Comprehensive reportsd</h2>
           <p className="primary-para max-w-4xl mx-auto">
             Project timesheet reports give a bird's-eye view of the time spent
@@ -65,4 +63,4 @@ const TimeSheetDashboardUi = () => {
   );
 };
 
-export default TimeSheetDashboardUi;
+export default TimeTracking;

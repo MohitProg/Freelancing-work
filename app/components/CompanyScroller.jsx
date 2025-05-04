@@ -17,16 +17,16 @@ const MotionImage = motion.create(Image);
 const CompanyScroller = () => {
   return (
     <>
-      <section className="common-section text-center  flex flex-col gap-2 ">
+      <section className="common-section  flex flex-col gap-2  items-center ">
         <AnimateContent>
-          <p className="primary-para text-center">
+          <p className="primary-para  ">
             Trusted by 3 millions+ teams
           </p>
         </AnimateContent>
 
         {/* company features */}
 
-        <div className="  ">
+        <div className="  w-full ">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}

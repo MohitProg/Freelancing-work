@@ -26,18 +26,16 @@ const SprintsUi = () => {
     <>
       {/* section 1  */}
       {/*  */}
-      <section className=" px-4 md:px-16 ">
-        <div className="text-center mb-16">
-          <h2>Here's how they work</h2>
-        </div>
+      <section className=" px-4  flex flex-col items-center gap-3  ">
+        <h2>Here's how they work</h2>
 
         {/* Section 1 */}
         <div className="grid grid-cols-1 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20">
-          <div className="order-2 md:order-1 p-3">
-            <h2 className="text-start leading-tight">
+          <div className="order-2 md:order-1 p-3 flex flex-col gap-3  items-start">
+            <h2 className="text-start leading-tight text-3xl">
               Simplify sprint management
             </h2>
-            <p className="text-para max-w-md">
+            <p className="text-para text-base leading-relaxed">
               Set sprint dates, assign points, and mark priorities so everyone
               knows what to do and when. Automate unfinished work into your next
               sprint and sync your team's development with GitHub, GitLab, or
@@ -48,18 +46,12 @@ const SprintsUi = () => {
             </AnimateButton>
           </div>
           <div className="order-1 md:order-2">
-            <div
-              style={{
-                filter:
-                  "drop-shadow(0 4px 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 6px 15px rgba(255, 105, 180, 0.493))",
-              }}
-              className=" w-full relative h-[40vh]  rounded-xl   overflow-hidden "
-            >
+            <div className=" w-full relative h-[50vh]  rounded-xl   overflow-hidden ">
               <AnimateImage
                 className="object-cover object-center hover:scale-105"
                 fill
                 alt="Please wait "
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://cdn.dribbble.com/userupload/28505818/file/original-91c710ed3cdb751a8c0791366f995dbc.png?resize=1504x1128&vertical=center"
               />
             </div>
           </div>
@@ -68,24 +60,18 @@ const SprintsUi = () => {
         {/* Section 2 */}
         <div className="grid grid-cols-1 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20">
           <div className="order-1">
-            <div
-              style={{
-                filter:
-                  "drop-shadow(0 4px 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 6px 15px rgba(255, 105, 180, 0.493))",
-              }}
-              className=" w-full relative h-[40vh]  rounded-xl   overflow-hidden "
-            >
+            <div className=" w-full relative h-[50vh]  rounded-xl   overflow-hidden ">
               <AnimateImage
                 className="object-cover object-center hover:scale-105"
                 fill
                 alt="Please wait "
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://cdn.dribbble.com/userupload/31330885/file/original-236db4530c18c19b6a64fc2e2319f3bd.png?resize=1504x1128&vertical=center"
               />
             </div>
           </div>
-          <div className="order-2 px-4">
-            <h2 className="text-start">Get yourself organized</h2>
-            <p className="text-para max-w-md">
+          <div className="order-2 px-4 flex flex-col items-start gap-3">
+            <h2 className="text-start text-3xl">Get yourself organized</h2>
+            <p className="text-para text-base leading-relaxed">
               Manage your team's workload with a fully customizable point
               system. Roll up points from subtasks, break them out by assignee,
               and easily sort them to track your sprints at a glance.
@@ -101,8 +87,8 @@ const SprintsUi = () => {
       {/* section 2  */}
 
       <section className="common-section">
-        <div className=" px-4 py-4 md:px-12 lg:px-20 text-center">
-          <div className="py-7">
+        <div className=" px-4 py-4  lg:px-20 text-center">
+          <div className="py-7 flex flex-col  items-center gap-3">
             <h2>Tasks that connect to the rest of your work</h2>
             <p className="primary-para">
               Tailor tasks to fit your flow with custom fields, categories and
@@ -112,12 +98,10 @@ const SprintsUi = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8  mt-4 mx-auto">
             {/* Left Card */}
-            <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
-              <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                <h3 className="text-xl  font-semibold mb-2">
-                  Automate repetitive tasks
-                </h3>
-                <p className="text-para  text-start mb-4">
+            <div className="bg-primary  rounded-xl overflow-hidden    ">
+              <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
+                <h2 className="text-3xl ">Automate repetitive tasks</h2>
+                <p className="text-para text-base text-start leading-relaxed ">
                   Assignments, status updates, notifications, and workflows can
                   be automated from any action
                 </p>
@@ -128,18 +112,16 @@ const SprintsUi = () => {
                   className="object-cover object-center hover:scale-105"
                   fill
                   alt="Please wait "
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://cdn.dribbble.com/userupload/36582829/file/original-c89a6204d849aa34b207efd742df588a.jpg?resize=1024x768&vertical=center"
                 />
               </div>
             </div>
 
             {/* Right Card */}
-            <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
+            <div className="bg-primary  rounded-xl overflow-hidden    ">
               <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                <h3 className="text-xl font-semibold mb-2">
-                  Eliminate duplicate tasks
-                </h3>
-                <p className="text-para mb-4 text-start">
+                <h2 className="text-3xl">Eliminate duplicate tasks</h2>
+                <p className="text-base  text-start leading-relaxed">
                   Centralize task discussions across teams by adding the same
                   task to multiple lists.
                 </p>
@@ -150,18 +132,16 @@ const SprintsUi = () => {
                   className="object-cover object-center hover:scale-105"
                   fill
                   alt="Please wait "
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center"
                 />
               </div>
             </div>
 
-            <div className="col-span-2 grid grid-cols-3 mt-5 gap-4">
-              <div className="bg-primary common-border  rounded-xl overflow-hidden   shadow-sm ">
+            <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-8">
+              <div className="bg-primary  rounded-xl overflow-hidden    ">
                 <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Eliminate duplicate tasks
-                  </h3>
-                  <p className="text-para mb-4 text-start">
+                  <h2 className="text-3xl">Eliminate duplicate tasks</h2>
+                  <p className="text-base  text-start leading-relaxed">
                     Centralize task discussions across teams by adding the same
                     task to multiple lists.
                   </p>
@@ -172,17 +152,15 @@ const SprintsUi = () => {
                     className="object-cover object-center hover:scale-105"
                     fill
                     alt="Please wait "
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center"
                   />
                 </div>
               </div>
 
-              <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
+              <div className="bg-primary  rounded-xl overflow-hidden    ">
                 <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Eliminate duplicate tasks
-                  </h3>
-                  <p className="text-para mb-4 text-start">
+                  <h2 className="text-3xl">Eliminate duplicate tasks</h2>
+                  <p className="text-base  text-start leading-relaxed">
                     Centralize task discussions across teams by adding the same
                     task to multiple lists.
                   </p>
@@ -193,17 +171,15 @@ const SprintsUi = () => {
                     className="object-cover object-center hover:scale-105"
                     fill
                     alt="Please wait "
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center"
                   />
                 </div>
               </div>
 
-              <div className="bg-primary common-border rounded-xl overflow-hidden   shadow-sm ">
+              <div className="bg-primary  rounded-xl overflow-hidden    ">
                 <div className="flex flex-col gap-1 items-start  p-3 py-5 ">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Eliminate duplicate tasks
-                  </h3>
-                  <p className="text-para mb-4 text-start">
+                  <h2 className="text-3xl">Eliminate duplicate tasks</h2>
+                  <p className="text-base  text-start leading-relaxed">
                     Centralize task discussions across teams by adding the same
                     task to multiple lists.
                   </p>
@@ -214,7 +190,7 @@ const SprintsUi = () => {
                     className="object-cover object-center hover:scale-105"
                     fill
                     alt="Please wait "
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://cdn.dribbble.com/userupload/11172555/file/original-e26bbf98e7c9fb29f282f379cb6e4c18.jpg?resize=1024x768&vertical=center"
                   />
                 </div>
               </div>
@@ -224,15 +200,15 @@ const SprintsUi = () => {
       </section>
 
       {/* section 3  */}
-
-      <section className="py-20 text-center  space-y-6">
+      {/* 
+      <section className="common-section">
         <h2>Start with a template, then make it your own.</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10  mx-auto">
           {templates.map((item, idx) => (
             <div
               key={idx}
-              className="common-border  rounded-xl px-6 py-10 shadow-sm hover:shadow-md transition bg-white/70 backdrop-blur-md"
+              className=" rounded-xl px-6 py-10 shadow-sm hover:shadow-md text-center transition bg-white/70 backdrop-blur-md"
             >
               <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-100 mx-auto mb-4">
                 {item.icon}
@@ -244,7 +220,7 @@ const SprintsUi = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

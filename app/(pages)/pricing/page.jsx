@@ -11,7 +11,7 @@ const PricePage = () => {
     <main>
       {/* section 1  */}
 
-      <section className=" relative common-backgroundGredient h-[50vh]">
+      <section className=" relative common-backgroundGradient h-[50vh]">
         <div className="common-section ">
           <div className="text-center lg:w-[70%] mx-auto ">
             <AnimateContent>
@@ -37,12 +37,12 @@ const PricePage = () => {
 
       {/* section 3  */}
 
-      <section className="flex  common-section flex-col gap-5  mt-4 p-2 lg:p-8 py-12">
+      <section className="flex  common-section flex-col  items-center text-center gap-8  mt-4 p-2 lg:p-8 py-12">
         <AnimateContent>
           <h2>Take your productivity to the next level</h2>
         </AnimateContent>
 
-        <AnimateContent className=" w-full sm:w-[90%] lg:w-[80%] common-border  mx-auto shadow-lg  common-border bg-gradient-to-r from-white to-black/40 via-white/60 md:to-black   p-5  rounded-xl">
+        <AnimateContent className=" w-full sm:w-[90%] lg:w-[80%] space-y-3  text-start  mx-auto common-backgroundGradient  p-5  rounded-xl">
           <button className="secondary-btn text-xs p-[0.5px] px-2 bg-[#edfced] rounded-full">
             ClickUp Assist
           </button>
@@ -62,11 +62,11 @@ const PricePage = () => {
             </ul>
           </div>
 
-          <div className="flex items-center gap-3 sm:flex-row flex-col   justify-between mt-6">
+          <div className="flex i flex-col items-start gap-3 sm:flex-row    justify-between mt-6">
             <AnimateButton className="secondary-btn p-2 lg:p-3 px-8 text-white rounded-xl font-bold lg:w-[40%]">
               Get ClickUp Assist
             </AnimateButton>
-            <AnimateButton className=" common-border shadow-xl lg:w-[40%] p-2 lg:p-3 px-8   font-bold text-white rounded-xl">
+            <AnimateButton className="  bg-primary lg:w-[40%] p-2 lg:p-3 px-8 text-lg  text-black  font-bold  rounded-xl">
               Learn more
             </AnimateButton>
           </div>

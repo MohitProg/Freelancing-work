@@ -285,15 +285,15 @@ export const dataArray = [
             icon: "",
             linKpath: "attendence",
           },
+          // {
+          //   title: "Time Tracking",
+          //   icon: "",
+          //   linKpath: "time-tracking",
+          // },
           {
-            title: "Time Tracking",
+            title: "Workload management",
             icon: "",
-            linKpath: "time-tracking",
-          },
-          {
-            title: "WorkLoad views",
-            icon: "",
-            linKpath: "workload-views",
+            linKpath: "workload-load-management",
           },
           {
             title: "Goals",

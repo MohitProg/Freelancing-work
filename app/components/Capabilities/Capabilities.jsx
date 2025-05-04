@@ -13,6 +13,15 @@ import SprintsUi from "./subComponents/SprintsUi";
 import KanbanUi from "./subComponents/KanbanUi";
 import RoadmapUi from "./subComponents/RoadmapUi";
 import TimeSheetDashboardUi from "./subComponents/TimeSheetDashboardUi";
+import Calendar from "./subComponents/Calendar";
+import AutoTimeSheet from "./subComponents/AutoTimeSheet";
+import ManualTimeSheet from "./subComponents/ManualTimeSheet";
+import DailyTaskTimeSheet from "./subComponents/DailyTaskTimeSheet";
+import ScreenMonitoring from "./subComponents/ScreenMonitoring";
+import LiveStreaming from "./subComponents/LiveStreaming";
+import Attendence from "./subComponents/Attendence";
+import TimeTracking from "./subComponents/TimeTracking";
+import WorkLoadManagement from "./subComponents/WorkLoadManagement";
 
 const Capabilities = ({ slug }) => {
   const [Maindata, setMainData] = useState(null);
@@ -37,12 +46,12 @@ const Capabilities = ({ slug }) => {
   return (
     <>
       {Maindata && (
-        <main className="flex flex-col   gap-4">
+        <main className="flex flex-col   gap-8">
           {/* section 2  */}
-          <section className="  flex flex-col gap-7 min-h-[80vh]  common-backgroundGredient relative w-full   ">
-            <div className="grid   grid-cols-1  lg:grid-cols-5 p-2  common-section  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
-              <div className="flex flex-col gap-3 p-3 py-6  rounded-xl    lg:col-span-2 items-start">
-                <h1 className="text-start leading-[2.1rem] md:leading-[2.9rem] lg:leading-[4rem]">
+          <section className="  flex flex-col gap-7  min-h-screen common-backgroundGradient relative w-full   ">
+            <div className="grid   grid-cols-1  lg:grid-cols-5 p-2 w-[95%] mx-auto  lg:w-[80%]  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
+              <div className="flex flex-col gap-3 p-3 py-6  rounded-xl  md:items-center text-start  md:text-center lg:items-start lg:text-start  lg:col-span-2 items-start">
+                <h1 className=" ">
                   A Task Management Platform that saves time
                   {/* {Maindata?.heading} */}
                 </h1>
@@ -58,14 +67,14 @@ const Capabilities = ({ slug }) => {
                 </AnimateButton>
               </div>
 
-              <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] lg:h-full     rounded-xl  overflow-hidden ">
+              <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] md:h-[50vh] lg:h-full     rounded-xl  overflow-hidden ">
                 <AnimateImage
                   className="object-cover object-center"
                   fill
                   alt="Please wait "
                   src={
                     Maindata?.image ||
-                    "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    "https://cdn.dribbble.com/userupload/16554789/file/original-797a59537249b8666b2aaa1b512d1e04.png?resize=1504x1128&vertical=center"
                   }
                 />
               </div>
@@ -75,12 +84,20 @@ const Capabilities = ({ slug }) => {
           </section>
           {/* section 3  */}
           {slug === "tasks" && <TaskUi />}
+          {slug === "calender" && <Calendar />}
           {slug === "time-line" && <TimeUi />}
           {slug === "gantt-charts" && <GenChartUi />}
           {slug === "sprints" && <SprintsUi />}
           {slug === "kanban" && <KanbanUi />}
           {slug === "roadmap-backlog" && <RoadmapUi />}
           {slug === "time-sheet-dashboard" && <TimeSheetDashboardUi />}
+          {slug === "autofill-timesheet" && <AutoTimeSheet />}
+          {slug === "manual-timesheet" && <ManualTimeSheet />}
+          {slug === "daily-task-timesheet" && <DailyTaskTimeSheet />}
+          {slug === "screenshots" && <ScreenMonitoring />}
+          {slug === "livestreaming" && <LiveStreaming />}
+          {slug === "attendence" && <Attendence />}
+          {slug === "workload-load-management" && <WorkLoadManagement />}
         </main>
       )}
     </>

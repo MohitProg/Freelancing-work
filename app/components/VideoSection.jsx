@@ -6,6 +6,7 @@ import gsap from "gsap";
 import AnimateContent from "../utils/AnimateContent";
 import { AnimatePresence, motion } from "motion/react";
 import AnimateButton from "../utils/AnimateButton";
+import AnimateSubHeading from "../utils/AnimateSubHeading";
 const VideoSection = () => {
   const [data, setData] = useState({
     videoUrl: "/sample.mp4",
@@ -27,20 +28,18 @@ const VideoSection = () => {
   };
   return (
     <>
-      <section className="common-section min-h-screen flex flex-col items-center justify-center space-y-4 py-4 lg:p-10  sm:rounded-xl">
-        <div className=" text-start lg:text-center space-y-2 px-3">
+      <section className="common-section  flex flex-col items-center justify-center space-y-4 py-4 lg:p-5  sm:rounded-xl">
+        <div className="flex flex-col items-center justify-center   px-3 gap-2 text-center">
           <AnimateContent>
-            <h3 className=" italic text-[#7815fa] text-center">
-              The all-in-one workspace
-            </h3>
+            <h3 className="italic text-[#7815fa]">The all-in-one workspace</h3>
           </AnimateContent>
+
+          <AnimateSubHeading>
+            Do your most important work, faster
+          </AnimateSubHeading>
+
           <AnimateContent>
-            <h2 className="text-start md:text-center">
-              Do your most important work, faster
-            </h2>
-          </AnimateContent>
-          <AnimateContent>
-            <p className="primary-para  sm:text-center">
+            <p className="primary-para">
               From campaigns to operations and more, this is just the tip of the
               iceberg.
             </p>
@@ -48,8 +47,8 @@ const VideoSection = () => {
         </div>
 
         <AnimatePresence mode="wait">
-          <div className="grid grid-cols-1 gap-4  bg-primary lg:grid-cols-3 common-border p-2 rounded-xl lg:gap-7 lg:mt-5">
-            <div className="mt-2 flex flex-col gap-2">
+          <div className="grid grid-cols-1 gap-4  bg-primary lg:grid-cols-6  p-4 rounded-xl lg:gap-7 lg:mt-5">
+            <div className="mt-2 flex flex-col col-span-2 items-start gap-2">
               {/* Card 1 */}
               <div className="space-y-2 p-3 flex items-start gap-1">
                 <div className="flex flex-col items-start gap-1">
@@ -183,14 +182,14 @@ const VideoSection = () => {
                 </div>
               </div>
 
-              <AnimateButton className="secondary-btn mt-2 md:mt-10 ml-3">
+              <AnimateButton className="secondary-btn mt-2 py-2 md:mt-10 ml-3">
                 See all use cases{" "}
                 <FaArrowRightLong size={14} className="mt-1" color="#ffffff" />
               </AnimateButton>
             </div>
 
             {/* Main Video on large screen */}
-            <motion.div className="col-span-2 p-5 hidden lg:block">
+            <motion.div className="col-span-4 p-5 hidden lg:flex items-center justify-center">
               {data?.videoUrl && (
                 <motion.video
                   initial={{ opacity: 0, y: 40, scale: 0.95 }}

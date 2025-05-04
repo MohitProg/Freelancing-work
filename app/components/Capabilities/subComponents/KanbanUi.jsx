@@ -17,7 +17,7 @@ const KanbanUi = () => {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
           {/* Card 1 */}
-          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md ">
+          <div className=" bg-primary  rounded-xl  overflow-hidden  ">
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold text-gray-900">
                 Categorize with subgroup
@@ -40,7 +40,7 @@ const KanbanUi = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md">
+          <div className=" bg-primary  rounded-xl  overflow-hidden ">
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold text-gray-900">
                 Auto-schedule your work
@@ -68,8 +68,8 @@ const KanbanUi = () => {
 
       <section className="min-h-screen common-section flex flex-col items-center p-6 space-y-12">
         <div className="w-full grid grid-cols-8 gap-4">
-          <div className="col-span-6 min-h-screen space-y-8">
-            <div className="common-border bg-primary   rounded-xl  overflow-hidden shadow-lg ">
+          <div className="col-span-8 md:col-span-6 min-h-screen space-y-8">
+            <div className=" bg-primary   rounded-xl  overflow-hidden ">
               <div className="p-6 space-y-2">
                 <h2 className="text-start">
                   Manage priorities easier than ever
@@ -92,7 +92,7 @@ const KanbanUi = () => {
               </div>
             </div>
 
-            <div className="common-border bg-primary   rounded-xl  overflow-hidden shadow-lg ">
+            <div className=" bg-primary   rounded-xl  overflow-hidden s ">
               <div className="p-6 space-y-2">
                 <h2 className="text-start">
                   Manage priorities easier than ever
@@ -116,7 +116,7 @@ const KanbanUi = () => {
             </div>
           </div>
 
-          <div className="col-span-2  h-[400px] sticky top-[10%] p-4 rounded-lg">
+          <div className="col-span-2  h-[400px] hidden md:block sticky top-[10%] p-4 rounded-lg">
             <div className="w-64 max-h-96  bg-primary overflow-y-auto rounded-2xl border border-gray-200 shadow-md">
               <ul className="space-y-2 p-2">
                 <li className="bg-black text-white font-semibold rounded-xl px-4 py-3 cursor-pointer">

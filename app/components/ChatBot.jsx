@@ -97,7 +97,6 @@ const ChatBot = () => {
 
                 <button className="p-3" onClick={() => setShowChat(!showChat)}>
                   <RxCross2 color="#ffffff" size={20} />
-
                 </button>
               </div>
             </div>
