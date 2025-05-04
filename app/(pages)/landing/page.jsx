@@ -18,7 +18,7 @@ const LandingPage = () => {
 
         {/* section 3  */}
 
-        <section className="common-section   flex flex-col gap-5 mt-4 ">
+        <section className="common-section   flex flex-col gap-5 mt-4  p-5">
           <div className="flex flex-col gap-1 items-center">
             <AnimateContent>
               <h2>Everthing your team is looking for</h2>
