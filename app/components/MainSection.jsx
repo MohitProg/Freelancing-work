@@ -68,7 +68,7 @@ const MainSection = () => {
               />
 
               {/* blur background  */}
-              <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[50] h-10 bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent "></div>
+              <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[20] h-10 bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent "></div>
 
               {/* Gradient Overlay */}
 

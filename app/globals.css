@@ -177,14 +177,14 @@ body {
 
 @layer utilities {
   .primary-para {
-    @apply text-para sm:text-lg   lg:text-lg  max-w-2xl;
+    @apply text-para sm:text-lg   lg:text-lg  max-w-5xl;
   }
 
   .common-border {
     @apply border-[0.5px] border-solid border-gray-300;
   }
 
-  .common-backgroundGradient{
+  .common-backgroundGradient {
     @apply bg-gradient-to-b from-[#f6f4ff]  to-[#56aafe79];
   }
 }

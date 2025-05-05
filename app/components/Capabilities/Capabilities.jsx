@@ -22,6 +22,11 @@ import LiveStreaming from "./subComponents/LiveStreaming";
 import Attendence from "./subComponents/Attendence";
 import TimeTracking from "./subComponents/TimeTracking";
 import WorkLoadManagement from "./subComponents/WorkLoadManagement";
+import Goal from "./subComponents/Goal";
+import Dashboard from "./subComponents/Dashboard";
+import Productivity from "./subComponents/Productivity";
+import ProductivityRules from "./subComponents/ProductivityRules";
+import MostUsedApp from "./subComponents/MostUsedApp";
 
 const Capabilities = ({ slug }) => {
   const [Maindata, setMainData] = useState(null);
@@ -98,6 +103,11 @@ const Capabilities = ({ slug }) => {
           {slug === "livestreaming" && <LiveStreaming />}
           {slug === "attendence" && <Attendence />}
           {slug === "workload-load-management" && <WorkLoadManagement />}
+          {slug === "goals" && <Goal />}
+          {slug === "dashboard" && <Dashboard />}
+          {slug === "productivity-matrices" && <Productivity />}
+          {slug === "productivity-rules" && <ProductivityRules />}
+          {slug === "moast-used-apps" && <MostUsedApp />}
         </main>
       )}
     </>

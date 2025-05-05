@@ -28,7 +28,11 @@ const Attendence = () => {
         <div className="text-center space-y-2 flex flex-col items-center">
           <h2 className=""> Empowering Transparent Time Tracking</h2>
           <p className="primary-para">
-          Our attendance system is designed to simplify and enhance workforce time management. From real-time check-ins to insightful analytics, these features help teams and admins maintain transparency, improve punctuality, and make informed decisions based on accurate attendance data.
+            Our attendance system is designed to simplify and enhance workforce
+            time management. From real-time check-ins to insightful analytics,
+            these features help teams and admins maintain transparency, improve
+            punctuality, and make informed decisions based on accurate
+            attendance data.
           </p>
         </div>
 
@@ -48,7 +52,7 @@ const Attendence = () => {
             </div>
             <div className="p-6 space-y-2">
               <h3 className="text-xl font-semibold text-gray-900">
-              Self Check-In/Check-Out
+                Self Check-In/Check-Out
               </h3>
               <p className="text-gray-600">
                 Generate Task summaries, progress updates, translations, and
@@ -71,7 +75,7 @@ const Attendence = () => {
             </div>
             <div className="p-6 space-y-2">
               <h3 className="text-xl font-semibold text-gray-900">
-              Daily, Weekly, and Monthly View
+                Daily, Weekly, and Monthly View
               </h3>
               <p className="text-gray-600">
                 Time-block Tasks automatically, based on urgency, workload, &
@@ -94,7 +98,7 @@ const Attendence = () => {
             </div>
             <div className="p-6 space-y-2">
               <h3 className="text-xl font-semibold text-gray-900">
-              Attendance History & Reports
+                Attendance History & Reports
               </h3>
               <p className="text-gray-600">
                 Auto-create Tasks from conversations, Docs, and previous Tasks.
