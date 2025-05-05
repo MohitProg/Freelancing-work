@@ -48,26 +48,36 @@ const Features = ({ slug }) => {
     <>
       {mainData && (
         <main className="space-y-5">
-          <section className=" relative common-backgroundGradient h-[40vh] md:h-[60vh]">
-            <div className="common-section ">
-              <div className="text-center lg:w-[70%] mx-auto  flex flex-col gap-4">
-                <AnimateContent>
-                  <h1 className="leading-[2.2rem] md:leading-[2.9rem] lg:leading-[4rem]">
-                    {mainData.title}
-                  </h1>
-                </AnimateContent>
-                <AnimateContent>
-                  <p className="primary-para  mx-auto lg:w-[80%] px-3">
-                    One app for projects, knowledge, conversations, and more.
-                    Get more done faster—together.
-                  </p>
-                </AnimateContent>
+          <section className="  flex flex-col gap-7  min-h-screen common-backgroundGradient relative w-full   ">
+            <div className="grid   grid-cols-1  lg:grid-cols-5 p-2 w-[95%] mx-auto  lg:w-[80%]  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
+              <div className="flex flex-col gap-3 p-3 py-6  rounded-xl  md:items-center text-start  md:text-center lg:items-start lg:text-start  lg:col-span-2 items-start">
+                <h1 className=" ">{mainData.title}</h1>
 
-                <AnimateButton className="text-lg mx-auto py-3 lg:text-2xl lg:py-3 px-5 lg:px-12 gap-2 primary-btn flex items-center">
-                  Get started. It's FREE
+                <p className="primary-para px-2">
+                  Automate, prioritize, and keep work moving—all while staying
+                  connected to Docs, Whiteboards, Chat, and more
+                  {/* {Maindata?.desc} */}
+                </p>
+
+                <AnimateButton className="primary-btn py-3 px-7">
+                  Gets Started
                 </AnimateButton>
               </div>
+
+              <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] md:h-[50vh] lg:h-[70vh]    rounded-xl  overflow-hidden ">
+                <AnimateImage
+                  className="object-cover object-center"
+                  fill
+                  alt="Please wait "
+                  src={
+                    mainData?.image ||
+                    "https://cdn.dribbble.com/userupload/16554789/file/original-797a59537249b8666b2aaa1b512d1e04.png?resize=1504x1128&vertical=center"
+                  }
+                />
+              </div>
             </div>
+
+            <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[30] h-[10vh] bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
           </section>
 
           {/* scetion 2 for main content  */}

@@ -27,7 +27,7 @@ const MobileNavbar = () => {
 
   return (
     <Sheet>
-      <SheetTrigger className="lg:hidden p-2 px-3 bg-primary rounded-xl shadow-md hover:bg-opacity-90 transition">
+      <SheetTrigger className="lg:hidden p-3 px-3 bg-primary rounded-xl  hover:bg-opacity-90 transition">
         <FiMenu size={25} />
       </SheetTrigger>
 

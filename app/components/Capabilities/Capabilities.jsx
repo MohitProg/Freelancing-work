@@ -53,7 +53,7 @@ const Capabilities = ({ slug }) => {
       {Maindata && (
         <main className="flex flex-col   gap-8">
           {/* section 2  */}
-          <section className="  flex flex-col gap-7  min-h-screen common-backgroundGradient relative w-full   ">
+          <section className="  flex flex-col gap-7  min-h-screen common-backgroundGradient relative w-full  py-2  ">
             <div className="grid   grid-cols-1  lg:grid-cols-5 p-2 w-[95%] mx-auto  lg:w-[80%]  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
               <div className="flex flex-col gap-3 p-3 py-6  rounded-xl  md:items-center text-start  md:text-center lg:items-start lg:text-start  lg:col-span-2 items-start">
                 <h1 className=" ">
@@ -72,7 +72,7 @@ const Capabilities = ({ slug }) => {
                 </AnimateButton>
               </div>
 
-              <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] md:h-[50vh] lg:h-full     rounded-xl  overflow-hidden ">
+              <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] md:h-[50vh] lg:h-[80vh]     rounded-xl  overflow-hidden ">
                 <AnimateImage
                   className="object-cover object-center"
                   fill
@@ -85,7 +85,7 @@ const Capabilities = ({ slug }) => {
               </div>
             </div>
 
-            <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[30] h-[10vh] bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
+            <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[30] hidden md:block h-[10vh] bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
           </section>
           {/* section 3  */}
           {slug === "tasks" && <TaskUi />}

@@ -285,11 +285,7 @@ export const dataArray = [
             icon: "",
             linKpath: "attendence",
           },
-          // {
-          //   title: "Time Tracking",
-          //   icon: "",
-          //   linKpath: "time-tracking",
-          // },
+
           {
             title: "Workload management",
             icon: "",
@@ -337,45 +333,18 @@ export const dataArray = [
       },
 
       {
-        title: "Breaks ",
+        title: "Breaks & Alerts ",
         link: "#",
         subCat: [
           {
-            title: "Pre-defined breaks ",
+            title: "Breaks ",
             icon: "",
-            linKpath: "predefined-breaks",
+            linKpath: "breaks",
           },
           {
-            title: "Custom Breaks",
+            title: "Alert",
             icon: "",
-            linKpath: "custom-breaks",
-          },
-          {
-            title: "idle time breaks",
-            icon: "",
-            linKpath: "idle-time-breaks",
-          },
-          {
-            title: "custom statuses",
-            icon: "",
-            linKpath: "custom-statuses",
-          },
-        ],
-      },
-
-      {
-        title: "Alrets",
-        link: "#",
-        subCat: [
-          {
-            title: "Auto Alerts ",
-            icon: "",
-            linKpath: "auto-alerts",
-          },
-          {
-            title: "Custom Alerts",
-            icon: "",
-            linKpath: "custom-alerts",
+            linKpath: "alerts",
           },
         ],
       },

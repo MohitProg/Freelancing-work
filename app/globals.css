@@ -16,7 +16,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #8d59ff; /* orange thumb */
+  background-color: #8f8e9293; /* orange thumb */
   border-radius: 10px;
   border: 2px solid #ffffff; /* white border for separation */
 }

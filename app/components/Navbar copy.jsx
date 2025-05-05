@@ -52,7 +52,7 @@ const Navbar = () => {
 
           <Link
             href={"/"}
-            className="  gap-2  flex items-center bg-primary  hover:shadow-sm   p-2 md:p-2  px-4 rounded-xl"
+            className="  gap-2  flex items-center bg-primary  hover:shadow-sm   p-3  px-4 rounded-xl"
           >
             <img
               src="https://clickup.com/assets/brand/logo-v3-clickup-light.svg"

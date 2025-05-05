@@ -63,7 +63,7 @@ const HeroSection = () => {
         </AnimateContent>
 
         {/* blur background  */}
-        <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[100] h-30 bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80  to-transparent rounded-b-xl "></div>
+        <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[100] h-10 bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80  to-transparent rounded-b-xl "></div>
 
         {/* main content div  */}
         <div className="flex  absolute   top-[5%]  left-0 right-0  z-50    flex-col gap-2 md:gap-4  lg:gap-2  text-center justify-center items-center">

@@ -17,8 +17,8 @@ const MainSection = () => {
       <section className="common-backgroundGradient ">
         <div className="space-y-8">
           {/* Heading Section */}
-          <div className="grid grid-cols-1  lg:grid-cols-2 p-3  w-full  gap-5   mx-auto   ">
-            <div className="  gap-5  flex  flex-col common-section  items-start justify-center   md:items-center lg:items-start  ">
+          <div className="grid grid-cols-1  lg:grid-cols-2 p-3  w-full    mx-auto   ">
+            <div className="  gap-5  flex  flex-col common-section items-start justify-center   md:items-center lg:items-start  ">
               <AnimateContent>
                 <h1 className="">The everything app, for work</h1>
               </AnimateContent>
@@ -48,7 +48,7 @@ const MainSection = () => {
               </AnimateContent>
             </div>
 
-            <div className=" relative h-[40vh] md:h-[50vh]   overflow-hidden rounded-lg  ">
+            <div className=" relative h-[40vh] md:h-[50vh]  common-section  overflow-hidden rounded-lg  ">
               <AnimateImage
                 className="object-cover object-center"
                 src="https://cdn.dribbble.com/userupload/36094553/file/original-753ef0b87b5be77e5d7b39f4b197e26c.png?resize=1504x1128&vertical=center"
