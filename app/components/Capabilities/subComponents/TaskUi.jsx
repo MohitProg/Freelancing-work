@@ -33,9 +33,9 @@ const TaskUi = () => {
           </div>
 
           {/* Right Card - ClickUp Way */}
-          <div className="bg-gradient-to-br  from-[#8b5cf6] to-[#933afe] rounded-xl p-3 w-full  text-white">
-            <h3 className="text-2xl font-bold mb-6 text-center">The Our Way</h3>
-            <div className="bg-primary rounded-2xl p-3 space-y-4 text-gray-800">
+          <div className="bg-gradient-to-br  from-[#8b5cf6] to-[#933afe] rounded-xl p-3 md:py-5  md:px-6 w-full  text-white">
+            <h3 className="text-2xl font-bold mb-3 text-center">The Our Way</h3>
+            <div className="bg-primary rounded-2xl p-3 space-y-2 text-gray-800">
               {[
                 "Project updates come to me!",
                 "Progress predicted months in advance.",
@@ -44,7 +44,7 @@ const TaskUi = () => {
                 "All teams can track the same task.",
                 "My calendar auto-blocks time for tasks.",
               ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3">
+                <div key={idx} className="flex items-start gap-3 md:gap-5">
                   <div className="text-purple-600 text-xl">
                     <CornerDownRight />
                   </div>
@@ -64,7 +64,7 @@ const TaskUi = () => {
 
       {/* section 4 */}
 
-      <section className="common-section  flex flex-col items-center px-6 py-5 space-y-12">
+      <section className="common-section  flex flex-col items-center  py-5 px-4  space-y-12">
         {/* Heading */}
         <div className="text-center space-y-2">
           <h2 className="">Assign Responsibilities</h2>
@@ -145,101 +145,99 @@ const TaskUi = () => {
         </div>
       </section>
       {/* section 5  */}
-      <section className="common-section">
-        <div className=" px-4 py-4 md:px-12 lg:px-10">
-          <div className="py-7  flex flex-col items-center ">
-            <h2>Plan with Timelines</h2>
-            <p className="primary-para">
-              Set start & due dates to stay on schedule
-            </p>
+      <section className="common-section px-4">
+        <div className="py-7  flex flex-col items-center ">
+          <h2>Plan with Timelines</h2>
+          <p className="primary-para">
+            Set start & due dates to stay on schedule
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   ">
+          {/* Card 1 */}
+          <div className="bg-primary  overflow-hidden  rounded-xl  flex flex-col justify-between">
+            <div className="p-3 py-4">
+              <h3 className="text-xl font-semibold text-texthead mb-3">
+                Track your time from any device
+              </h3>
+              <p className="text-para mb-4">
+                Record time from your desktop, mobile, or web browser with
+                <a href="#" className="text-purple-600 underline">
+                  Chrome extension
+                </a>
+                . Easily link time tracked to any task you're working on in
+                ClickUp.
+              </p>
+            </div>
+
+            <div className="h-[30vh] relative ">
+              <AnimateImage
+                className={"object-cover"}
+                src="https://cdn.dribbble.com/userupload/4380927/file/original-f5def8e719298c59949c11edc6cc237f.png?resize=1504x1128&vertical=center"
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   ">
-            {/* Card 1 */}
-            <div className="bg-primary  overflow-hidden  rounded-xl  flex flex-col justify-between">
-              <div className="p-3 py-4">
-                <h3 className="text-xl font-semibold text-texthead mb-3">
-                  Track your time from any device
-                </h3>
-                <p className="text-para mb-4">
-                  Record time from your desktop, mobile, or web browser with
-                  <a href="#" className="text-purple-600 underline">
-                    Chrome extension
-                  </a>
-                  . Easily link time tracked to any task you're working on in
-                  ClickUp.
-                </p>
-              </div>
-
-              <div className="h-[30vh] relative ">
-                <AnimateImage
-                  className={"object-cover"}
-                  src="https://cdn.dribbble.com/userupload/4380927/file/original-f5def8e719298c59949c11edc6cc237f.png?resize=1504x1128&vertical=center"
-                />
-              </div>
+          {/* Card 2 */}
+          <div className="bg-primary  overflow-hidden  rounded-xl   flex flex-col justify-between">
+            <div className="p-3 py-4">
+              <h3 className="text-xl font-semibold text-texthead mb-3">
+                Sync your time with us
+              </h3>
+              <p className="text-para mb-4">
+                Record time from your desktop, mobile, or web browser with
+                <a href="#" className="text-purple-600 underline">
+                  Chrome extension
+                </a>
+                . Easily link time tracked to any task you're working on in
+                ClickUp.
+              </p>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-primary  overflow-hidden  rounded-xl   flex flex-col justify-between">
-              <div className="p-3 py-4">
-                <h3 className="text-xl font-semibold text-texthead mb-3">
-                  Sync your time with us
-                </h3>
-                <p className="text-para mb-4">
-                  Record time from your desktop, mobile, or web browser with
-                  <a href="#" className="text-purple-600 underline">
-                    Chrome extension
-                  </a>
-                  . Easily link time tracked to any task you're working on in
-                  ClickUp.
-                </p>
-              </div>
+            <div className="h-[30vh] relative ">
+              <AnimateImage
+                className={"object-cover"}
+                src="https://images.unsplash.com/photo-1590402494756-10c265b9d736?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </div>
+          </div>
 
-              <div className="h-[30vh] relative ">
-                <AnimateImage
-                  className={"object-cover"}
-                  src="https://images.unsplash.com/photo-1590402494756-10c265b9d736?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
-              </div>
+          {/* Card 3 */}
+          <div className="bg-primary  overflow-hidden  rounded-xl  flex flex-col justify-between">
+            <div className="p-3 py-4">
+              <h3 className="text-xl font-semibold text-texthead mb-3">
+                Update your time from anywhere
+              </h3>
+              <p className="text-para mb-4">
+                Record time from your desktop, mobile, or web browser with
+                <a href="#" className="text-purple-600 underline">
+                  Chrome extension
+                </a>
+                . Easily link time tracked to any task you're working on in
+                ClickUp.
+              </p>
             </div>
 
-            {/* Card 3 */}
-            <div className="bg-primary  overflow-hidden  rounded-xl  flex flex-col justify-between">
-              <div className="p-3 py-4">
-                <h3 className="text-xl font-semibold text-texthead mb-3">
-                  Update your time from anywhere
-                </h3>
-                <p className="text-para mb-4">
-                  Record time from your desktop, mobile, or web browser with
-                  <a href="#" className="text-purple-600 underline">
-                    Chrome extension
-                  </a>
-                  . Easily link time tracked to any task you're working on in
-                  ClickUp.
-                </p>
-              </div>
-
-              <div className="h-[30vh] relative ">
-                <AnimateImage
-                  className={"object-cover"}
-                  src="https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
-              </div>
+            <div className="h-[30vh] relative ">
+              <AnimateImage
+                className={"object-cover"}
+                src="https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <section className="common-section">
-        <div className=" px-4 py-4 md:px-12 lg:px-10 ">
-          <div className="py-7 flex flex-col items-center">
+        <div className=" px-4 py-4 ">
+          <div className="py-7 flex flex-col items-center text-center">
             <h2>Break Down Work</h2>
             <p className="primary-para">
               Organize complex projects into smaller, trackable subtasks
             </p>
           </div>
 
-          <div className="w-full h-[60vh] relative  rounded-xl overflow-hidden ">
+          <div className="w-full h-[50vh] md:h-[80vh] relative  rounded-xl overflow-hidden ">
             <AnimateImage
               className="object-cover"
               src="https://cdn.dribbble.com/userupload/4161840/file/original-b725c82654822e33dbeb49c884bc2e76.png?resize=1504x1128&vertical=center"
@@ -249,8 +247,8 @@ const TaskUi = () => {
       </section>
 
       <section className="common-section">
-        <div className=" px-4 py-4 md:px-12 lg:px-10 ">
-          <div className="py-7 flex flex-col items-center">
+        <div className=" px-4 py-4  ">
+          <div className="py-7 flex flex-col items-center text-center ">
             <h2>Track Progress</h2>
             <p className="primary-para">
               Update task status as “To Do,” “In Progress,” or “Done.”
@@ -258,7 +256,7 @@ const TaskUi = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className=" bg-primary overflow-hidden   rounded-xl flex flex-col">
+            <div className=" bg-primary overflow-hidden  hover:shadow-xl  rounded-xl flex flex-col">
               <div className=" relative      w-full h-[40vh] flex items-center justify-center overflow-hidden rounded">
                 <AnimateImage
                   className="object-cover"
@@ -279,7 +277,7 @@ const TaskUi = () => {
               </div>
             </div>
 
-            <div className=" bg-primary overflow-hidden   rounded-xl flex flex-col">
+            <div className=" bg-primary overflow-hidden  hover:shadow-xl    rounded-xl flex flex-col">
               <div className=" relative      w-full h-[40vh] flex items-center justify-center overflow-hidden rounded">
                 <AnimateImage
                   className="object-cover"
@@ -300,8 +298,8 @@ const TaskUi = () => {
               </div>
             </div>
 
-            <div className=" bg-primary overflow-hidden    rounded-xl flex flex-col">
-              <div className=" relative      w-full h-[40vh] flex items-center justify-center overflow-hidden rounded">
+            <div className=" bg-primary overflow-hidden  hover:shadow-xl   rounded-xl flex flex-col">
+              <div className=" relative      w-full h-[40vh]  flex items-center justify-center overflow-hidden rounded">
                 <AnimateImage
                   className="object-cover"
                   src="https://images.unsplash.com/photo-1578496479939-722d9dd1cc5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

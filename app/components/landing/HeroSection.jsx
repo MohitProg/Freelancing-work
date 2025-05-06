@@ -12,7 +12,6 @@ const HeroSection = () => {
     <>
       <section className="   relative    ">
         {/* animation div  */}
-
         <AnimateContent>
           <div className="h-screen overflow-hidden relative common-backgroundGradient mx-auto rounded-xl">
             {/* Center div — animate from bottom */}

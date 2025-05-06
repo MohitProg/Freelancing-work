@@ -4,6 +4,55 @@ import React from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const RoadmapUi = () => {
+  const FeatureArray = [
+    {
+      id: 1,
+      title: "Product Backlog Prioritization",
+      description:
+        "Most product backlogs end up becoming a dumping ground for every idea, user story, or bug fix related to your product. Maintain a prioritized list of backlog items by grouping the results based on parameters like item type, priority, or assignee.",
+      src: "https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center",
+    },
+
+    {
+      id: 2,
+      title: "Sprint Planning",
+      description:
+        "Backlog grooming or sprint planning can become tedious when multiple tasks require the same field update or need to be moved to a different project or sprint. In Zoho Sprints, you can easily update fields and move or delete multiple work items in one go",
+      src: "https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center",
+    },
+
+    {
+      id: 3,
+      title: "Sprint Planning",
+      description:
+        "Backlog grooming or sprint planning can become tedious when multiple tasks require the same field update or need to be moved to a different project or sprint. In Zoho Sprints, you can easily update fields and move or delete multiple work items in one go",
+      src: "https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center",
+    },
+
+    {
+      id: 4,
+      title: "Quick and Custom Filters",
+      description:
+        "Backlog grooming or sprint planning can become tedious when multiple tasks require the same field update or need to be moved to a different project or sprint. In Zoho Sprints, you can easily update fields and move or delete multiple work items in one go.",
+      src: "https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center",
+    },
+
+    {
+      id: 5,
+      title: "Data Interoperability",
+      description:
+        "Backlog grooming or sprint planning can become tedious when multiple tasks require the same field update or need to be moved to a different project or sprint. In Zoho Sprints, you can easily update fields and move or delete multiple work items in one go.",
+      src: "https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center",
+    },
+
+    {
+      id: 6,
+      title: "Bulk Updates",
+      description:
+        "Backlog grooming or sprint planning can become tedious when multiple tasks require the same field update or need to be moved to a different project or sprint. In Zoho Sprints, you can easily update fields and move or delete multiple work items in one go.",
+      src: "https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center",
+    },
+  ];
   return (
     <>
       <section className="common-section  flex flex-col gap-8 items-center">
@@ -14,138 +63,29 @@ const RoadmapUi = () => {
         </div>
 
         {/* Two Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5  lg:gap-20  p-5  ">
-          <div className="bg-primary  rounded-xl overflow-hidden   ">
-            <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
-              <h2 className="text-3xl  ">Product Backlog Prioritization</h2>
-              <p className="text-para  text-base leading-relaxed">
-                Most product backlogs end up becoming a dumping ground for every
-                idea, user story, or bug fix related to your product. Maintain a
-                prioritized list of backlog items by grouping the results based
-                on parameters like item type, priority, or assignee.
-              </p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5  lg:gap-20  p-3  ">
+          {FeatureArray?.map((value) => (
+            <div
+              key={value?.id}
+              className="bg-primary  rounded-xl overflow-hidden flex flex-col justify-between   "
+            >
+              <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
+                <h2 className=" text-2xl md:text-3xl  ">{value?.title}</h2>
+                <p className="text-para  text-base leading-relaxed">
+                  {value?.description}
+                </p>
+              </div>
 
-            <div className=" w-full h-[30vh] relative    ">
-              <AnimateImage
-                className="object-cover object-center hover:scale-105"
-                fill
-                alt="Please wait "
-                src="https://cdn.dribbble.com/userupload/34176841/file/original-2a281ed32297944cdde3945265c461be.png?resize=1504x1128&vertical=center"
-              />
+              <div className=" w-full h-[30vh] relative    ">
+                <AnimateImage
+                  className="object-cover object-center hover:scale-105"
+                  fill
+                  alt="Please wait "
+                  src={value?.src}
+                />
+              </div>
             </div>
-          </div>
-
-          {/* Right Card */}
-          <div className="bg-primary  rounded-xl overflow-hidden   ">
-            <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
-              <h2 className="text-3xl  ">Sprint Planning</h2>
-              <p className="text-para  text-base leading-relaxed">
-                Backlog grooming or sprint planning can become tedious when
-                multiple tasks require the same field update or need to be moved
-                to a different project or sprint. In Zoho Sprints, you can
-                easily update fields and move or delete multiple work items in
-                one go.
-              </p>
-            </div>
-
-            <div className=" w-full h-[30vh] relative    ">
-              <AnimateImage
-                className="object-cover object-center hover:scale-105"
-                fill
-                alt="Please wait "
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </div>
-          </div>
-
-          <div className="bg-primary  rounded-xl overflow-hidden   ">
-            <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
-              <h2 className="text-3xl  ">Sprint Planning</h2>
-              <p className="text-para  text-base leading-relaxed">
-                Backlog grooming or sprint planning can become tedious when
-                multiple tasks require the same field update or need to be moved
-                to a different project or sprint. In Zoho Sprints, you can
-                easily update fields and move or delete multiple work items in
-                one go.
-              </p>
-            </div>
-
-            <div className=" w-full h-[30vh] relative    ">
-              <AnimateImage
-                className="object-cover object-center hover:scale-105"
-                fill
-                alt="Please wait "
-                src="https://cdn.dribbble.com/userupload/36094553/file/original-753ef0b87b5be77e5d7b39f4b197e26c.png?resize=1504x1128&vertical=center"
-              />
-            </div>
-          </div>
-
-          <div className="bg-primary  rounded-xl overflow-hidden   ">
-            <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
-              <h2 className="text-3xl  ">Quick and Custom Filters</h2>
-              <p className="text-para  text-base leading-relaxed">
-                Backlog grooming or sprint planning can become tedious when
-                multiple tasks require the same field update or need to be moved
-                to a different project or sprint. In Zoho Sprints, you can
-                easily update fields and move or delete multiple work items in
-                one go.
-              </p>
-            </div>
-
-            <div className=" w-full h-[30vh] relative    ">
-              <AnimateImage
-                className="object-cover object-center hover:scale-105"
-                fill
-                alt="Please wait "
-                src="https://cdn.dribbble.com/userupload/36094553/file/original-753ef0b87b5be77e5d7b39f4b197e26c.png?resize=1504x1128&vertical=center"
-              />
-            </div>
-          </div>
-
-          <div className="bg-primary  rounded-xl overflow-hidden   ">
-            <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
-              <h2 className="text-3xl  ">Data Interoperability</h2>
-              <p className="text-para  text-base leading-relaxed">
-                Backlog grooming or sprint planning can become tedious when
-                multiple tasks require the same field update or need to be moved
-                to a different project or sprint. In Zoho Sprints, you can
-                easily update fields and move or delete multiple work items in
-                one go.
-              </p>
-            </div>
-
-            <div className=" w-full h-[30vh] relative    ">
-              <AnimateImage
-                className="object-cover object-center hover:scale-105"
-                fill
-                alt="Please wait "
-                src="https://cdn.dribbble.com/userupload/36094553/file/original-753ef0b87b5be77e5d7b39f4b197e26c.png?resize=1504x1128&vertical=center"
-              />
-            </div>
-          </div>
-
-          <div className="bg-primary  rounded-xl overflow-hidden   ">
-            <div className="flex flex-col gap-2 items-start  p-3 py-5 ">
-              <h2 className="text-3xl  ">Bulk Updates</h2>
-              <p className="text-para  text-base leading-relaxed">
-                Backlog grooming or sprint planning can become tedious when
-                multiple tasks require the same field update or need to be moved
-                to a different project or sprint. In Zoho Sprints, you can
-                easily update fields and move or delete multiple work items in
-                one go.
-              </p>
-            </div>
-
-            <div className=" w-full h-[30vh] relative    ">
-              <AnimateImage
-                className="object-cover object-center hover:scale-105"
-                fill
-                alt="Please wait "
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </>

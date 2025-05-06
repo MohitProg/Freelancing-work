@@ -28,11 +28,11 @@ const FaQ = () => {
               className=" rounded-xl p-1 w-full  bg-primary  "
             >
               <AccordionItem value="item-1">
-                <AccordionTrigger className={" text-texthead text-lg p-2"}>
+                <AccordionTrigger className={" text-texthead text-[1rem] md:text-lg p-2"}>
                   {val.title} ?
                 </AccordionTrigger>
                 <AccordionContent
-                  className={" text-para  md:text-sm p-2  py-2 "}
+                  className={" text-para text-base   md:text-sm p-2  py-2 "}
                 >
                   {val.description}
                 </AccordionContent>

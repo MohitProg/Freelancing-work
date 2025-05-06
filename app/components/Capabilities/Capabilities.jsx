@@ -27,6 +27,8 @@ import Dashboard from "./subComponents/Dashboard";
 import Productivity from "./subComponents/Productivity";
 import ProductivityRules from "./subComponents/ProductivityRules";
 import MostUsedApp from "./subComponents/MostUsedApp";
+import BreakUI from "./subComponents/BreakUI";
+import AlertsUi from "./subComponents/AlertsUi";
 
 const Capabilities = ({ slug }) => {
   const [Maindata, setMainData] = useState(null);
@@ -55,7 +57,7 @@ const Capabilities = ({ slug }) => {
           {/* section 2  */}
           <section className="  flex flex-col gap-7  min-h-screen common-backgroundGradient relative w-full  py-2  ">
             <div className="grid   grid-cols-1  lg:grid-cols-5 p-2 w-[95%] mx-auto  lg:w-[80%]  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
-              <div className="flex flex-col gap-3 p-3 py-6  rounded-xl  md:items-center text-start  md:text-center lg:items-start lg:text-start  lg:col-span-2 items-start">
+              <div className="flex flex-col gap-3 p-3 py-2  rounded-xl  md:items-center text-start  md:text-center lg:items-start lg:text-start  lg:col-span-2 items-start">
                 <h1 className=" ">
                   A Task Management Platform that saves time
                   {/* {Maindata?.heading} */}
@@ -108,6 +110,8 @@ const Capabilities = ({ slug }) => {
           {slug === "productivity-matrices" && <Productivity />}
           {slug === "productivity-rules" && <ProductivityRules />}
           {slug === "moast-used-apps" && <MostUsedApp />}
+          {slug === "breaks" && <BreakUI />}
+          {slug === "alerts" && <AlertsUi />}
         </main>
       )}
     </>

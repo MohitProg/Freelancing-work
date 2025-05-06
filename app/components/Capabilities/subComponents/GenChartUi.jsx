@@ -5,6 +5,38 @@ import AnimateImage from "@/app/utils/AnimateImage";
 import FaQ from "../../FaQ";
 
 const GenChartUi = () => {
+  const FeatureArray = [
+    {
+      id: 1,
+      title: "Gantt Chart: Visual Task Scheduling",
+      description:
+        "A clean, horizontal bar chart showing each task's start and end, making it easy to track timelines and durations.",
+      src: "https://cdn.dribbble.com/userupload/34672707/file/original-fb602955aa60ca6393c5520967f246a6.jpg?resize=1200x900&vertical=center",
+    },
+
+    {
+      id: 2,
+      title: "Team-Based Gantt Chart for Resource Planning",
+      description:
+        "Displays tasks with assigned owners and durations to help manage workloads and prevent scheduling conflicts.",
+      src: "https://cdn.dribbble.com/userupload/34672707/file/original-fb602955aa60ca6393c5520967f246a6.jpg?resize=1200x900&vertical=center",
+    },
+
+    {
+      id: 3,
+      title: "Adaptive Gantt View: Day to Quarter Scaling",
+      description:
+        "Switch between daily, weekly, monthly, or quarterly views to match the project’s complexity and timeline.",
+      src: "https://cdn.dribbble.com/userupload/34672707/file/original-fb602955aa60ca6393c5520967f246a6.jpg?resize=1200x900&vertical=center",
+    },
+    {
+      id: 4,
+      title: "Team-Based Gantt Chart for Resource Planning",
+      description:
+        "Displays tasks with assigned owners and durations to help manage workloads and prevent scheduling conflicts.",
+      src: "https://cdn.dribbble.com/userupload/34672707/file/original-fb602955aa60ca6393c5520967f246a6.jpg?resize=1200x900&vertical=center",
+    },
+  ];
   return (
     <>
       <CompanyScroller />
@@ -14,57 +46,58 @@ const GenChartUi = () => {
           <h2>Key Features of a Gantt Chart Creator</h2>
         </div>
 
-        {/* Section 1 */}
-        <div className="grid grid-cols-1 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20">
-          <div className="order-2 md:order-1 p-3 flex flex-col gap-3">
-            <h2 className="text-3xl ">Create and edit dependencies</h2>
-            <p className="text-para text-base leading-relaxed">
-              Sometimes there may be tasks that are related to one another and
-              must follow a specific sequence. The online Gantt chart maker
-              empowers you to establish four types of dependencies for such
-              tasks, enabling you to edit, delete, or modify the time lag
-              between dependent tasks as required.
-            </p>
-          </div>
-          <div className="order-1 md:order-2">
-            <div className=" w-full relative h-[50vh]  rounded-xl   overflow-hidden ">
-              <AnimateImage
-                className="object-cover object-center "
-                fill
-                alt="Please wait "
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Section 2 */}
-        <div className="grid grid-cols-1 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20">
-          <div className="order-1">
-            <div className=" w-full relative h-[50vh]  rounded-xl   overflow-hidden ">
-              <AnimateImage
-                className="object-cover object-center"
-                fill
-                alt="Please wait "
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </div>
-          </div>
-          <div className="order-2 px-4 flex flex-col gap-3 ">
-            <h2 className="text-3xl">Identify critical tasks</h2>
-            <p className="text-para text-base leading-relaxed">
-              The critical tasks in a project are those tasks that, if delayed,
-              would have a cascading effect on the entire project. When you are
-              working under tight project deadlines, errors are not an option.
-              Utilize our online Gantt chart maker to pinpoint these essential
-              tasks, enabling you to plan meticulously and allocate resources to
-              ensure project success.
-            </p>
-          </div>
-        </div>
+        {FeatureArray?.map((value) => {
+          if (value?.id % 2 === 0) {
+            return (
+              <div
+                key={value?.id}
+                className="grid grid-cols-1 sm:grid-cols-2  bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20"
+              >
+                <div className="order-2 md:order-1 p-3 flex flex-col gap-3">
+                  <h2 className=" text-2xl md:text-3xl ">{value?.title}</h2>
+                  <p className="text-para text-base leading-relaxed">
+                    {value?.description}
+                  </p>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className=" w-full relative h-[30vh] md:h-[50vh]  rounded-xl   overflow-hidden ">
+                    <AnimateImage
+                      className="object-cover object-center "
+                      fill
+                      alt="Please wait "
+                      src={value?.src}
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          } else {
+            return (
+              <div
+                key={value?.id}
+                className="grid grid-cols-1 sm:grid-cols-2 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20"
+              >
+                <div className="order-1">
+                  <div className=" w-full relative  h-[30vh] md:h-[50vh]   rounded-xl   overflow-hidden ">
+                    <AnimateImage
+                      className="object-cover object-center"
+                      fill
+                      alt="Please wait "
+                      src={value?.src}
+                    />
+                  </div>
+                </div>
+                <div className="order-2 px-4 flex flex-col gap-3 ">
+                  <h2 className="text-2xl md:text-3xl">{value?.title}</h2>
+                  <p className="text-para text-base leading-relaxed">
+                    {value?.description}
+                  </p>
+                </div>
+              </div>
+            );
+          }
+        })}
       </section>
-
-      {/* section 2  */}
 
       <section className="common-section">
         <div className="w-full px-6 py-10 bg-white">
@@ -107,12 +140,12 @@ const GenChartUi = () => {
       </section>
       {/* benifits and some other things  */}
 
-      <section className="common-section">
+      <section className="common-section px-2">
         <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Benefits */}
-          <div className="bg-orange-50 p-6 rounded-md flex flex-col gap-3">
+          <div className="bg-orange-50 p-4 rounded-md flex flex-col gap-3">
             <h2 className="text-3xl">Benefits of using Gantt Chart Creator</h2>
-            <ul className="list-disc list-inside text-para space-y-2">
+            <ul className="list-disc list-outside pl-3 text-para text-base space-y-2">
               <li>A quick overview of project status</li>
               <li>Performs real-time progress tracking</li>
               <li>Aids in optimum resource allocation</li>
@@ -126,9 +159,9 @@ const GenChartUi = () => {
           </div>
 
           {/* Disadvantages */}
-          <div className="bg-orange-50 p-6 rounded-md flex flex-col gap-3">
+          <div className="bg-orange-50 p-4 rounded-md flex flex-col gap-3">
             <h2 className="text-3xl">Disadvantages of a Gantt chart</h2>
-            <ul className="list-disc list-inside text-para space-y-2">
+            <ul className="list-disc list-outside pl-3 text-para text-base space-y-2">
               <li>
                 Scaling may become complicated when it comes to larger projects
               </li>
@@ -142,7 +175,6 @@ const GenChartUi = () => {
             </ul>
           </div>
         </div>
-        =
       </section>
 
       <FaQ />

@@ -5,10 +5,10 @@ import { MdDashboardCustomize } from "react-icons/md";
 const MostUsedApp = () => {
   return (
     <>
-      <section className=" common-secion  py-4 px-4  flex flex-col gap-4">
+      <section className=" common-secion   space-y-8 p-3">
         <div className="mx-auto text-center  flex flex-col gap-2 items-center">
           <h2>
-            Configure Productivity{" "}
+            Configure Productivity
             <span className="text-purple-600">Your Way</span>
           </h2>
           <p className=" primary-para">
@@ -17,9 +17,9 @@ const MostUsedApp = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 common-section  mx-auto">
           {/* Card 1 */}
-          <div className="bg-white rounded-2xl p-4 hover:shadow-sm flex flex-col gap-6 items-center ">
+          <div className="bg-white rounded-xl p-2 hover:shadow-sm flex flex-col gap-6 items-center ">
             <div className="h-[30vh] relative w-full ">
               <AnimateImage
                 src={
@@ -30,7 +30,7 @@ const MostUsedApp = () => {
               />
             </div>
 
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2 p-2 ">
               <div className="flex items-center  gap-3   justify-start">
                 <div className="bg-purple-100 text-purple-600 p-3 rounded-xl">
                   <MdDashboardCustomize size={20} />
@@ -47,18 +47,18 @@ const MostUsedApp = () => {
 
           {/* Card 2 */}
 
-          <div className="bg-white rounded-2xl p-4 hover:shadow-sm flex flex-col gap-6 items-center ">
+          <div className="bg-white rounded-xl p-2 hover:shadow-sm flex flex-col gap-6 items-center ">
             <div className="h-[30vh] relative w-full ">
               <AnimateImage
                 src={
                   "https://cdn.dribbble.com/userupload/17415831/file/original-f17d27b2f87f9e3f55973f2b731d5347.png?resize=1200x900&vertical=center"
                 }
                 alt="Productivity Rules by Role"
-                className="w-full h-40 object-cover rounded-xl mb-4"
+                className="w-full  object-cover rounded-xl mb-4"
               />
             </div>
 
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2 p-2 ">
               <div className="flex items-center  gap-3   justify-start">
                 <div className="bg-purple-100 text-purple-600 p-3 rounded-xl">
                   <MdDashboardCustomize size={20} />
@@ -77,7 +77,7 @@ const MostUsedApp = () => {
 
           {/* card 3  */}
 
-          <div className="bg-white rounded-2xl p-4 hover:shadow-sm flex flex-col gap-6 items-center ">
+          <div className="bg-white rounded-xl p-2 hover:shadow-sm flex flex-col gap-6 items-center ">
             <div className="h-[30vh] relative w-full ">
               <AnimateImage
                 src={
@@ -88,7 +88,7 @@ const MostUsedApp = () => {
               />
             </div>
 
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2 p-2 ">
               <div className="flex items-center  gap-3   justify-start">
                 <div className="bg-purple-100 text-purple-600 p-3 rounded-xl">
                   <MdDashboardCustomize size={20} />

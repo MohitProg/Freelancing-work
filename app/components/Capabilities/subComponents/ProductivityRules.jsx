@@ -4,17 +4,20 @@ import React from "react";
 const ProductivityRules = () => {
   return (
     <>
-      <section className="common-section space-y-8">
+      <section className="common-section space-y-8 p-3 ">
         <div className=" space-y-2 flex items-center text-center flex-col">
-          <h2 className="">Custom Productivity Rules by Role</h2>
-          <p className="primary-para ">
-            Tailor productivity measurement by setting specific rules for
-            different roles—choose the apps and websites that define productive
-            work for marketing, sales, or support teams.
+          <h2 className="">
+            Custom Productivity Rules for Role-Based Measurement
+          </h2>
+          <p className="primary-para  text-base ">
+            Define productivity benchmarks by selecting specific applications
+            and websites relevant to each user's role—perfect for evaluating
+            performance across individuals or entire teams, such as marketing,
+            development, or support.
           </p>
         </div>
 
-        <div className="relative h-[70vh] w-full rounded-xl overflow-hidden  ">
+        <div className="relative h-[30vh] sm:h-[50vh] md:h-[70vh] w-full rounded-xl overflow-hidden  ">
           <AnimateImage
             className="object-cover object-center"
             src="https://cdn.dribbble.com/userupload/17415831/file/original-f17d27b2f87f9e3f55973f2b731d5347.png?resize=1200x900&vertical=center"
@@ -22,21 +25,21 @@ const ProductivityRules = () => {
         </div>
       </section>
 
-      <section className="common-section py-16 px-4 md:px-12">
+      <section className="common-section py-16 px-4 ">
         <div className="  items-center flex-col  text-center mb-12 flex ">
           <h2>
             Configure Productivity{" "}
             <span className="text-purple-600">Your Way</span>
           </h2>
-          <p className="primary-para">
+          <p className="primary-para text-base ">
             Leverage our intelligent rules engine to customize productivity
             tracking for different roles and teams.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10  mx-auto">
           {/* Card 1 */}
-          <div className="bg-white p-8  rounded-xl hover:shadow-sm transition duration-300">
+          <div className="bg-white p-4  md:p-8  rounded-xl hover:shadow-sm transition duration-300">
             <div className="flex items-center space-x-4 mb-4">
               <div className="bg-purple-100 text-purple-600 p-3 rounded-xl">
                 <svg
@@ -66,7 +69,7 @@ const ProductivityRules = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white p-8 rounded-xl hover:shadow-sm transition duration-300">
+          <div className="bg-white p-4  md:p-8  rounded-xl hover:shadow-sm transition duration-300">
             <div className="flex items-center space-x-4 mb-4">
               <div className="bg-purple-100 text-purple-600 p-3 rounded-xl">
                 <svg

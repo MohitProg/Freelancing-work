@@ -4,7 +4,7 @@ import React from "react";
 const Attendence = () => {
   return (
     <>
-      <section className="common-section space-y-8">
+      <section className="common-section space-y-8 p-3">
         <div className="text-center space-y-2 flex flex-col items-center">
           <h2 className="">Smart Attendance & Activity Analytics Dashboard</h2>
           <p className="primary-para max-w-4xl mx-auto">
@@ -15,7 +15,7 @@ const Attendence = () => {
           </p>
         </div>
 
-        <div className="relative h-[70vh] w-full rounded-xl overflow-hidden  ">
+        <div className="relative h-[30vh] sm:h-[50vh] md:h-[70vh] w-full rounded-xl overflow-hidden  ">
           <AnimateImage
             className="object-cover object-center"
             src="https://cdn.dribbble.com/userupload/15213681/file/original-358ec6d5b0b8ade77d6d79048313ea69.png?resize=1600x1200&vertical=center"
@@ -23,11 +23,11 @@ const Attendence = () => {
         </div>
       </section>
 
-      <section className="common-section  flex flex-col items-center px-6 py-5 space-y-12">
+      <section className="common-section  flex flex-col items-center p-3 py-5 space-y-12">
         {/* Heading */}
         <div className="text-center space-y-2 flex flex-col items-center">
           <h2 className=""> Empowering Transparent Time Tracking</h2>
-          <p className="primary-para">
+          <p className="primary-para text-base ">
             Our attendance system is designed to simplify and enhance workforce
             time management. From real-time check-ins to insightful analytics,
             these features help teams and admins maintain transparency, improve
@@ -39,7 +39,7 @@ const Attendence = () => {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  w-full">
           {/* Card 1 */}
-          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md ">
+          <div className="common-border bg-primary  rounded-xl  overflow-hidden ">
             <div className="bg-gradient-to-tr from-purple-800 to-purple-300  p-2">
               <div className=" w-full relative h-[30vh]  rounded-xl   overflow-hidden ">
                 <AnimateImage
@@ -50,7 +50,7 @@ const Attendence = () => {
                 />
               </div>
             </div>
-            <div className="p-6 space-y-2">
+            <div className="p-3 space-y-2">
               <h3 className="text-xl font-semibold text-gray-900">
                 Self Check-In/Check-Out
               </h3>
@@ -62,7 +62,7 @@ const Attendence = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md">
+          <div className="common-border bg-primary  rounded-xl  overflow-hidden ">
             <div className="bg-gradient-to-tr from-blue-800 to-purple-300  p-2">
               <div className=" w-full relative h-[30vh]  rounded-xl   overflow-hidden ">
                 <AnimateImage
@@ -73,7 +73,7 @@ const Attendence = () => {
                 />
               </div>
             </div>
-            <div className="p-6 space-y-2">
+            <div className="p-3 space-y-2">
               <h3 className="text-xl font-semibold text-gray-900">
                 Daily, Weekly, and Monthly View
               </h3>
@@ -85,7 +85,7 @@ const Attendence = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="common-border bg-primary  rounded-xl  overflow-hidden shadow-md">
+          <div className="common-border bg-primary  rounded-xl  overflow-hidden ">
             <div className="bg-gradient-to-tr from-pink-800 to-purple-300  p-2">
               <div className=" w-full relative h-[30vh]  rounded-xl   overflow-hidden ">
                 <AnimateImage
@@ -96,7 +96,7 @@ const Attendence = () => {
                 />
               </div>
             </div>
-            <div className="p-6 space-y-2">
+            <div className="p-3 space-y-2">
               <h3 className="text-xl font-semibold text-gray-900">
                 Attendance History & Reports
               </h3>

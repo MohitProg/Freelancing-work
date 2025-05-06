@@ -5,85 +5,92 @@ import { FaBoxOpen } from "react-icons/fa";
 import { CiSquarePlus } from "react-icons/ci";
 
 const Goal = () => {
+  const featureArray = [
+    {
+      id: 1,
+      title: "Measure success of all your work",
+      description:
+        "Every manager wants to measure the success of their team. To start, all you need to do is add tasks from different teams into a single Goal.",
+      src: "https://cdn.dribbble.com/userupload/4018455/file/original-ebf9d23986933c1387af81f6e5a494af.png?resize=1200x900&vertical=center",
+    },
+
+    {
+      id: 2,
+      title: "Give your team a task target",
+      description:
+        "With Task Targets, ClickUp will automatically track your progress as you complete them. For example, link all tasks in a Sprint to a single Goal to track overall progress.",
+      src: "https://cdn.dribbble.com/userupload/4018455/file/original-ebf9d23986933c1387af81f6e5a494af.png?resize=1200x900&vertical=center",
+    },
+
+    {
+      id: 3,
+      title: "Setup your numerical targets",
+      description:
+        "Add targets to track items that can be broken down into distinct units like numbers or True/False. Then create your own Targets, such as Create 5 Instagram posts in a week.",
+      src: "https://cdn.dribbble.com/userupload/4018455/file/original-ebf9d23986933c1387af81f6e5a494af.png?resize=1200x900&vertical=center",
+    },
+  ];
   return (
     <>
       <CompanyScroller />
 
-      <section className=" px-4    ">
-        <div className="text-center mb-16 flex flex-col items-center">
-          <h2>Connect your Goals to your work</h2>
-        </div>
-
-        {/* Section 1 */}
-        <div className="grid grid-cols-1 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20">
-          <div className="order-2 md:order-1 p-3 flex flex-col gap-3">
-            <h2 className="text-3xl ">Measure success of all your work</h2>
-            <p className="text-para text-base leading-relaxed">
-              Every manager wants to measure the success of their team. To
-              start, all you need to do is add tasks from different teams into a
-              single Goal.
-            </p>
-          </div>
-          <div className="order-1 md:order-2">
-            <div className=" w-full relative h-[50vh]  rounded-xl   overflow-hidden ">
-              <AnimateImage
-                className="object-cover object-center "
-                fill
-                alt="Please wait "
-                src="https://cdn.dribbble.com/userupload/4018455/file/original-ebf9d23986933c1387af81f6e5a494af.png?resize=1200x900&vertical=center"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Section 2 */}
-        <div className="grid grid-cols-1 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20">
-          <div className="order-1">
-            <div className=" w-full relative h-[50vh]  rounded-xl   overflow-hidden ">
-              <AnimateImage
-                className="object-cover object-center"
-                fill
-                alt="Please wait "
-                src="https://cdn.dribbble.com/userupload/26421593/file/original-241623baa1207c71fc1ea53fd2e305c4.png?resize=1200x900&vertical=center"
-              />
-            </div>
-          </div>
-          <div className="order-2 px-4 flex flex-col gap-3 ">
-            <h2 className="text-3xl">Give your team a task target</h2>
-            <p className="text-para text-base leading-relaxed">
-              With Task Targets, ClickUp will automatically track your progress
-              as you complete them. For example, link all tasks in a Sprint to a
-              single Goal to track overall progress.
-            </p>
-          </div>
-        </div>
-
-        {/* Section 3 */}
-        <div className="grid grid-cols-1 bg-primary rounded-xl  common-section md:grid-cols-2 items-center gap-4 mb-20">
-          <div className="order-2 md:order-1 p-3 flex flex-col gap-3">
-            <h2 className="text-3xl ">Setup your numerical targets</h2>
-            <p className="text-para text-base leading-relaxed">
-              Add targets to track items that can be broken down into distinct
-              units like numbers or True/False. Then create your own Targets,
-              such as "Create 5 Instagram posts in a week.
-            </p>
-          </div>
-          <div className="order-1 md:order-2">
-            <div className=" w-full relative h-[50vh]  rounded-xl   overflow-hidden ">
-              <AnimateImage
-                className="object-cover object-center "
-                fill
-                alt="Please wait "
-                src="https://cdn.dribbble.com/userupload/41500502/file/original-6a9a532ea15d0bfd767ce6a4283e5e65.png?resize=1200x900&vertical=center"
-              />
-            </div>
-          </div>
-        </div>
+      <section className="space-y-8 p-3">
+        {featureArray?.map((value) => {
+          if (value?.id % 2 === 0) {
+            return (
+              <div
+                key={value?.id}
+                className="grid grid-cols-1 bg-primary rounded-xl sm:grid-cols-2  common-section md:grid-cols-2 items-center gap-4 "
+              >
+                <div className="order-2 md:order-1 lg:px-8  p-3 flex flex-col gap-3">
+                  <h2 className=" text-2xl md:text-3xl ">{value?.title}</h2>
+                  <p className="text-para text-base leading-relaxed">
+                    {value?.description}
+                  </p>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className=" w-full relative h-[30vh]  md:h-[50vh] rounded-xl   overflow-hidden ">
+                    <AnimateImage
+                      className="object-cover object-center "
+                      fill
+                      alt="Please wait "
+                      src={value?.src}
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          } else {
+            return (
+              <div
+                key={value?.id}
+                className="grid grid-cols-1 bg-primary rounded-xl sm:grid-cols-2  common-section md:grid-cols-2 items-center gap-4 "
+              >
+                <div className="order-1">
+                  <div className=" w-full relative h-[30vh]  md:h-[50vh]   rounded-xl   overflow-hidden ">
+                    <AnimateImage
+                      className="object-cover object-center"
+                      fill
+                      alt="Please wait "
+                      src={value?.src}
+                    />
+                  </div>
+                </div>
+                <div className="order-2 px-4  p-3 flex flex-col gap-3 ">
+                  <h2 className=" text-2xl md:text-3xl">{value?.title}</h2>
+                  <p className="text-para text-base leading-relaxed">
+                    {value?.description}
+                  </p>
+                </div>
+              </div>
+            );
+          }
+        })}
       </section>
 
       <section className="common-section">
         <div className="flex flex-col items-center px-4 py-4 space-y-8">
-          <h2>Make goals part of the day-to-day</h2>
+          <h2 className="text-center">Make goals part of the day-to-day</h2>
 
           <div className="flex flex-col md:flex-row gap-6 mt-10 w-full max-w-6xl">
             {/* Box 1 */}
