@@ -26,7 +26,7 @@ const MotionButton = motion(DialogTrigger);
 const FormSection = ({ title, className }) => {
   return (
     <>
-      <Dialog >
+      <Dialog>
         <MotionButton
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const FormSection = ({ title, className }) => {
 
         <DialogContent
           className={
-            " w-[95vw] md:w-[60vw]  !max-w-none  outline-none drop-shadow-2xl border-none"
+            " w-[95vw] md:w-[60vw]  !max-w-none  outline-none  border-none"
           }
         >
           <div className="hidden">
@@ -78,11 +78,11 @@ const FormSection = ({ title, className }) => {
               </div>
             </div>
 
-            <form action="" className="flex flex-col gap-2 p-2   ">
-              <div className="flex flex-col gap-2   ">
+            <form action="" className="flex flex-col gap-2 ">
+              <div className="flex flex-col gap-2  h-[60vh] md:h-full  overflow-y-scroll md:overflow-hidden   ">
                 <div className="grid grid-cols-1  md:grid-cols-3 gap-2">
                   <div className="flex flex-col gap-2 p-1 ">
-                    <label htmlFor="" className="text-para text-md">
+                    <label htmlFor="" className="text-para text-md hidden">
                       Name
                     </label>
                     <Input

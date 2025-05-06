@@ -62,7 +62,7 @@ const PaymentSection = () => {
 
   return (
     <>
-      <section className="p-2 mx-auto common-section   rounded-xl">
+      <section className="p-3 mx-auto common-section   rounded-xl">
         <AnimateContent className="flex  items-start flex-col gap-3">
           <span className=" text-sm lg:text-xs text-[#9049fe] p-2 bg-[#f1e7fe] rounded-full">
             100% Money-BackGuarantee
@@ -189,9 +189,7 @@ const PaymentSection = () => {
                   Popular
                 </span>
               </h1>
-              <p className="primary-para ">
-                Best for mid-sized teams
-              </p>
+              <p className="primary-para ">Best for mid-sized teams</p>
             </div>
 
             <div className="space-y-3 text-center  ">
