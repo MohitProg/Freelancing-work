@@ -84,7 +84,7 @@ const VideoSection = () => {
                           transition={{ duration: 0.5, ease: "easeInOut" }}
                           src={data.videoUrl}
                           autoPlay
-                          className="rounded-xl shadow-2xl"
+                          className="rounded-xl"
                         />
                       </div>
                     </motion.div>
@@ -129,7 +129,7 @@ const VideoSection = () => {
                           transition={{ duration: 0.5, ease: "easeInOut" }}
                           src={data.videoUrl}
                           autoPlay
-                          className="rounded-xl shadow-2xl"
+                          className="rounded-xl "
                         />
                       </div>
                     </motion.div>
@@ -174,7 +174,7 @@ const VideoSection = () => {
                           transition={{ duration: 0.5, ease: "easeInOut" }}
                           src={data.videoUrl}
                           autoPlay
-                          className="rounded-xl shadow-2xl"
+                          className="rounded-xl "
                         />
                       </div>
                     </motion.div>

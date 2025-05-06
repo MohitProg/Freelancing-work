@@ -5,13 +5,41 @@ import AnimateContent from "@/app/utils/AnimateContent";
 import PaymentSection from "@/app/components/PaymentSection";
 import AnimateButton from "@/app/utils/AnimateButton";
 import FaQ from "@/app/components/FaQ";
+import AnimateImage from "@/app/utils/AnimateImage";
 
 const PricePage = () => {
   return (
     <main>
       {/* section 1  */}
+      <section className="  flex flex-col gap-7  min-h-[80vh] common-backgroundGradient relative w-full  py-2  ">
+        <div className="grid   grid-cols-1  lg:grid-cols-5 p-2 w-[95%] mx-auto  lg:w-[80%]  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
+          <div className="flex flex-col gap-3 p-3 py-2  rounded-xl  md:items-center text-start  md:text-center lg:items-start lg:text-start  lg:col-span-2 items-start">
+            <h1>The best work solution, for the best price.</h1>
 
-      <section className=" relative common-backgroundGradient h-[50vh]">
+            <p className="primary-para px-2">
+              Trusted by the world's leading businesses
+            </p>
+            <AnimateButton className="primary-btn py-3 px-7">
+              Gets Started
+            </AnimateButton>
+          </div>
+
+          <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] md:h-[50vh] lg:h-[60vh]     rounded-xl  overflow-hidden ">
+            <AnimateImage
+              className="object-cover object-center"
+              fill
+              alt="Please wait "
+              src={
+                "https://cdn.dribbble.com/userupload/16554789/file/original-797a59537249b8666b2aaa1b512d1e04.png?resize=1504x1128&vertical=center"
+              }
+            />
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[30] hidden md:block h-[10vh] bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
+      </section>
+
+      {/* <section className=" relative common-backgroundGradient h-[50vh]">
         <div className="common-section ">
           <div className="text-center lg:w-[70%] mx-auto ">
             <AnimateContent>
@@ -26,9 +54,10 @@ const PricePage = () => {
           </div>
         </div>
 
-        {/* blur background  */}
+   
         <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[30] h-30 bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
-      </section>
+      </section> */}
+
       {/* payment section  */}
 
       <PaymentSection />
