@@ -62,8 +62,8 @@ const PaymentSection = () => {
 
   return (
     <>
-      <section className="p-3 mx-auto common-section   rounded-xl">
-        <AnimateContent className="flex  items-start flex-col gap-3">
+      <section className="p-3 py-6  mx-auto common-section   rounded-xl">
+        <AnimateContent className="flex  items-center md:items-start flex-col gap-3">
           <span className=" text-sm lg:text-xs text-[#9049fe] p-2 bg-[#f1e7fe] rounded-full">
             100% Money-BackGuarantee
           </span>
