@@ -9,10 +9,9 @@ import AnimateImage from "@/app/utils/AnimateImage";
 import AnimateLink from "@/app/utils/AnimateLink";
 import { Clock, RotateCcw, Zap } from "lucide-react";
 import { MdAddTask } from "react-icons/md";
+import FormSection from "../FormSection";
 
 const Features = ({ slug }) => {
-  console.log(slug);
-
   const templates = [
     {
       title: "Sprint",
@@ -43,25 +42,23 @@ const Features = ({ slug }) => {
     }
   }, [slug]);
 
-  console.log(mainData);
   return (
     <>
       {mainData && (
         <main className="space-y-5">
           <section className="  flex flex-col gap-7  min-h-screen common-backgroundGradient relative w-full   ">
             <div className="grid   grid-cols-1  lg:grid-cols-5 p-2 w-[95%] mx-auto  lg:w-[80%]  bg-gradient-to-b  lg:bg-gradient-to-r from-transparent rounded-xl    to-purple-400 gap-4">
-              <div className="flex flex-col gap-3 p-3 py-6  rounded-xl  md:items-center text-start  md:text-center lg:items-start lg:text-start  lg:col-span-2 items-start">
+              <div className="flex flex-col gap-3 p-3 py-6  rounded-xl  md:items-center text-start  md:text-center  lg:justify-center lg:items-start lg:text-start  lg:col-span-2 items-start">
                 <h1 className=" ">{mainData.title}</h1>
 
                 <p className="primary-para px-2">
-                  Automate, prioritize, and keep work moving—all while staying
-                  connected to Docs, Whiteboards, Chat, and more
-                  {/* {Maindata?.desc} */}
+                 
+                  {mainData?.desc}
                 </p>
-
-                <AnimateButton className="primary-btn py-3 px-7">
-                  Gets Started
-                </AnimateButton>
+                <FormSection
+                  className="primary-btn py-3 px-7"
+                  title="Gets Started"
+                />
               </div>
 
               <div className="  relative  lg:col-span-3 col-span-1 h-[40vh] md:h-[50vh] lg:h-[70vh]    rounded-xl  overflow-hidden ">
@@ -77,7 +74,7 @@ const Features = ({ slug }) => {
               </div>
             </div>
 
-            <div className="absolute bottom-0 pointer-events-none left-0 w-full z-[30] h-[10vh] bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
+            <div className="absolute bottom-0 pointer-events-none left-0 w-full z-30 h-[10vh] bg-gradient-to-t from-[#f6f4ff] via-[#f6f4ff]/80 to-transparent  "></div>
           </section>
 
           {/* scetion 2 for main content  */}
@@ -92,7 +89,11 @@ const Features = ({ slug }) => {
                     <AnimateLink
                       key={ind}
                       href={val?.linKpath}
-                      className="common-navlink text-sm  transition-colors duration-300 ease-in-out  py-3 border-b-[0.5px]  border-gray-400 hover:bg-gradient-to-r hover:from-[#33bbfd] hover:to-[#933afe] rounded-xl hover:text-white  font-medium "
+                      className={`common-navlink text-sm  transition-colors duration-300 ease-in-out  py-3 border-b-[0.5px]  border-gray-400 hover:bg-gradient-to-r hover:from-[#33bbfd] hover:to-[#933afe] ${
+                        slug === val?.linKpath
+                          ? " bg-gradient-to-r  from-[#33bbfd] to-[#933afe] text-primary"
+                          : ""
+                      } rounded-xl hover:text-white  font-medium `}
                     >
                       <MdAddTask size={22} />
                       {val?.title}
@@ -104,160 +105,81 @@ const Features = ({ slug }) => {
 
             <div className="md:col-span-8 lg:col-span-6   flex   min-h-[130vh]  flex-col gap-8 ">
               {/* info divs  */}
-              <AnimateContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5      bg-primary  p-2 lg:p-4   rounded-xl">
-                  <div className="bg-gradient-to-tr order-2 from-purple-800 rounded-xl overflow-hidden to-purple-300   p-2 ">
-                    <div className=" w-full relative h-[30vh]  md:h-[50vh]   rounded-2xl  ">
-                      <AnimateImage
-                        className="object-cover object-center"
-                        fill
-                        alt="Please wait "
-                        src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      />
-                    </div>
-                  </div>
-                  <div className="lg:p-3 p-1 flex flex-col order-1 gap-5 items-start justify-center ">
-                    <h2 className="text-2xl text-center md:text-start ">
-                      Comprehensive Attendance Tracking
-                    </h2>
-                    <ul className="text-para  list-none  text-[1rem] lg:text-[1.08rem] flex flex-col  gap-6 ">
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
+
+              {mainData?.data?.map((val) => {
+                if (val?.id % 2 === 0) {
+                  return (
+                    <AnimateContent key={val?.id}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5      bg-primary  p-2 lg:p-4   rounded-xl">
+                        <div className="bg-gradient-to-tr order-2 from-purple-800 rounded-xl overflow-hidden to-purple-300   p-2 ">
+                          <div className=" w-full relative h-[30vh]  md:h-[50vh]   rounded-2xl  ">
+                            <AnimateImage
+                              className="object-cover object-center"
+                              fill
+                              alt="Please wait "
+                              src={val?.image}
+                            />
+                          </div>
                         </div>
-                        Real-time tracking of employee clock-ins and clock-outs
-                      </li>
-
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
+                        <div className="lg:p-3 p-1 flex flex-col order-1 gap-5 items-start justify-center ">
+                          <h2 className="text-2xl text-center md:text-start ">
+                            {val?.title}
+                          </h2>
+                          <ul className="text-para  list-none  text-[1rem] lg:text-[1.08rem] flex flex-col  gap-6 ">
+                            {val?.points?.map((li, ind) => (
+                              <li
+                                key={ind}
+                                className="flex items-start gap-3 leading-tight "
+                              >
+                                <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
+                                  <GoArrowUpRight color="#ffffff" size={18} />
+                                </div>
+                                {li}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
-                        Automatic calculation of total work hours, online hours,
-                        active and inactive hours including overtime
-                      </li>
-
-                      <li className="flex items-start gap-3  leading-tight">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
+                      </div>
+                    </AnimateContent>
+                  );
+                } else {
+                  return (
+                    <AnimateContent key={val?.id}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5   bg-primary  p-2 lg:p-4   rounded-xl">
+                        <div className="lg:p-3 p-1 order-1 md:order-2  flex flex-col gap-5 items-start justify-center ">
+                          <h2 className="text-2xl text-center md:text-start  ">
+                            {val?.title}
+                          </h2>
+                          <ul className="text-para  list-none text-[1rem] lg:text-[1.08rem] flex flex-col   gap-6">
+                            {val?.points?.map((li, ind) => (
+                              <li
+                                key={ind}
+                                className="flex items-start gap-3 leading-tight "
+                              >
+                                <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
+                                  <GoArrowUpRight color="#ffffff" size={18} />
+                                </div>
+                                {li}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
-                        Detailed reports for individual and team attendance
-                        patterns
-                      </li>
 
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
+                        <div className="bg-gradient-to-tr order-2 md:order-1  from-purple-800 rounded-xl overflow-hidden to-purple-300   p-2 ">
+                          <div className=" w-full relative h-[30vh]  md:h-[50vh]  rounded-2xl  ">
+                            <AnimateImage
+                              className="object-cover object-center"
+                              fill
+                              alt="Please wait "
+                              src={val?.image}
+                            />
+                          </div>
                         </div>
-                        Real-time tracking of employee clock-ins and clock-outs
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </AnimateContent>
-
-              <AnimateContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5   bg-primary  p-2 lg:p-4   rounded-xl">
-                  <div className="lg:p-3 p-1 order-1 md:order-2  flex flex-col gap-5 items-start justify-center ">
-                    <h2 className="text-2xl text-center md:text-start  ">
-                      Comprehensive Attendance Tracking
-                    </h2>
-                    <ul className="text-para  list-none text-[1rem] lg:text-[1.08rem] flex flex-col  gap-4 gap-6">
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Real-time tracking of employee clock-ins and clock-outs
-                      </li>
-
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Automatic calculation of total work hours, online hours,
-                        active and inactive hours including overtime
-                      </li>
-
-                      <li className="flex items-start gap-3  leading-tight">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Detailed reports for individual and team attendance
-                        patterns
-                      </li>
-
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Real-time tracking of employee clock-ins and clock-outs
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-gradient-to-tr order-2 md:order-1  from-purple-800 rounded-xl overflow-hidden to-purple-300   p-2 ">
-                    <div className=" w-full relative h-[30vh]  md:h-[50vh]  rounded-2xl  ">
-                      <AnimateImage
-                        className="object-cover object-center"
-                        fill
-                        alt="Please wait "
-                        src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </AnimateContent>
-
-              <AnimateContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5     bg-primary  p-2 lg:p-4  rounded-xl">
-                  <div className="lg:p-3 p-1 order-1 flex flex-col gap-5 items-start justify-center ">
-                    <h2 className="text-2xl text-center md:text-start  ">
-                      Comprehensive Attendance Tracking
-                    </h2>
-                    <ul className="text-para  list-none  text-[1rem] lg:text-[1.08rem] flex flex-col  gap-4">
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Real-time tracking of employee clock-ins and clock-outs
-                      </li>
-
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Automatic calculation of total work hours, online hours,
-                        active and inactive hours including overtime
-                      </li>
-
-                      <li className="flex items-start gap-3  leading-tight">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Detailed reports for individual and team attendance
-                        patterns
-                      </li>
-
-                      <li className="flex items-start gap-3 leading-tight ">
-                        <div className=" rounded-full p-[2px] bg-gradient-to-r from-[#33bbfd] to-[#933afe] ">
-                          <GoArrowUpRight color="#ffffff" size={18} />
-                        </div>
-                        Real-time tracking of employee clock-ins and clock-outs
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-gradient-to-tr order-2 from-purple-800 rounded-xl overflow-hidden to-purple-300   p-2 ">
-                    <div className=" w-full relative h-[30vh]  md:h-[50vh]  rounded-2xl  ">
-                      <AnimateImage
-                        className="object-cover object-center"
-                        fill
-                        alt="Please wait "
-                        src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </AnimateContent>
+                      </div>
+                    </AnimateContent>
+                  );
+                }
+              })}
             </div>
           </section>
 

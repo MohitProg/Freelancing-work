@@ -17,6 +17,8 @@ import AnimateButton from "../utils/AnimateButton";
 import { AnimatePresence, motion } from "motion/react";
 import { dataArray } from "../data";
 import MobileNavbar from "./MobileNavbar";
+import FormSection from "./FormSection";
+import WatchVideoSection from "./WatchVideoSection";
 
 const Navbar = () => {
   // variables for category
@@ -86,25 +88,30 @@ const Navbar = () => {
           )}
 
           <div className="flex items-center gap-4 px-2  text-para">
-            <div className="p-1  bg-primary hidden lg:block text-sm     hover:shadow-sm   rounded-xl">
-              <button className="p-2 hover:bg-hoverColor px-4  rounded-xl">
-                Contact Sales
-              </button>
-            </div>
+            <FormSection
+              title={"Contact Sales"}
+              cat={"NavMenu"}
+              className={
+                "  bg-primary hidden lg:flex  text-sm     hover:shadow-sm   rounded-xl p-3 hover:bg-hoverColor px-4 "
+              }
+            />
 
-            <div className=" flex items-center justify-between gap-1 p-1  bg-primary   rounded-xl">
+            {/* login signup button */}
+
+            {/* <div className=" flex items-center justify-between gap-1 p-1  bg-primary   rounded-xl">
               <button className="p-3 md:p-2 px-8  text-sm hidden lg:block  rounded-lg hover:bg-hoverColor">
                 Login
               </button>
               <AnimateButton className="  primary-btn py-2   ">
                 SignUp
               </AnimateButton>
-            </div>
+            </div> */}
+
             <MobileNavbar />
           </div>
         </nav>
 
-        {/* div menu start from here  */}
+        {/* Main  menu start from here  */}
 
         <AnimatePresence>
           {navDropToggle && (
@@ -272,10 +279,10 @@ const Navbar = () => {
                     transition={{ duration: 0.3, ease: "easeIn" }}
                     className="col-span-4   grid grid-cols-4"
                   >
-                    <div className="col-span-3   grid grid-cols-1">
+                    <div className="col-span-3    grid grid-cols-1">
                       {/* div for nav list  */}
 
-                      <div className=" p-3  columns-3  items-start flex-wrap w-full">
+                      <div className=" p-3  columns-3 min-h-[40vh]  items-start flex-wrap w-full">
                         <Link
                           href="#"
                           className="flex gap-2 text-para  items-center text-[0.8rem]  hover:bg-[#f1f1f9] p-2 "
@@ -290,60 +297,17 @@ const Navbar = () => {
                         </button>
                       </div>
                     </div>
-
-                    <div className="col-span-1">
-                      <div className="flex flex-col gap-2">
-                        <div className="flex flex-col  items-start ">
-                          <h1 className="font-bold text-sm">Import</h1>
-                        </div>
-
-                        <div className="flex flex-col gap-6">
-                          <ul className="text-md flex flex-col gap-2  text-[#3c3a54]">
-                            <li className="flex items-center gap-2">
-                              <PiArrowBendRightUpBold color="#8c0b9fff" />
-                              Generate standup
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <PiArrowBendRightUpBold color="#8c0b9fff" />
-                              Generate standup
-                            </li>
-
-                            <li className="flex items-center gap-2">
-                              <PiArrowBendRightUpBold color="#8c0b9fff" />
-                              Generate standup
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <PiArrowBendRightUpBold color="#8c0b9fff" />
-                              Generate standup
-                            </li>
-                            <li className="flex items-center gap-2">
-                              <PiArrowBendRightUpBold color="#8c0b9fff" />
-                              Generate standup
-                            </li>
-                          </ul>
-
-                          <button className="p-2 rounded-lg mx-auto cursor-pointer ">
-                            Learn More
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* type 1 capabilities */}
                   </motion.div>
                 )}
               </div>
               <div className="w-full flex items-center justify-end text-[#3c3a54] p-3  gap-8">
-                <button className="flex items-center text-sm gap-2 ">
-                  {" "}
-                  <GrContact size={18} />
-                  Contact Sales
-                </button>
-                <button className="flex items-center text-sm gap-2">
-                  {" "}
-                  <PiVideoFill size={18} />
-                  Watch demo
-                </button>
+                <FormSection
+                  title={"Contact Sales"}
+                  cat={"NavMenu"}
+                  className={"flex items-center text-sm gap-2 "}
+                />
+
+                <WatchVideoSection />
               </div>
             </motion.div>
           )}

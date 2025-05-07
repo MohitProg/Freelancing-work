@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -23,7 +23,39 @@ import {
 } from "@/components/ui/select";
 
 const MotionButton = motion(DialogTrigger);
-const FormSection = ({ title, className }) => {
+const FormSection = ({ title, className, cat }) => {
+  const [userdata, setUserdata] = useState({
+    name: null,
+    organizationName: null,
+    location: null,
+    linkedinurl: null,
+    email: null,
+    phoneNo: null,
+    teamsize: null,
+    message: null,
+  });
+
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      !userdata?.name ||
+      !userdata?.organizationName ||
+      !userdata?.location ||
+      !userdata?.linkedinurl ||
+      !userdata?.email ||
+      !userdata?.email ||
+      !userdata?.phoneNo ||
+      !userdata?.teamsize ||
+      !userdata?.message
+    ) {
+      alert("please fill all the required filled");
+    } else {
+      alert("data submit ");
+    }
+  };
+
+  console.log(userdata);
+
   return (
     <>
       <Dialog>
@@ -41,7 +73,12 @@ const FormSection = ({ title, className }) => {
           viewport={{ once: true, amount: 0.2 }}
           className={className}
         >
-          {title} <GoArrowRight size={20} />
+          {title}{" "}
+          {cat === "pricing" || cat === "NavMenu" ? (
+            ""
+          ) : (
+            <GoArrowRight size={20} />
+          )}
         </MotionButton>
 
         <DialogContent
@@ -78,37 +115,65 @@ const FormSection = ({ title, className }) => {
               </div>
             </div>
 
-            <form action="" className="flex flex-col gap-2 ">
+            <form
+              onSubmit={HandleSubmit}
+              action=""
+              className="flex flex-col gap-2 "
+            >
               <div className="flex flex-col gap-2  h-[60vh] md:h-full  overflow-y-scroll md:overflow-hidden   ">
                 <div className="grid grid-cols-1  md:grid-cols-3 gap-2">
                   <div className="flex flex-col gap-2 p-1 ">
-                    <label htmlFor="" className="text-para text-md hidden">
+                    <label
+                      htmlFor=""
+                      className="text-para text-md  after:ml-0.5 after:text-red-500 after:content-['*']"
+                    >
                       Name
                     </label>
                     <Input
                       type="text"
                       className="common-input "
+                      onChange={(e) =>
+                        setUserdata({ ...userdata, name: e.target.value })
+                      }
+                      value={userdata?.name || ""}
                       placeholder="Enter your Name"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2 p-1 ">
-                    <label htmlFor="" className="text-para text-md">
+                    <label
+                      htmlFor=""
+                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                    >
                       Organization Name
                     </label>
                     <Input
                       type="text"
                       className="common-input "
+                      onChange={(e) =>
+                        setUserdata({
+                          ...userdata,
+                          organizationName: e.target.value,
+                        })
+                      }
+                      value={userdata?.organizationName || ""}
                       placeholder="Enter organization Name"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2 p-1 ">
-                    <label htmlFor="" className="text-para text-md">
+                    <label
+                      htmlFor=""
+                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                    >
                       Location
                     </label>
                     <Input
                       type="text"
+                      onChange={(e) =>
+                        setUserdata({ ...userdata, location: e.target.value })
+                      }
+                      value={userdata?.location || ""}
                       className="common-input "
                       placeholder="Enter your location"
                     />
@@ -120,56 +185,92 @@ const FormSection = ({ title, className }) => {
                     </label>
                     <Input
                       type="text"
+                      onChange={(e) =>
+                        setUserdata({
+                          ...userdata,
+                          linkedinurl: e.target.value,
+                        })
+                      }
+                      value={userdata?.linkedinurl || ""}
                       className="common-input "
                       placeholder="Enter your location"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2 p-1 ">
-                    <label htmlFor="" className="text-para text-md">
+                    <label
+                      htmlFor=""
+                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                    >
                       Email
                     </label>
                     <Input
                       type="text"
+                      onChange={(e) =>
+                        setUserdata({ ...userdata, email: e.target.value })
+                      }
+                      value={userdata?.email || ""}
                       className="common-input common-border"
                       placeholder="Enter your Email"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2 p-1  ">
-                    <label htmlFor="" className="text-para text-md">
+                    <label
+                      htmlFor=""
+                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                    >
                       Phone No
                     </label>
                     <Input
                       type="text"
+                      onChange={(e) =>
+                        setUserdata({ ...userdata, phoneNo: e.target.value })
+                      }
+                      value={userdata?.phoneNo || ""}
                       className="common-input common-border"
                       placeholder="Enter your Name"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2  p-1 ">
-                    <label htmlFor="" className="text-para text-md">
+                    <label
+                      htmlFor=""
+                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                    >
                       Team Size
                     </label>
-                    <Select>
+                    <Select
+                      onValueChange={(e) =>
+                        setUserdata({ ...userdata, teamsize: e })
+                      }
+                      value={userdata?.teamsize || ""}
+                    >
                       <SelectTrigger className="w-full">
                         <SelectValue placeholder="Select team Size " />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="light">1-10 employee</SelectItem>
-                        <SelectItem value="dark">11-50 employee</SelectItem>
-                        <SelectItem value="system">51-200 employee</SelectItem>
+                        <SelectItem value="1-10">1–10 employees</SelectItem>
+                        <SelectItem value="11-50">11–50 employees</SelectItem>
+                        <SelectItem value="51-200">51–200 employees</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-2   p-1">
-                  <label htmlFor="" className="text-para text-md">
+                  <label
+                    htmlFor=""
+                    className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                  >
                     message
                   </label>
                   <Textarea
                     type="text"
+                    onChange={(e) =>
+                      setUserdata({ ...userdata, message: e.target.value })
+                    }
+                    value={userdata?.message || ""}
                     className="common-input common-border  h-30"
                     placeholder="Enter your Name"
                   />

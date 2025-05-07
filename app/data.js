@@ -179,37 +179,39 @@ export const dataArray = [
             title: "Tasks",
             icon: "",
             linKpath: "tasks",
-            data: {
-              heading: "A Task Management Platform that saves time",
-              desc: "Automate, prioritize, and keep work moving—all while staying connected to Docs, Whiteboards, Chat, and more.",
-              image:
-                "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            },
+            heading: "Manage and assign tasks effortlessly",
+            desc: "Organize and track all your work in one place for enhanced productivity.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Time Line",
             icon: "",
             linKpath: "time-line",
+            heading: "Visualize task progress over time",
+            desc: "Use a horizontal timeline to schedule and track project progress.",
+            image: "https://cdn.dribbble.com/userupload/5943099/...",
           },
           {
             title: "Calender",
             icon: "",
             linKpath: "calender",
+            heading: "Plan tasks using a calendar view",
+            desc: "Map tasks, meetings, and deadlines on a clear, visual calendar.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Gantt charts",
             icon: "",
             linKpath: "gantt-charts",
-            data: {
-              heading: "Visualize projects as organized timelines",
-              desc: "ClickUp's drag-and-drop Gantt Charts give you a clear picture of your team's progress, dependencies, and any dangerously over-optimistic deadlines.",
-              image:
-                "https://images.unsplash.com/photo-1726568313407-c7d9c8a8ce88?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            },
+            heading: "Track dependencies with Gantt charts",
+            desc: "Understand timelines and task relations with drag-and-drop charts.",
+            image:
+              "https://images.unsplash.com/photo-1726568313407-c7d9c8a8ce88?...",
           },
         ],
       },
-
       {
         title: "Product Development",
         link: "#",
@@ -218,20 +220,31 @@ export const dataArray = [
             title: "Sprints",
             icon: "",
             linKpath: "sprints",
+            heading: "Track agile sprints with precision",
+            desc: "Organize work into time-boxed iterations for better delivery.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Kanban",
             icon: "",
             linKpath: "kanban",
+            heading: "Streamline workflows with Kanban",
+            desc: "Manage task status and progress visually with Kanban boards.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Roadmap & Backlog",
             icon: "",
             linKpath: "roadmap-backlog",
+            heading: "Prioritize your development pipeline",
+            desc: "Plan, organize, and maintain your product vision with roadmaps and backlogs.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
         ],
       },
-
       {
         title: "Time Sheet",
         link: "#",
@@ -240,25 +253,40 @@ export const dataArray = [
             title: "Time Sheet DashBoard",
             icon: "",
             linKpath: "time-sheet-dashboard",
+            heading: "View and manage team timesheets",
+            desc: "Centralized dashboard to track hours logged and work summaries.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "AutoFill TimeSheet",
             icon: "",
             linKpath: "autofill-timesheet",
+            heading: "Automate timesheet entries",
+            desc: "Use activity data to auto-populate timesheets accurately.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Manual TimeSheet",
             icon: "",
             linKpath: "manual-timesheet",
+            heading: "Log time entries manually",
+            desc: "Enter daily work hours manually for flexible tracking.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Daily task TimeSheet",
             icon: "",
             linKpath: "daily-task-timesheet",
+            heading: "Daily task-level time tracking",
+            desc: "Break down work hours by individual tasks each day.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
         ],
       },
-
       {
         title: "Screen Monitor",
         link: "#",
@@ -267,15 +295,22 @@ export const dataArray = [
             title: "ScreenShots",
             icon: "",
             linKpath: "screenshots",
+            heading: "Capture employee screens automatically",
+            desc: "Track work progress with automated, periodic screenshots.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "liveStreaming",
             icon: "",
             linKpath: "livestreaming",
+            heading: "Monitor activity in real time",
+            desc: "Stream user screens live for immediate visibility and support.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
         ],
       },
-
       {
         title: "Resource Management",
         link: "#",
@@ -284,27 +319,40 @@ export const dataArray = [
             title: "Attendence",
             icon: "",
             linKpath: "attendence",
+            heading: "Track employee attendance efficiently",
+            desc: "Monitor check-ins, absences, and working hours across teams.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
-
           {
             title: "Workload management",
             icon: "",
             linKpath: "workload-load-management",
+            heading: "Balance team workloads smartly",
+            desc: "Distribute tasks fairly and track utilization with real-time data.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Goals",
             icon: "",
             linKpath: "goals",
+            heading: "Set and achieve team goals",
+            desc: "Align objectives and measure key results with structured goals.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
-
           {
             title: "Dashboard",
             icon: "",
             linKpath: "dashboard",
+            heading: "Get a holistic overview of work",
+            desc: "Visualize KPIs, tasks, and timelines in one customizable view.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
         ],
       },
-
       {
         title: "Productivity Tracking ",
         link: "#",
@@ -313,25 +361,40 @@ export const dataArray = [
             title: "Active Trends",
             icon: "",
             linKpath: "active-trends",
+            heading: "Identify productivity trends over time",
+            desc: "Spot patterns in work behavior and adjust team strategies.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Productivity Metrices",
             icon: "",
             linKpath: "productivity-matrices",
+            heading: "Measure performance with key metrics",
+            desc: "Track output, efficiency, and goal completion rates.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Productivity Rules",
             icon: "",
             linKpath: "productivity-rules",
+            heading: "Define rules to boost output",
+            desc: "Set policies and boundaries to encourage focused work.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Moast used Apps",
             icon: "",
             linKpath: "moast-used-apps",
+            heading: "Track most-used applications",
+            desc: "See which apps dominate daily use for productivity insights.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
         ],
       },
-
       {
         title: "Breaks & Alerts ",
         link: "#",
@@ -340,11 +403,19 @@ export const dataArray = [
             title: "Breaks ",
             icon: "",
             linKpath: "breaks",
+            heading: "Manage employee break time",
+            desc: "Record and analyze break durations to encourage healthy habits.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
           {
             title: "Alert",
             icon: "",
             linKpath: "alerts",
+            heading: "Set up alerts and reminders",
+            desc: "Notify team members about deadlines, shifts, or anomalies.",
+            image:
+              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
           },
         ],
       },
@@ -357,113 +428,833 @@ export const dataArray = [
       {
         title: "Attendence Management",
         linKpath: "attendence-management",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Real Time User Activity",
         linKpath: "real-time-user-activity",
+        image:
+          "https://cdn.dribbble.com/userupload/38161878/file/original-0db768be4d133be952fb82f42884d554.png?resize=1200x924&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Productive Application or Classification",
         linKpath: "productive-application-or-classification",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Hourly Engagement",
-        linKpath: "#",
+        linKpath: "hourly-engagement",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Activity And Inactivity",
-        linKpath: "#",
+        linKpath: "activity-and-inactivity",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "The real productivity algo",
-        linKpath: "#",
+        linKpath: "real-productivity-algo",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Interactive Desktop Application",
-        linKpath: "#",
+        linKpath: "interactive-desktop-application",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Screenshots",
-        linKpath: "#",
+        linKpath: "screenshots",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Live video streaming",
-        linKpath: "#",
+        linKpath: "live-video-streaming",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Project And Taskmanagement",
-        linKpath: "#",
+        linKpath: "project-and-taskmanagement",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Auto fill timesheet",
-        linKpath: "#",
+        linKpath: "auto-fill-timesheet",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Application & Url Alerts ",
-        linKpath: "#",
+        linKpath: "application-url-alerts",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Application And website Usage ",
-        linKpath: "#",
+        linKpath: "application-webiste-usage",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Goal Setting And Benchmarking ",
-        linKpath: "#",
+        linKpath: "goal-setting-benchmarking",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Work load Balance ",
-        linKpath: "#",
+        linKpath: "work-load-balance",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
 
       {
         title: "Repots ",
-        linKpath: "#",
+        linKpath: "repots",
+        image:
+          "https://cdn.dribbble.com/userupload/16814448/file/original-060f8fe1874d47b247c73cd4af6657ba.png?resize=1200x900&vertical=center",
+        desc: "Attendance Management refers to the process of tracking and managing the attendance of employees, students, or members in an organization or institution",
         icon: "",
-        data: {},
+        data: [
+          {
+            id: 1,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 2,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+
+          {
+            id: 3,
+            title: "Comprehensive Attendance Tracking",
+            points: [
+              "Real-time tracking of employee clock-ins and clock-outs",
+              "Automatic calculation of total work hours, online hours, active and inactive hours including overtime",
+              "Detailed reports for individual and team attendance patterns",
+              "Real-time tracking of employee clock-ins and clock-outs",
+            ],
+
+            image:
+              "https://cdn.dribbble.com/userupload/17467126/file/original-b427ff3edb5617d3921e11b82dddb14e.png?resize=1200x900&vertical=center",
+          },
+        ],
       },
     ],
   },

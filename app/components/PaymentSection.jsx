@@ -6,6 +6,7 @@ import AnimateButton from "../utils/AnimateButton";
 import { motion } from "motion/react";
 import { Switch } from "@/components/ui/switch";
 import { CornerDownRight } from "lucide-react";
+import FormSection from "./FormSection";
 
 const features = [
   "Task Creation",
@@ -32,6 +33,7 @@ const PaymentSection = () => {
 
   useEffect(() => {
     if (moneychange === "USD") {
+      // set amount according to USD
       if (timeQnt === "year") {
         setamount({
           amount1: 30,
@@ -44,6 +46,7 @@ const PaymentSection = () => {
         });
       }
     } else {
+      //  set ampont according to rupees
       if (timeQnt === "year") {
         setamount({
           amount1: 30 * 85,
@@ -75,7 +78,9 @@ const PaymentSection = () => {
                   e ? setMoneyChange("INR") : setMoneyChange("USD")
                 }
               />
-              <span className="primary-para  font-medium">{moneychange}</span>
+              <span className="primary-para  font-medium">
+                {moneychange == "INR" ? "USD" : "INR"}
+              </span>
             </div>
 
             <div className="flex items-center  common-border  bg-primary overflow-hidden rounded-full  ">
@@ -153,11 +158,17 @@ const PaymentSection = () => {
                 {" "}
                 {moneychange === "USD"
                   ? `$${amount.amount1}`
-                  : `₹ ${amount.amount1}`}
+                  : `₹${amount.amount1}`}
               </h2>
-              <AnimateButton className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full">
+              {/* <AnimateButton >
                 Get Started
-              </AnimateButton>
+              </AnimateButton> */}
+
+              <FormSection
+                title={"Get Started"}
+                cat={"pricing"}
+                className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full"
+              />
             </div>
 
             {/* lsit of features  */}
@@ -196,11 +207,13 @@ const PaymentSection = () => {
               <h2 className="text-6xl uppercase font-bold ">
                 {moneychange === "USD"
                   ? `$${amount.amount2}`
-                  : `₹ ${amount.amount2}`}
+                  : `₹${amount.amount2}`}
               </h2>
-              <AnimateButton className="p-2  secondary-btn text-lg text-white font-bold rounded-lg w-full">
-                Get started
-              </AnimateButton>
+              <FormSection
+                title={"Get Started"}
+                cat="pricing"
+                className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full"
+              />
             </div>
 
             {/* lsit of features  */}
@@ -237,9 +250,11 @@ const PaymentSection = () => {
               <p className="text-para text-sm">
                 Get a custom demo and see how ClickUp aligns with your goals.
               </p>
-              <AnimateButton className="p-2  secondary-btn text-lg text-white font-bold rounded-xl w-full">
-                Contact Sales
-              </AnimateButton>
+              <FormSection
+                title={"Contact Sales"}
+                cat={"pricing"}
+                className="p-2 secondary-btn text-lg text-white font-bold rounded-lg w-full"
+              />
             </div>
 
             {/* lsit of features  */}

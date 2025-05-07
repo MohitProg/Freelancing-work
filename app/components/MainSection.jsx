@@ -32,10 +32,8 @@ const MainSection = () => {
               <AnimateContent>
                 <div className="space-y-3 flex flex-col items-start justify-start md:items-center  lg:items-start ">
                   <div className="flex items-start flex-col md:flex-row  gap-5">
-                    <AnimateButton className="text-sm py-3 lg:text-lg lg:py-3 px-4 lg:px-5 gap-2 primary-btn flex items-center">
-                      Get started. It's FREE{" "}
-                      <FaArrowRightLong className="mt-1" size={18} />
-                    </AnimateButton>
+                   
+                    <FormSection title="Get Started its Free" className="text-sm py-3 lg:text-lg lg:py-3 px-4 lg:px-5 gap-2 primary-btn flex items-center"/>
 
                     <AnimateButton className="text-sm py-3 lg:text-lg lg:py-3 px-5 lg:px-6 gap-2 secondary-btn flex items-center">
                       Learn More

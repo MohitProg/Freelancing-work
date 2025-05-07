@@ -27,7 +27,7 @@ const HomePage = () => {
       <VideoSection />
 
       {/* section 4 */}
-      <FeatureGrid />
+      {/* <FeatureGrid /> */}
 
       <HoverVideoSection />
 
