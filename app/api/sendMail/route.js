@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
-import { createTransport } from "nodemailer";
+
 // const resend = new Resend("re_DtRNSsNq_L8pHzuJTrHTFRKWhA3WoNe9m");
 import { Resend } from "resend";
 const resend = new Resend("re_123456789");
