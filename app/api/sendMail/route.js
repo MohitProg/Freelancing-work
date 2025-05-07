@@ -1,5 +1,4 @@
 import { NextResponse, NextRequest } from "next/server";
-import { Resend } from "resend";
 import { createTransport } from "nodemailer";
 // const resend = new Resend("re_DtRNSsNq_L8pHzuJTrHTFRKWhA3WoNe9m");
 import { Resend } from "resend";
@@ -20,6 +19,9 @@ export async function POST(request) {
               <strong>Message:</strong><br /> ${message}
             `,
     });
+
+
+
 
     return new Response(JSON.stringify({ success: true, data }), {
       status: 200,
