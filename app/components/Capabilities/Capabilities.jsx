@@ -30,6 +30,7 @@ import MostUsedApp from "./subComponents/MostUsedApp";
 import BreakUI from "./subComponents/BreakUI";
 import AlertsUi from "./subComponents/AlertsUi";
 import FormSection from "../FormSection";
+import ActiveTrends from "./subComponents/ActiveTrends";
 
 const Capabilities = ({ slug }) => {
   const [Maindata, setMainData] = useState(null);
@@ -107,6 +108,7 @@ const Capabilities = ({ slug }) => {
           {slug === "moast-used-apps" && <MostUsedApp />}
           {slug === "breaks" && <BreakUI />}
           {slug === "alerts" && <AlertsUi />}
+          {slug === "active-trends" && <ActiveTrends />}
         </main>
       )}
     </>

@@ -1,165 +1,126 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { TbMessageCircleFilled } from "react-icons/tb";
 import { RxCross2 } from "react-icons/rx";
 import { IoSend } from "react-icons/io5";
 import { TbMessageChatbot } from "react-icons/tb";
 import { AnimatePresence } from "motion/react";
 import { motion } from "motion/react";
-import { BsChatLeftTextFill } from "react-icons/bs";
 import { MessageCircleMore, MessageSquareText } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import AnimateImage from "../utils/AnimateImage";
 
 const ChatBot = () => {
+  // useref for chat scroller
+  const chatEndRef = useRef(null);
+
   // state for chat box
   const chatbotData = [
     {
       id: 1,
       type: "chatbot",
-      message:
-        "Hi there! 👋 Welcome to our support chat. How can I assist you today?",
-      questions: [
-        {
-          id: 1,
-          type: "chatbot",
-          question: "What are your business hours?",
-          response:
-            "We’re open Monday to Friday, 9 AM to 6 PM (EST). Let us know if you need help outside these hours!",
+      message: "Hi there! 👋 I'm here to help. How can I assist you today?",
+    },
 
-          subQuestions: [
-            {
-              id: 1,
-              type: "chatbot",
-              question: "What are your business hours?",
-              response:
-                "We’re open Monday to Friday, 9 AM to 6 PM (EST). Let us know if you need help outside these hours!",
-            },
-            {
-              id: 2,
-              type: "chatbot",
-              question: "How can I track my order?",
-              response:
-                "You can track your order using the tracking number sent to your email. Or visit 'My Orders' in your account.",
-            },
-          ],
-        },
-        {
-          id: 2,
-          type: "chatbot",
-          question: "How can I track my order?",
-          response:
-            "You can track your order using the tracking number sent to your email. Or visit 'My Orders' in your account.",
-        },
-        {
-          id: 3,
-          type: "chatbot",
-          question: "Can I cancel my order?",
-          response:
-            "Orders can be canceled within 2 hours of placement. Please provide your order number to proceed.",
-        },
-        {
-          id: 4,
-          type: "chatbot",
-          question: "Do you have a return policy?",
-          response:
-            "Yes! You can return items within 30 days of delivery. Make sure the item is unused and in original packaging.",
-        },
-        {
-          id: 5,
-          type: "chatbot",
-          question: "How do I change my shipping address?",
-          response:
-            "If your order hasn’t shipped yet, we can help you update the address. Please provide your order ID.",
-        },
-      ],
+    {
+      id: 2,
+      type: "chatbot",
+      message: "Please pick  your query",
+    },
+
+    {
+      id: 3,
+      type: "chatbot",
+      message: "I hope your query get Resolved",
+    },
+  ];
+
+  const QuestionBank = [
+    {
+      id: 1,
+      type: "chatbot",
+      cat: "service",
+      question: "What are your business hours?",
+      response:
+        "Our support team is available Monday through Friday, from 9 AM to 6 PM (EST). If you contact us outside these hours, we'll respond as soon as possible on the next business day.",
     },
     {
       id: 2,
       type: "chatbot",
-
-      message: "Hello again! 😊 Need help with anything else?",
-      questions: [
-        {
-          id: 6,
-          type: "chatbot",
-          question: "How do I apply a discount code?",
-          response:
-            "You can enter a discount code at checkout in the promo code field before completing your payment.",
-        },
-        {
-          id: 7,
-          type: "chatbot",
-          question: "I received a damaged item. What now?",
-          response:
-            "We’re sorry about that! Please share a photo of the item and your order number, and we’ll resolve it quickly.",
-        },
-        {
-          id: 8,
-          type: "chatbot",
-          question: "Where do you ship from?",
-          response:
-            "We ship from our main warehouse located in New Jersey, USA.",
-        },
-        {
-          id: 9,
-          type: "chatbot",
-          question: "Can I change items in my order?",
-          response:
-            "Once an order is placed, we can’t change the items. You can cancel the order and place a new one if it’s not shipped.",
-        },
-        {
-          id: 10,
-          type: "chatbot",
-          question: "What payment methods do you accept?",
-          response:
-            "We accept Visa, MasterCard, PayPal, Apple Pay, and Google Pay.",
-        },
-      ],
+      cat: "shipping",
+      question: "How can I track my order?",
+      response:
+        "You can track your order by logging into your account and visiting the 'Orders' section. A tracking link will be provided once your order has shipped.",
     },
     {
       id: 3,
       type: "chatbot",
-      message: "Still here to help! What else can I assist you with?",
-      questions: [
-        {
-          id: 11,
-          type: "chatbot",
-          question: "Is my data secure with you?",
-          response:
-            "Yes, we use top-level encryption and security standards to protect your personal and payment data.",
-        },
-        {
-          id: 12,
-          type: "chatbot",
-          question: "Do you offer gift wrapping?",
-          response:
-            "Yes! Gift wrapping is available at checkout for a small additional fee.",
-        },
-        {
-          id: 13,
-          type: "chatbot",
-          question: "Can I subscribe to your newsletter?",
-          response:
-            "Absolutely! You can subscribe via the footer on our website to get the latest deals and news.",
-        },
-        {
-          id: 14,
-          type: "chatbot",
-          question: "How long does shipping take?",
-          response:
-            "Standard shipping takes 3–5 business days in the US. International orders may take 7–14 days depending on location.",
-        },
-        {
-          id: 15,
-          type: "chatbot",
-          question: "How do I leave a review?",
-          response:
-            "You can leave a review by going to the product page and clicking 'Write a Review'. We appreciate your feedback!",
-        },
-      ],
+      cat: "shipping",
+      question: "Do you offer international shipping?",
+      response:
+        "Yes, we offer international shipping to most countries. Shipping fees and delivery times may vary depending on your location.",
+    },
+    {
+      id: 4,
+      type: "chatbot",
+      cat: "order",
+      question: "Can I modify or cancel my order after placing it?",
+      response:
+        "You can modify or cancel your order within one hour of placing it. Please contact our support team as soon as possible to make any changes.",
+    },
+    {
+      id: 5,
+      type: "chatbot",
+      cat: "payment",
+      question: "What payment methods do you accept?",
+      response:
+        "We accept all major credit cards, PayPal, Apple Pay, and Google Pay for secure and convenient checkout.",
+    },
+    {
+      id: 6,
+      type: "chatbot",
+      cat: "account",
+      question: "How do I reset my password?",
+      response:
+        "To reset your password, click on 'Forgot Password' on the login page and follow the instructions sent to your registered email.",
+    },
+    {
+      id: 7,
+      type: "chatbot",
+      cat: "account",
+      question: "How can I update my account information?",
+      response:
+        "Log in to your account, go to the 'Account Settings' section, and update your personal information as needed.",
+    },
+    {
+      id: 8,
+      type: "chatbot",
+      cat: "technical",
+      question: "The website isn’t loading. What should I do?",
+      response:
+        "Try refreshing the page, clearing your browser cache, or using a different browser. If the problem persists, contact support.",
+    },
+    {
+      id: 9,
+      type: "chatbot",
+      cat: "technical",
+      question: "Why am I not receiving email confirmations?",
+      response:
+        "Please check your spam or junk folder. If it’s not there, ensure your email address is entered correctly in your account settings.",
+    },
+    {
+      id: 10,
+      type: "chatbot",
+      cat: "service",
+      question: "Do you have a return policy?",
+      response:
+        "Yes, we offer a 30-day return policy on most items. Please review our Returns page for details and exceptions.",
     },
   ];
+
+  // state for  previous question data  which is already view by user
+
+  const [prevQuestion, setPrevQuestion] = useState([]);
   const [showChat, setShowChat] = useState(false);
   const [chatMessage, setChatMessage] = useState([]);
   const [answer, setanswer] = useState({
@@ -172,25 +133,36 @@ const ChatBot = () => {
   const HandleClick = ({ question }) => {
     console.log(question, "answer");
     if (question) {
-      const findAnswer = chatbotData?.filter((value) =>
-        value?.questions?.some((val) => val?.question === question)
-      );
-
-      const anwervalue = findAnswer[0]?.questions?.filter(
+      const findAnswer = QuestionBank?.filter(
         (val) => val?.question === question
       )[0];
 
-      setChatMessage([
-        ...chatMessage,
-        {
-          id: chatMessage?.length + 1,
-          message: anwervalue?.response,
-          type: anwervalue?.type,
-          questions: anwervalue?.subQuestions,
-        },
-      ]);
+      console.log(findAnswer, "answer");
+      // gettig more question
+      setChatMessage((prev) => {
+        //get randowm questions
+        const moreQuestion = QuestionBank?.filter(
+          (value) =>
+            value?.cat === findAnswer?.cat && value?.question !== question
+        )?.slice(0, 3);
 
-      console.log(anwervalue, chatMessage, "answer");
+        const messageText =
+          findAnswer?.response || "Sorry, I don't have an answer for that.";
+
+        return [
+          ...prev,
+          {
+            type: "chatbot",
+            id: prev.length + 1,
+            response: messageText,
+            message:
+              moreQuestion?.length > 0
+                ? chatbotData[1]?.message
+                : chatbotData[2]?.message,
+            questions: moreQuestion,
+          },
+        ];
+      });
     }
   };
 
@@ -208,32 +180,29 @@ const ChatBot = () => {
         },
       ];
 
-      // Step 2: Search after message is added
-      const questiondata = chatbotData?.flatMap((val) => val?.questions);
-
       const searchTerm = userResponse?.toLowerCase()?.trim();
 
       // result of question
-      const result = questiondata?.find((val) =>
-        val?.question?.toLowerCase()?.includes(searchTerm)
+      const results = QuestionBank?.filter((val) =>
+        val?.question?.toLowerCase()?.includes(searchTerm.toLowerCase())
       );
 
-      console.log(result, "answer");
+      console.log(results, "answer");
       let botMessage;
 
-      if (result) {
+      if (results?.length > 0) {
         // Step 3: Add chatbot response
         botMessage = {
           id: updatedMessages.length + 1,
           message: "Please pick a suitable option",
           type: "chatbot",
-          questions: [result],
+          questions: [...results],
         };
       } else {
         botMessage = {
           id: updatedMessages.length + 1,
           message:
-            "Not Able to get You Can connect with Our Faccilitator 354351324",
+            "I'm sorry, I didn't quite catch that. You can connect with one of our support specialists at 354351324 for further assistance.",
           type: "chatbot",
         };
       }
@@ -244,8 +213,21 @@ const ChatBot = () => {
     setUserResponse(""); // clear input field
   };
   useEffect(() => {
-    setChatMessage([chatbotData[0]]);
+    // pcking random question for starting
+    const randomQuestion = QuestionBank.slice(0, 4);
+    setPrevQuestion(randomQuestion);
+
+    let botmessage = {
+      ...chatbotData[0],
+      questions: randomQuestion,
+    };
+
+    setChatMessage([botmessage]);
   }, []);
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chatMessage]);
 
   return (
     <>
@@ -302,7 +284,7 @@ const ChatBot = () => {
 
             <div className=" max-h-[70vh] h-[70vh] lg:max-h-[63vh] lg:h-[63vh] overflow-y-scroll p-3 space-y-4">
               <div className="flex items-center justify-center">
-                <span className="text-para text-sm">Sat, Mar 29, 2:15 pm</span>
+                {/* <span className="text-para text-sm">Sat, Mar 29, 2:15 pm</span> */}
               </div>
 
               {/* message  1 */}
@@ -315,38 +297,51 @@ const ChatBot = () => {
                         whileInView={{ y: 0, scale: 1 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         key={val?.id}
-                        className="flex   items-start flex-col   justify-start "
+                        className="flex flex-col items-start justify-start"
                       >
-                        <div className=" relative flex items-start gap-1 rounded-lg text-sm  ">
-                          <div className="relative h-5 w-5 rounded-full  overflow-hidden ">
+                        <div className="relative flex items-start gap-3 rounded-lg text-sm">
+                          {/* Avatar Image */}
+                          <div className="relative h-8 w-8 min-w-[1.5rem] rounded-full overflow-hidden">
                             <AnimateImage
-                              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                              className=" object-cover "
-                              alt=""
+                              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=80"
+                              className="object-cover"
+                              alt="User Avatar"
                               fill
                             />
                           </div>
 
-                          <div className="flex flex-col ">
-                            <motion.div className="flex  bg-[#f1f4f7] p-2 items-center  justify-end">
-                              <div className="bg-[#f1f4f7] relative  rounded-lg text-[0.9rem]">
-                                <p className="text-para/70">{val?.message}</p>
-                              </div>
+                          {/* Message & Questions */}
+
+                          <div className="flex flex-col items-start">
+                            {val?.response && (
+                              <motion.div className="flex bg-[#f1f4f7] p-2 items-center justify-end rounded-lg">
+                                <p className="text-para/70 text-[0.9rem]">
+                                  {val?.response}
+                                </p>
+                              </motion.div>
+                            )}
+
+                            <motion.div className="flex bg-[#f1f4f7] p-2 items-center justify-end rounded-lg">
+                              <p className="text-para/70 text-[0.9rem]">
+                                {val?.message}
+                              </p>
                             </motion.div>
 
-                            <div className="p-1  text-blue-600 ">
-                              <ul className="flex flex-col gap-2 ">
-                                {val?.questions?.map((value) => (
-                                  <li
-                                    key={value?.id}
-                                    onClick={() => HandleClick(value)}
-                                    className="text-[0.8rem] underline cursor-pointer"
-                                  >
-                                    {value?.question}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
+                            {val?.questions && (
+                              <div className="p-1 text-blue-600">
+                                <ul className="flex flex-col gap-2">
+                                  {val?.questions?.map((value) => (
+                                    <li
+                                      key={value?.id}
+                                      onClick={() => HandleClick(value)}
+                                      className="text-[0.8rem] underline cursor-pointer"
+                                    >
+                                      {value?.question}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </motion.div>
@@ -369,6 +364,8 @@ const ChatBot = () => {
                     );
                   }
                 })}
+
+              <div ref={chatEndRef} />
             </div>
 
             {/* message input field */}

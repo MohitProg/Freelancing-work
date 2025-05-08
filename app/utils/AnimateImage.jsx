@@ -19,7 +19,12 @@ const AnimateImage = ({ className, src }) => {
         className={className}
         fill
         src={src}
-        alt="Image is Loading "
+        alt="Image is Loading"
+        sizes="(max-width: 640px) 100vw,
+         (max-width: 768px) 100vw,
+         (max-width: 1024px) 100vw,
+         (max-width: 1280px) 50vw,
+         33vw"
       />
     </>
   );

@@ -100,7 +100,7 @@ const FormSection = ({ title, className, cat }) => {
 
         <DialogContent
           className={
-            " w-[95vw] md:w-[60vw]  !max-w-none  outline-none  border-none"
+            " w-[95vw] sm:-[70vw] md:w-[70vw] p-2 px-3  !max-w-none  outline-none  border-none"
           }
         >
           <div className="hidden">
@@ -142,7 +142,7 @@ const FormSection = ({ title, className, cat }) => {
                   <div className="flex flex-col gap-2 p-1 ">
                     <label
                       htmlFor=""
-                      className="text-para text-md  after:ml-0.5 after:text-red-500 after:content-['*']"
+                      className="text-para text-base md:text-md  after:ml-0.5 after:text-red-500 after:content-['*']"
                     >
                       Name
                     </label>
@@ -160,7 +160,7 @@ const FormSection = ({ title, className, cat }) => {
                   <div className="flex flex-col gap-2 p-1 ">
                     <label
                       htmlFor=""
-                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                      className="text-para text-base md:text-md after:ml-0.5 after:text-red-500 after:content-['*']"
                     >
                       Organization Name
                     </label>
@@ -181,7 +181,7 @@ const FormSection = ({ title, className, cat }) => {
                   <div className="flex flex-col gap-2 p-1 ">
                     <label
                       htmlFor=""
-                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                      className="text-para text-base md:text-md after:ml-0.5 after:text-red-500 after:content-['*']"
                     >
                       Location
                     </label>
@@ -217,7 +217,7 @@ const FormSection = ({ title, className, cat }) => {
                   <div className="flex flex-col gap-2 p-1 ">
                     <label
                       htmlFor=""
-                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                      className="text-para text-base md:text-md after:ml-0.5 after:text-red-500 after:content-['*']"
                     >
                       Email
                     </label>
@@ -235,7 +235,7 @@ const FormSection = ({ title, className, cat }) => {
                   <div className="flex flex-col gap-2 p-1  ">
                     <label
                       htmlFor=""
-                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                      className="text-para text-base md:text-md after:ml-0.5 after:text-red-500 after:content-['*']"
                     >
                       Phone No
                     </label>
@@ -253,7 +253,7 @@ const FormSection = ({ title, className, cat }) => {
                   <div className="flex flex-col gap-2  p-1 ">
                     <label
                       htmlFor=""
-                      className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                      className="text-para text-base md:text-md after:ml-0.5 after:text-red-500 after:content-['*']"
                     >
                       Team Size
                     </label>
@@ -278,7 +278,7 @@ const FormSection = ({ title, className, cat }) => {
                 <div className="flex flex-col gap-2   p-1">
                   <label
                     htmlFor=""
-                    className="text-para text-md after:ml-0.5 after:text-red-500 after:content-['*']"
+                    className="text-para  text-base md:text-md after:ml-0.5 after:text-red-500 after:content-['*']"
                   >
                     message
                   </label>
