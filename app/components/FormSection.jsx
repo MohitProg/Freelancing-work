@@ -22,6 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const MotionButton = motion(DialogTrigger);
 const FormSection = ({ title, className, cat }) => {
@@ -49,10 +50,26 @@ const FormSection = ({ title, className, cat }) => {
       !userdata?.teamsize ||
       !userdata?.message
     ) {
-      alert("please fill all the required filled");
+      toast.error("please fill all the filled");
     } else {
       const SendMailResponse = await axios.post("api/sendMail", userdata);
       console.log(SendMailResponse);
+      const { success } = SendMailResponse?.data;
+      if (success) {
+        toast.success("form submit successfully");
+        setUserdata({
+          name: null,
+          organizationName: null,
+          location: null,
+          linkedinurl: null,
+          email: null,
+          phoneNo: null,
+          teamsize: null,
+          message: null,
+        });
+      } else {
+        toast.error("Internal Server Error");
+      }
     }
   };
 

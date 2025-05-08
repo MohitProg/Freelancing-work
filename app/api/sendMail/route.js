@@ -1,8 +1,8 @@
 import { NextResponse, NextRequest } from "next/server";
 import { Resend } from "resend";
-import { createTransport } from "nodemailer";
-// const resend = new Resend("re_DtRNSsNq_L8pHzuJTrHTFRKWhA3WoNe9m");
-import { Resend } from "resend";
+import nodemailer from "nodemailer"
+
+
 
 export async function POST(request) {
   try {
@@ -29,10 +29,8 @@ export async function POST(request) {
                 `,
     });
 
-    return new Response(JSON.stringify({ success: true, info }), {
-      status: 200,
-    });
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.log(error);
+    return NextResponse.json({ message: error.message, success: false });
   }
 }

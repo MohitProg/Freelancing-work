@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar copy";
 import Footer from "./components/Footer";
 import ChatBot from "./components/ChatBot";
+import { Toaster } from "react-hot-toast";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Toaster  position="top-center" />
         <Navbar />
 
         <div className="min-h-screen py-20    md:py-20 lg:py-30 ">
