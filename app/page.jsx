@@ -1,38 +1,30 @@
-"use client";
-
-import React from "react";
-
-import { GoArrowRight } from "react-icons/go";
-import gsap from "gsap";
 import CompanyScroller from "./components/CompanyScroller";
-import FeatureGrid from "./components/FeatureGrid";
 import MainSection from "./components/MainSection";
 import VideoSection from "./components/VideoSection";
 import HoverVideoSection from "./components/HoverVideoSection";
 import AnimateContent from "./utils/AnimateContent";
-import AnimateButton from "./utils/AnimateButton";
 import FormSection from "./components/FormSection";
+
+export const metadata = {
+  title: "Welcome to MyApp",
+  description: "MyApp is the best platform for your business needs.",
+};
+
+
 const HomePage = () => {
   return (
     <main className="min-h-screen w-full  space-y-8  ">
       {/* section 1  */}
 
       <MainSection />
-
       {/* section 2  */}
-
       <CompanyScroller />
-
       {/* section 3  */}
       <VideoSection />
-
       {/* section 4 */}
       {/* <FeatureGrid /> */}
-
       <HoverVideoSection />
-
       {/* section 5 */}
-
       <AnimateContent>
         <section className="p-5">
           <div className="   mx-auto common-section  mt-10 bg-gradient-to-r from-gray-500 to-black overflow-hidden rounded-xl  grid grid-cols-1  md:grid-cols-2 gap-2  ">

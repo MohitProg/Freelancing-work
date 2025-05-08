@@ -1260,4 +1260,26 @@ export const dataArray = [
   },
 ];
 
+// array for metadata
+export const metadata = [
+  {
+    title: "Next.js Tutorial",
+    description:
+      "A comprehensive guide to learning Next.js and building web apps.",
+    slug: "tasks",
+  },
+  {
+    title: "Understanding React Hooks",
+    description:
+      "An in-depth look at React Hooks and how to use them in your components.",
+    slug: "react-hooks",
+  },
+  {
+    title: "Mastering JavaScript",
+    description:
+      "Become a JavaScript expert by understanding its core concepts and advanced features.",
+    slug: "mastering-javascript",
+  },
+];
+
 export default ArrayData;

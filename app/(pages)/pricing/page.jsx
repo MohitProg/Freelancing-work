@@ -1,11 +1,15 @@
 import React from "react";
-
 import CompanyScroller from "@/app/components/CompanyScroller";
 import AnimateContent from "@/app/utils/AnimateContent";
 import PaymentSection from "@/app/components/PaymentSection";
 import AnimateButton from "@/app/utils/AnimateButton";
 import FaQ from "@/app/components/FaQ";
 import AnimateImage from "@/app/utils/AnimateImage";
+
+export const metadata = {
+  title: "Welcome to MyApp",
+  description: "MyApp is the best platform for your business needs.",
+};
 
 const PricePage = () => {
   return (

@@ -4,9 +4,21 @@ import Features from "@/app/components/Features/Features";
 import { dataArray } from "@/app/data";
 import { notFound } from "next/navigation";
 
+// function for setting metadata
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const value = metadata.find((val) => val?.slug === slug[0]);
+
+  if (value) {
+    return {
+      title: value?.title,
+      description: value?.description,
+    };
+  }
+}
+
 const page = async ({ params }) => {
   const { slug } = await params;
-  console.log(slug);
 
   const isSlugValidate = (slugvalue) => {
     const value = dataArray[1].subData.some(

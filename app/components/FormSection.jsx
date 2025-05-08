@@ -21,6 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import axios from "axios";
 
 const MotionButton = motion(DialogTrigger);
 const FormSection = ({ title, className, cat }) => {
@@ -35,7 +36,7 @@ const FormSection = ({ title, className, cat }) => {
     message: null,
   });
 
-  const HandleSubmit = (e) => {
+  const HandleSubmit = async (e) => {
     e.preventDefault();
     if (
       !userdata?.name ||
@@ -50,11 +51,10 @@ const FormSection = ({ title, className, cat }) => {
     ) {
       alert("please fill all the required filled");
     } else {
-      alert("data submit ");
+      const SendMailResponse = await axios.post("api/sendMail", userdata);
+      console.log(SendMailResponse);
     }
   };
-
-  console.log(userdata);
 
   return (
     <>
