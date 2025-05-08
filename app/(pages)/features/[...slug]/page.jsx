@@ -1,7 +1,7 @@
 import React from "react";
 
 import Features from "@/app/components/Features/Features";
-import { dataArray } from "@/app/data";
+import { dataArray, metadata } from "@/app/data";
 import { notFound } from "next/navigation";
 
 // function for setting metadata
