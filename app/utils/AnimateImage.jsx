@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
 
 const AnimateImage = ({ className, src }) => {
   return (
@@ -16,6 +16,8 @@ const AnimateImage = ({ className, src }) => {
           stiffness: 200,
           damping: 15,
         }}
+
+        priority
         className={className}
         fill
         src={src}

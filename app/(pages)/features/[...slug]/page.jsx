@@ -25,7 +25,7 @@ const page = async ({ params }) => {
       (val) => val.linKpath === slugvalue
     );
 
-    console.log(value, slugvalue);
+   
 
     return value;
   };

@@ -61,7 +61,7 @@ const PaymentSection = () => {
     }
   }, [timeQnt, moneychange]);
 
-  console.log(timeQnt);
+
 
   return (
     <>

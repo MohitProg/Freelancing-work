@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import gsap from "gsap";
 import AnimateContent from "../utils/AnimateContent";
 import { AnimatePresence, motion } from "motion/react";
 import AnimateButton from "../utils/AnimateButton";
@@ -13,17 +12,9 @@ const VideoSection = () => {
     videoNum: 1,
   });
 
-  console.log(data);
-
   const handleVideoSwitch = (e, video, num) => {
     if (data?.videoNum) {
       setData({ videoUrl: video, videoNum: num });
-      gsap.from(e.target.nextSibling, {
-        y: 30,
-        opacity: "0",
-        filter: "blur(2px)",
-        duration: 0.6,
-      });
     }
   };
   return (

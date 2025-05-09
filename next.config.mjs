@@ -19,6 +19,12 @@ const nextConfig = {
         hostname: "cdn.dribbble.com",
         pathname: "/**",
       },
+
+      {
+        protocol: "https",
+        hostname: "clickup.com",
+        pathname: "/**",
+      }
       
     ],
   },

@@ -7,7 +7,7 @@ import nodemailer from "nodemailer"
 export async function POST(request) {
   try {
     const body = await request.json();
-    console.log(body);
+
     const { name, email, message } = body;
     const transporter = nodemailer.createTransport({
       host: "smtp.resend.com",

@@ -19,9 +19,7 @@ const CompanyScroller = () => {
     <>
       <section className="common-section  flex flex-col gap-2  items-center ">
         <AnimateContent>
-          <p className="primary-para  ">
-            Trusted by 3 millions+ teams
-          </p>
+          <p className="primary-para  ">Trusted by 3 millions+ teams</p>
         </AnimateContent>
 
         {/* company features */}
@@ -58,6 +56,12 @@ const CompanyScroller = () => {
                     fill
                     src={val.img.src}
                     alt={val.text}
+                  
+                    sizes="(max-width: 640px) 100vw,
+                    (max-width: 768px) 100vw,
+                    (max-width: 1024px) 100vw,
+                    (max-width: 1280px) 50vw,
+                    33vw"
                     className=" object-contain"
                   />
                 </div>

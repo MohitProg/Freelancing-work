@@ -35,8 +35,6 @@ import ActiveTrends from "./subComponents/ActiveTrends";
 const Capabilities = ({ slug }) => {
   const [Maindata, setMainData] = useState(null);
 
-  console.log(slug);
-
   useEffect(() => {
     if (slug) {
       const data = dataArray[0]?.subData?.flatMap(
@@ -44,13 +42,9 @@ const Capabilities = ({ slug }) => {
           item.subCat?.filter((subItem) => subItem.linKpath === slug) || []
       );
 
-      console.log(data[0]);
-
       setMainData(data[0]);
     }
   }, [slug]);
-
-  console.log(Maindata);
 
   return (
     <>

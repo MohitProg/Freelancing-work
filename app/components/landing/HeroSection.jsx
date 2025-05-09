@@ -22,6 +22,12 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
                   fill
+                  priority
+                  sizes="(max-width: 640px) 100vw,
+                  (max-width: 768px) 100vw,
+                  (max-width: 1024px) 100vw,
+                  (max-width: 1280px) 50vw,
+                  33vw"
                   src="https://images.ctfassets.net/w8fc6tgspyjz/ANJFM8HigJCMUwQxflBvU/226711f57db215ba057f50f7a9b68c37/home-tabs-v4-chat-desktop.png"
                   alt=""
                   className="object-cover"
@@ -37,6 +43,12 @@ const HeroSection = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1.2, ease: "easeOut" }}
                   fill
+                  priority
+                  sizes="(max-width: 640px) 100vw,
+                  (max-width: 768px) 100vw,
+                  (max-width: 1024px) 100vw,
+                  (max-width: 1280px) 50vw,
+                  33vw"
                   src="https://images.ctfassets.net/w8fc6tgspyjz/3FllRRqmlYB2Bdf3ASg3fT/14ff2e7789c12cfc0a55358c50aa5312/home-tabs-v3-projects-desktop.png?fm=avif&q=50"
                   alt=""
                   className="object-cover"
@@ -52,6 +64,12 @@ const HeroSection = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1.4, ease: "easeOut" }}
                   fill
+                  priority
+                  sizes="(max-width: 640px) 100vw,
+                  (max-width: 768px) 100vw,
+                  (max-width: 1024px) 100vw,
+                  (max-width: 1280px) 50vw,
+                  33vw"
                   src="https://images.ctfassets.net/w8fc6tgspyjz/3Rdwyyo4HE9409nPMNTN1y/1132f37adc35603d75741af29d6b7ea3/home-tabs-v3-time-tracking.png"
                   alt=""
                   className="object-cover"

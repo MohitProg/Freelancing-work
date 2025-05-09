@@ -25,7 +25,7 @@ const page = async ({ params }) => {
       val?.subCat?.some((value) => value?.linKpath === slugvalue)
     );
 
-    console.log(value, slugvalue);
+   
     return value;
   };
 

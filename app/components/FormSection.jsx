@@ -24,7 +24,7 @@ import {
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const MotionButton = motion(DialogTrigger);
+const MotionButton = motion.create(DialogTrigger);
 const FormSection = ({ title, className, cat }) => {
   const [userdata, setUserdata] = useState({
     name: null,
@@ -53,7 +53,7 @@ const FormSection = ({ title, className, cat }) => {
       toast.error("please fill all the filled");
     } else {
       const SendMailResponse = await axios.post("api/sendMail", userdata);
-      console.log(SendMailResponse);
+   
       const { success } = SendMailResponse?.data;
       if (success) {
         toast.success("form submit successfully");

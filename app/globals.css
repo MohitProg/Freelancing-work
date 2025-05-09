@@ -172,7 +172,7 @@ body {
 
   /* common-navlink of a paragraph  */
   .common-navlink {
-    @apply flex gap-2 text-black/70 font-medium items-center text-[1rem]  hover:bg-[#f1f1f9] p-2;
+    @apply flex gap-2 text-black/70 font-medium items-center text-base lg:text-[1rem]  hover:bg-[#f1f1f9] p-2;
   }
 }
 

@@ -120,12 +120,12 @@ const Navbar = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: "easeIn" }}
               exit={{ opacity: 0, y: 50 }}
-              className="  bg-primary w-[70%] mx-auto mt-1 space-y-4     rounded-xl p-4 "
+              className="  bg-primary  lg:w-[80%] mx-auto mt-1 space-y-4     rounded-xl p-4 "
             >
               {/*  drop down menu 1  for product section */}
               <div className=" grid grid-cols-5  gap-2 ">
                 <div className="col-span-1 ">
-                  <ul className="flex flex-col w-full   ">
+                  <ul className="flex flex-col w-full">
                     <li
                       onClick={() => Handlecategory(cat1)}
                       className="flex items-center justify-between p-1 rounded-xl font-medium  text-[#3c3a54] hover:text-black cursor-pointer hover:bg-[#f1f1f9] "
@@ -172,7 +172,7 @@ const Navbar = () => {
                     className="col-span-4  grid grid-cols-4"
                   >
                     {dataArray[0].subData?.map((val, ind) => (
-                      <div key={ind} className="   flex flex-col gap-1 ">
+                      <div key={ind} className=" flex flex-col gap-1 ">
                         <p className="text-sm px-3 text-black/80 font-semibold">
                           {val?.title}
                         </p>

@@ -13,7 +13,6 @@ import AnimateImage from "../utils/AnimateImage";
 const ChatBot = () => {
   // useref for chat scroller
   const chatEndRef = useRef(null);
-
   // state for chat box
   const chatbotData = [
     {
@@ -131,13 +130,13 @@ const ChatBot = () => {
   const [userResponse, setUserResponse] = useState("");
 
   const HandleClick = ({ question }) => {
-    console.log(question, "answer");
+
     if (question) {
       const findAnswer = QuestionBank?.filter(
         (val) => val?.question === question
       )[0];
 
-      console.log(findAnswer, "answer");
+  
       // gettig more question
       setChatMessage((prev) => {
         //get randowm questions
@@ -187,7 +186,6 @@ const ChatBot = () => {
         val?.question?.toLowerCase()?.includes(searchTerm.toLowerCase())
       );
 
-      console.log(results, "answer");
       let botMessage;
 
       if (results?.length > 0) {

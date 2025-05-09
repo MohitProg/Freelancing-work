@@ -43,7 +43,7 @@ const HoverVideoSection = () => {
 
   const HandleOnleave = (index) => {
     let hovervideo = videoRef.current[index];
-    console.log(hovervideo);
+   
 
     if (hovervideo) {
       setPlayvideoIndex(null);

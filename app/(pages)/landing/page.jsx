@@ -4,6 +4,7 @@ import CompanyScroller from "../../components/CompanyScroller";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import HeroSection from "../../components/landing/HeroSection";
 import AnimateContent from "../../utils/AnimateContent";
+import AnimateImage from "@/app/utils/AnimateImage";
 
 const LandingPage = () => {
   return (
@@ -50,11 +51,11 @@ const LandingPage = () => {
 
               {/* sample image div  */}
 
-              <div className=" ">
-                <img
+              <div className=" relative h-72  w-full ">
+                <AnimateImage
                   src="https://images.ctfassets.net/w8fc6tgspyjz/5sEQN5mm48tnX6kyqRXUBU/8377db6638b36ae5aa6bd29bbd708eda/AI-powered-productivity.png"
                   alt=""
-                  className=" w-full object-cover"
+                  className="  object-cover"
                 />
               </div>
             </AnimateContent>
@@ -72,8 +73,8 @@ const LandingPage = () => {
 
               {/* sample image div  */}
 
-              <div className="  ">
-                <img
+              <div className=" relative h-72   w-full ">
+                <AnimateImage
                   src="https://clickup.com/assets/home-test/view-work-your-way.png"
                   alt=""
                   className=" w-full object-cover"
@@ -95,8 +96,8 @@ const LandingPage = () => {
 
               {/* sample image div  */}
 
-              <div className=" ">
-                <img
+              <div className=" relative  h-72   w-full">
+                <AnimateImage
                   src="https://clickup.com/assets/home-test/search-everything.png"
                   alt=""
                   className=" w-full object-cover"
@@ -115,11 +116,13 @@ const LandingPage = () => {
                   </p>
                 </div>
 
-                <img
-                  className="w-[80%]"
-                  src="https://images.ctfassets.net/w8fc6tgspyjz/5eW6fJb73nNo4cjPCd45gT/737151fe3c8828de0aa775444040cd7e/clickup-integrations.svg"
-                  alt=""
-                />
+                <div className="relative  h-56  w-full">
+                  <AnimateImage
+                    className="object-cover"
+                    src="https://images.ctfassets.net/w8fc6tgspyjz/5eW6fJb73nNo4cjPCd45gT/737151fe3c8828de0aa775444040cd7e/clickup-integrations.svg"
+                    alt=""
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-3 items-start ">
                 <div className="items-start flex flex-col gap-2 ">
@@ -131,11 +134,13 @@ const LandingPage = () => {
                   </p>
                 </div>
 
-                <img
-                  className="w-[80%]"
-                  src="https://images.ctfassets.net/w8fc6tgspyjz/5eW6fJb73nNo4cjPCd45gT/737151fe3c8828de0aa775444040cd7e/clickup-integrations.svg"
-                  alt=""
-                />
+                <div className="relative  h-56  w-full">
+                  <AnimateImage
+                    className="object-cover"
+                    src="https://images.ctfassets.net/w8fc6tgspyjz/5eW6fJb73nNo4cjPCd45gT/737151fe3c8828de0aa775444040cd7e/clickup-integrations.svg"
+                    alt=""
+                  />
+                </div>
               </div>
             </AnimateContent>
 
@@ -153,8 +158,8 @@ const LandingPage = () => {
 
               {/* sample image div  */}
 
-              <div className=" ">
-                <img
+              <div className="relative  h-56  w-full ">
+                <AnimateImage
                   src="https://clickup.com/assets/home-test/search-everything.png"
                   alt=""
                   className=" w-full object-cover"
@@ -176,8 +181,8 @@ const LandingPage = () => {
 
               {/* sample image div  */}
 
-              <div className=" ">
-                <img
+              <div className="relative  h-56  w-full  ">
+                <AnimateImage
                   src="https://clickup.com/assets/home-test/view-work-your-way.png"
                   alt=""
                   className=" w-full object-cover"

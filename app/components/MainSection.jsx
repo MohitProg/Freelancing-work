@@ -97,7 +97,7 @@ const MainSection = () => {
                           {HomeImagedata?.map((val, index) => (
                             <SwiperSlide key={index}>
                               <div className="w-full h-[60vh] sm:h-[70vh]  md:h-[60vh] lg:h-[70vh] relative rounded-lg overflow-hidden">
-                                <Image
+                                <AnimateImage
                                   fill
                                   src={val}
                                   className="object-cover object-center"

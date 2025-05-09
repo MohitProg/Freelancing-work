@@ -182,7 +182,7 @@ export const dataArray = [
             heading: "Manage and assign tasks effortlessly",
             desc: "Organize and track all your work in one place for enhanced productivity.",
             image:
-              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
+              "https://cdn.dribbble.com/userupload/34202866/file/original-301b06d003791cc26de1e9b52f1332a0.jpg?resize=1200x900&vertical=center",
           },
           {
             title: "Time Line",
@@ -190,7 +190,7 @@ export const dataArray = [
             linKpath: "time-line",
             heading: "Visualize task progress over time",
             desc: "Use a horizontal timeline to schedule and track project progress.",
-            image: "https://cdn.dribbble.com/userupload/5943099/...",
+            image: "https://cdn.dribbble.com/userupload/34202866/file/original-301b06d003791cc26de1e9b52f1332a0.jpg?resize=1200x900&vertical=center",
           },
           {
             title: "Calender",
@@ -199,7 +199,7 @@ export const dataArray = [
             heading: "Plan tasks using a calendar view",
             desc: "Map tasks, meetings, and deadlines on a clear, visual calendar.",
             image:
-              "https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?...",
+              "https://cdn.dribbble.com/userupload/34202866/file/original-301b06d003791cc26de1e9b52f1332a0.jpg?resize=1200x900&vertical=center",
           },
           {
             title: "Gantt charts",
@@ -208,7 +208,7 @@ export const dataArray = [
             heading: "Track dependencies with Gantt charts",
             desc: "Understand timelines and task relations with drag-and-drop charts.",
             image:
-              "https://images.unsplash.com/photo-1726568313407-c7d9c8a8ce88?...",
+              "https://cdn.dribbble.com/userupload/34202866/file/original-301b06d003791cc26de1e9b52f1332a0.jpg?resize=1200x900&vertical=center",
           },
         ],
       },
