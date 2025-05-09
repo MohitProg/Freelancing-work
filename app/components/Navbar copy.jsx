@@ -104,7 +104,7 @@ const Navbar = () => {
             </div> */}
 
             <MobileNavbar />
-          </div>
+          </div>  
         </nav>
 
         {/* Main  menu start from here  */}

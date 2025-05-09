@@ -16,17 +16,20 @@ const AnimateImage = ({ className, src }) => {
           stiffness: 200,
           damping: 15,
         }}
-
         priority
         className={className}
         fill
         src={src}
         alt="Image is Loading"
         sizes="(max-width: 640px) 100vw,
-         (max-width: 768px) 100vw,
-         (max-width: 1024px) 100vw,
-         (max-width: 1280px) 50vw,
-         33vw"
+       (max-width: 768px) 100vw,
+       (max-width: 1024px) 100vw,
+       (max-width: 1280px) 80vw,
+       60vw"
+      
+
+      //  note that if you want to increase image quality than use below property 
+        // sizes="100vw"
       />
     </>
   );
